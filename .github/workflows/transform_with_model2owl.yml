@@ -4,7 +4,7 @@ on:
     branches:
       - "**"
     paths:
-      - "implementation/demo_ontology/xmi_conceptual_model/poc_ontology_CM.xml"
+      - "implementation/poc_ontology/xmi_conceptual_model/poc_ontology_CM.xml"
 
 jobs:
   report_and_glossary:
