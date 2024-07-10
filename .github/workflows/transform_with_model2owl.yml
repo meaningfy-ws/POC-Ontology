@@ -4,7 +4,7 @@ on:
     branches:
       - "**"
     paths:
-      - "implementation/poc_ontology/xmi_conceptual_model/poc_ontology_CM.xml"
+      - "implementation/poc/xmi_conceptual_model/poc_CM.xml"
 
 jobs:
   report_and_glossary:
@@ -30,7 +30,7 @@ jobs:
 
       - name: generate convention report and glossary and respec
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(poc_ontology)
+          AVAILABLE_IMPLEMENTATIONS=(poc)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -139,7 +139,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(poc_ontology)
+          AVAILABLE_IMPLEMENTATIONS=(poc)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
