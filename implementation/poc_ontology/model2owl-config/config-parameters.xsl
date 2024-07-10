@@ -25,11 +25,11 @@
 
     <!-- XSD datatypes that conform to OWL2 requirements   -->
     <xsl:variable name="xsdAndRdfDataTypes" select="fn:doc('xsdAndRdfDataTypes.xml')"/>
-    <!--    set default namespace interpretation for lexical Qnames that are not prefix:localSegment or :localSegment. If this 
+    <!--    set default namespace interpretation for lexical Qnames that are not prefix:localSegment or :localSegment. If this
     is set to true localSegment will transform to :localSegment-->
     <xsl:variable name="defaultNamespaceInterpretation" select="fn:true()"/>
 
-    <!-- Ontology base URI, configure as necessary. Do not use a trailing local delimiter 
+    <!-- Ontology base URI, configure as necessary. Do not use a trailing local delimiter
         like in the namespace definition-->
     <!--<xsl:variable name="base-uri" select="'http://publications.europa.eu/ontology/ePO'"/>-->
     <xsl:variable name="base-ontology-uri" select="'http://data.europa.eu/a4g/ontology'"/>
@@ -80,9 +80,9 @@
     <xsl:variable name="generateReusedConcepts" select="fn:true()"/>
 
 
-    <xsl:variable name="reference-to-external-classes-in-glossary" select="fn:false()"/>
+    <xsl:variable name="reference-to-external-classes-in-glossary" select="fn:true()"/>
 
-    <xsl:variable name="generateObjectsAndRealisations" select="fn:false()"/>
+    <xsl:variable name="generateObjectsAndRealisations" select="fn:true()"/>
 
     <xsl:variable name="conventionReportCopyrightText" select="'Publications Office of the European Union, 2023'"/>
     <xsl:variable name="conventionReportAuthor" select="'Publications Office of the European Union'"/>
@@ -94,22 +94,22 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'core'"/>
-        <!--    rdfs:label -->
-    <xsl:variable name="ontologyLabelCore" select="'eProcurement Ontology Ordering - core'"/>
-    <xsl:variable name="ontologyLabelRestrictions" select="'eProcurement Ontology Ordering - core restrictions'"/>
-    <xsl:variable name="ontologyLabelShapes" select="'eProcurement Ontology Ordering - core shapes'"/>
+    <xsl:variable name="moduleReference" select="'tech'"/>
+    <!--    rdfs:label -->
+<xsl:variable name="ontologyLabelCore" select="'Core Public Organisation Vocabulary - core'"/>
+<xsl:variable name="ontologyLabelRestrictions" select="'Core Public Organisation Vocabulary - core restrictions'"/>
+<xsl:variable name="ontologyLabelShapes" select="'Core Public Organisation Vocabulary - core shapes'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology - core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology - core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology - core shapes'"/>
+    <xsl:variable name="ontologyTitleCore" select="'technical package  - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'common SRC_AP Ontology - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'common SRC_AP Ontology - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="'The eProcurement Ontology core describes the concepts and properties representing the European Public Procurement domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+        select="'The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
-        select="'The eProcurement Ontology core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology core.'"/>
+        select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
     <xsl:variable name="ontologyDescriptionShapes"
-        select="'The eProcurement Ontology core shapes provides the generic datashape specifications for the eProcurement Ontology core.'"/>
+        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
@@ -138,14 +138,13 @@
     <!--    dct:publisher-->
     <xsl:variable name="publisher" select="'http://publications.europa.eu/resource/authority/corporate-body/PUBL'"/>
 
-        <!-- _______________________________________________________________________   -->
+            <!-- _______________________________________________________________________   -->
     <!--                            RESPEC SECTION                               -->
     <!-- _______________________________________________________________________   -->
 
-    <xsl:variable name="githubURL" select="'https://github.com/OP-TED/ePO'"/>
-    <xsl:variable name="respecDescription" select="$ontologyDescriptionCore"/>
+    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/eurovoc-pipelines'"/>
+    <xsl:variable name="respecDescription" select="'Common AP is an Application Profile designed to includes common entities that can be used as a foundational framework for all other APs.'"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
     <xsl:variable name="authors" select="('Author One', 'Author Two')"/>
     <xsl:variable name="editors" select="('Editor One', 'Editor Two')"/>
-
 </xsl:stylesheet>

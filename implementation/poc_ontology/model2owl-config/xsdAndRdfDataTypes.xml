@@ -31,6 +31,8 @@
     <datatype namespace="xsd" qname="xsd:unsignedInt"/>
     <datatype namespace="xsd" qname="xsd:unsignedLong"/>
     <datatype namespace="xsd" qname="xsd:unsignedShort"/>
+     <datatype namespace="xsd" qname="xsd:gYear"/>
+
     
     <datatype namespace="rdf" qname="rdf:HTML"/>
     <datatype namespace="rdf" qname="rdf:XMLLiteral"/>

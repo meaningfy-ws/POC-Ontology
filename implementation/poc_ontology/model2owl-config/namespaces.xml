@@ -13,16 +13,12 @@
     <prefix name="org" value="http://www.w3.org/ns/org#" importURI="http://www.w3.org/ns/org#"/>
     <prefix name="skos" value="http://www.w3.org/2004/02/skos/core#" importURI="http://www.w3.org/2004/02/skos/core"/>
 
-    <prefix name="epo" value="http://data.europa.eu/a4g/ontology#"/>
-    <prefix name="epo-cat" value="http://data.europa.eu/a4g/ontology#"/>
-    <prefix name="epo-con" value="http://data.europa.eu/a4g/ontology#"/>
-    <prefix name="epo-ord" value="http://data.europa.eu/a4g/ontology#"/>
-    <prefix name="epo-not" value="http://data.europa.eu/a4g/ontology#"/>
-    <prefix name="epo-ful" value="http://data.europa.eu/a4g/ontology#"/>
+
 
     <prefix name="nuts" value="http://data.europa.eu/nuts/" importURI="http://data.europa.eu/nuts"/>
     <prefix name="espd" value="https://github.com/ESPD/ESPD-EDM/"/>
-    <prefix name="at-voc" value="http://publications.europa.eu/resource/authority/" importURI="http://publications.europa.eu/resource/authority/"/>
+    <prefix name="at" value="http://publications.europa.eu/ontology/authority/" importURI="ttp://publications.europa.eu/ontology/authority/"/>
+    <prefix name="atold" value="http://publications.europa.eu/resource/authority/" importURI="http://publications.europa.eu/resource/authority/"/>
     <prefix name="time" value="http://www.w3.org/2006/time#" importURI="http://www.w3.org/2006/time"/>
     <prefix name="locn" value="http://www.w3.org/ns/locn#" importURI="http://www.w3.org/ns/locn"/>
     <prefix name="cv" value="http://data.europa.eu/m8g/" importURI="https://data.europa.eu/m8g/"/>
@@ -36,6 +32,15 @@
     <prefix name="person" value="http://www.w3.org/ns/person#" importURI="http://www.w3.org/ns/person"/>
     <prefix name="at-voc-new" value="http://publications.europa.eu/resource/authority/new/" />
     <prefix name="adms" value="http://www.w3.org/ns/adms#" importURI="http://www.w3.org/ns/adms"/>
-<!--    <prefix name="bibo" value="http://purl.org/ontology/bibo/" importURI="http://purl.org/ontology/bibo/"/>-->
+    <prefix name="wgs" value="http://www.w3.org/2003/01/geo/wgs84_pos#" importURI="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+    <prefix name="euvoc" value= "http://publications.europa.eu/ontology/euvoc#" importURI="http://publications.europa.eu/ontology/euvoc"/>
+    <prefix name="lexvo" value="http://lexvo.org/ontology#" importURI="http://lexvo.org/ontology" />
+    <prefix name="skosxl" value="http://www.w3.org/2008/05/skos-xl#" importURI="http://www.w3.org/2008/05/skos-xl" />
+    <prefix name="lexinfo" value="http://www.lexinfo.net/ontology/2.0/lexinfo#" importURI="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+    <prefix name="vcard" value="http://www.w3.org/2006/vcard/ns#" importURI="http://www.w3.org/2006/vcard/ns"/>
+    <prefix name="at-voc" value="http://publications.europa.eu/resource/authority/" importURI="http://publications.europa.eu/resource/authority/"/>
+     <prefix name="sf" value="http://www.opengis.net/ont/sf#" importURI="http://www.opengis.net/ont/sf"/>
+
+    <!--    <prefix name="bibo" value="http://purl.org/ontology/bibo/" importURI="http://purl.org/ontology/bibo/"/>-->
 <!--    <prefix name="vann" value="	http://purl.org/vocab/vann/" importURI="http://purl.org/vocab/vann/"/>-->
 </prefixes>
