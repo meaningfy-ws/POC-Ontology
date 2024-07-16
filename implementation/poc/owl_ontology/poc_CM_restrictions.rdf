@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://data.europa.eu/a4g/ontology#"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:at="http://publications.europa.eu/ontology/authority/"
+         xmlns:at-voc="http://publications.europa.eu/resource/authority/"
+         xmlns:at-voc-new="http://publications.europa.eu/resource/authority/new/"
+         xmlns:atold="http://publications.europa.eu/resource/authority/"
+         xmlns:cccev="http://data.europa.eu/m8g/"
+         xmlns:core="http://data.europa.eu/m8g/"
+         xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpsv="http://data.europa.eu/m8g/"
+         xmlns:cpv="http://data.europa.eu/m8g/"
+         xmlns:cv="http://data.europa.eu/m8g/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+         xmlns:esco="http://data.europa.eu/esco/model#"
+         xmlns:espd="https://github.com/ESPD/ESPD-EDM/"
+         xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+         xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
+         xmlns:lexvo="http://lexvo.org/ontology#"
+         xmlns:locn="http://www.w3.org/ns/locn#"
+         xmlns:nuts="http://data.europa.eu/nuts/"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:person="http://www.w3.org/ns/person#"
+         xmlns:poc="http://index.dev/ontology/poc# "
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+         xmlns:tech-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#tech-restriction">
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <owl:imports rdf:resource="http://data.europa.eu/nuts"/>
+      <owl:imports rdf:resource="ttp://publications.europa.eu/ontology/authority/"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
+      <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
+      <owl:imports rdf:resource="http://lexvo.org/ontology"/>
+      <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+      <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
+      <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech"/>
+      <dct:title xml:lang="en">common SRC_AP Ontology - core restrictions</dct:title>
+      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core restrictions</rdfs:label>
+      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
+      <dct:description xml:lang="en">The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.</dct:description>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 
+                2024-07-16</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
+      <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-16</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+      <owl:versionInfo>4.0.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#tech-restriction-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/ontology#tech-restriction-3.1.0</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
+   </owl:Ontology>
+   <owl:Class rdf:about="http://data.europa.eu/esco/model#Occupation">
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+            <owl:hasValue rdf:resource="http://data.europa.eu/esco/model#Occupation"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://data.europa.eu/esco/model#Qualification">
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+            <owl:hasValue rdf:resource="http://data.europa.eu/esco/model#Qualification"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://data.europa.eu/esco/model#Skill">
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+            <owl:hasValue rdf:resource="http://data.europa.eu/esco/model#Skill"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#candidate">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#candidate">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#candidate">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#candidate">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#candidate">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#phoneNumber"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#timeZone"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Benefits">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Benefits">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#BenefitName"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#profileId"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#targetRate"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Certification">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Company">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Company">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#companyName"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Company">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#industry"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Credential">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Credential">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#dateAwarded"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Education">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#educationDegree"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Experience">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Experience">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Experience">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#yearsOfExperience"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#availability"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#jobId"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#projectType"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#rate"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#startDate"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#yearsOfSkill"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#TypeOfEngagement">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#engagementType"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#TypeOfEngagement">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#hasLocation"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasLocation">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#hasSkills"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#hasEngagement"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasEngagement">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#offersPosition"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#offersPosition">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://index.dev/ontology/poc#requiresSkill"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+      <owl:members rdf:parseType="Collection">
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Certification"/>
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Education"/>
+      </owl:members>
+   </rdf:Description>
+   <rdf:Description>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+      <owl:members rdf:parseType="Collection">
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Contract"/>
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#ShortTime"/>
+      </owl:members>
+   </rdf:Description>
+   <rdf:Description>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+      <owl:members rdf:parseType="Collection">
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification"/>
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Role"/>
+         <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill"/>
+      </owl:members>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#candidate"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Credential"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Experience"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#JobDescription"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Role"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Skill"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+      <rdfs:range>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+               <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Plainliteral"/>
+               <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:range>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
+      <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+      <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#phoneNumber">
+      <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#phoneNumber">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#phoneNumber">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
+      <rdfs:domain rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#timeZone">
+      <rdfs:domain rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#timeZone">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#timeZone">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Benefits"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Certification"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Company"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Experience"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#JobDescription"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#BenefitName">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Benefits"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#BenefitName">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#BenefitName">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#profileId">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#profileId">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#profileId">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetRate">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetRate">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetRate">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#companyName">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Company"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#companyName">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#companyName">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#industry">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Company"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#industry">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#industry">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#dateAwarded">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Credential"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#dateAwarded">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#dateAwarded">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#educationDegree">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Education"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#educationDegree">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#educationDegree">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfExperience">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Experience"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfExperience">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Integer"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfExperience">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#availability">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#availability">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#availability">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#jobId">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#jobId">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#jobId">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#projectType">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#projectType">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#projectType">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#rate">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#rate">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#rate">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#startDate">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#startDate">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#startDate">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Role"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Skill"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#TypeOfEngagement"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Role"/>
+               <owl:Class rdf:about="http://index.dev/ontology/poc#Skill"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+      <rdfs:range>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral"/>
+               <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:range>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfSkill">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfSkill">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfSkill">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasProfile">
+      <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasProfile">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#specifiesLocation">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#specifiesLocation">
+      <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasLocation">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasLocation">
+      <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasBenefits">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasBenefits">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Benefits"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasExperience">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasExperience">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Experience"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#receivesJobDesciption">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#receivesJobDesciption">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetOccupation">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetOccupation">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Role"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasQualification">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasQualification">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Qualification"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasCredential">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasCredential">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Credential"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkills">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkills">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#posts">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Company"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#posts">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresCredential">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresCredential">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Credential"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#isRelatedTo">
+      <rdf:domain rdf:resource="http://index.dev/ontology/poc#Experience"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#isRelatedTo">
+      <rdfs:range>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <rdf:Description rdf:about="http://index.dev/ontology/poc#Role"/>
+               <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:range>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkillUsed">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Experience"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkillUsed">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresExperience">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresExperience">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Experience"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasEngagement">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasEngagement">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresQualification">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresQualification">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Qualification"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#offersPosition">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#offersPosition">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Role"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresSkill">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#JobDescription"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresSkill">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification"/>
+               <rdf:Description rdf:about="http://index.dev/ontology/poc#Role"/>
+               <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#optionalFor">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#optionalFor">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Role"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#essentialFor">
+      <rdfs:domain rdf:resource="http://index.dev/ontology/poc#Skill"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#essentialFor">
+      <rdfs:range rdf:resource="http://index.dev/ontology/poc#Role"/>
+   </rdf:Description>
+</rdf:RDF>
