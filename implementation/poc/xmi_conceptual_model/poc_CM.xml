@@ -96,7 +96,7 @@
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000022_1B87_4791_91B8_A0E407C9BE6A" value="1"/>
 					<type xmi:idref="EAJava_xsd_double"/>
 				</ownedAttribute>
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst7CA986_3DAA_44f0_990C_4B57433D2011" name="poc:has Experience" association="EAID_1E7CA986_3DAA_44f0_990C_4B57433D2011">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst7CA986_3DAA_44f0_990C_4B57433D2011" name="poc:hasExperience" association="EAID_1E7CA986_3DAA_44f0_990C_4B57433D2011">
 					<type xmi:idref="EAID_9B15AC7E_CCA4_4865_B0E9_EE212D1CCBD8"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000023__3DAA_44f0_990C_4B57433D2011" value="0"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000024__3DAA_44f0_990C_4B57433D2011" value="*"/>
@@ -617,8 +617,8 @@
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000002_A009_48ad_9EC5_575B43C009FB" x="451" y="455"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_F409FC12_A009_48ad_990C_4B57433D2011" source="EAID_080A510A_3260_4589_ABA7_3032F61F2E11" target="EAID_9B15AC7E_CCA4_4865_B0E9_EE212D1CCBD8" modelElement="EAID_1E7CA986_3DAA_44f0_990C_4B57433D2011">
-				<ownedElement xmi:type="umldi:UMLAssociationEndLabel" xmi:id="EAID_TEL000000_A009_48ad_990C_4B57433D2011" text="+poc:has Experience" modelElement="EAID_dst7CA986_3DAA_44f0_990C_4B57433D2011">
-					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTEL000000_A009_48ad_990C_4B57433D2011" x="917" y="288" width="82" height="14"/>
+				<ownedElement xmi:type="umldi:UMLAssociationEndLabel" xmi:id="EAID_TEL000000_A009_48ad_990C_4B57433D2011" text="+poc:hasExperience" modelElement="EAID_dst7CA986_3DAA_44f0_990C_4B57433D2011">
+					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTEL000000_A009_48ad_990C_4B57433D2011" x="919" y="288" width="82" height="14"/>
 				</ownedElement>
 				<ownedElement xmi:type="umldi:UMLMultiplicityLabel" xmi:id="EAID_TML000000_A009_48ad_990C_4B57433D2011" text="0..*" modelElement="EAID_dst7CA986_3DAA_44f0_990C_4B57433D2011">
 					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTML000000_A009_48ad_990C_4B57433D2011" x="967" y="301" width="17" height="14"/>
@@ -1978,7 +1978,7 @@
 				</source>
 				<target xmi:idref="EAID_9B15AC7E_CCA4_4865_B0E9_EE212D1CCBD8">
 					<model ea_localid="7" type="Class" name="poc:Experience"/>
-					<role name="poc:has Experience" visibility="Public" targetScope="instance"/>
+					<role name="poc:hasExperience" visibility="Public" targetScope="instance"/>
 					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
@@ -1993,7 +1993,7 @@
 				<parameterSubstitutions/>
 				<documentation value="Represents the work experience details of a CandidateProfile."/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..*" rt="+poc:has Experience"/>
+				<labels rb="0..*" rt="+poc:hasExperience"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
