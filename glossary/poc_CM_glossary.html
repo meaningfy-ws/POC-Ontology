@@ -1,0 +1,440 @@
+<!DOCTYPE HTML><html xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <meta name="description" content="Model glossary">
+      <meta name="author" content="Publications Office of the European Union">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+      <link rel="stylesheet" href="static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="static/css/pubcss-acm-sig.css">
+      <link rel="stylesheet" href="static/css/toc_adjustments.css">
+      <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link rel="shortcut icon" href="">
+      <style>
+                #toc {
+                font-size: 1.2em;
+                width: 10%;
+                }
+                @media print{@page {size: landscape}}
+                
+            </style>
+      <title>Model glossary</title>
+   </head>
+   <body>
+      <main class="container-fluid">
+         <div id="toc" class="tocify">
+            <div class="text-center">
+               <p><strong>Table of contents</strong></p>
+            </div>
+         </div>
+         <div class="container">
+            <h1 xmlns:f="http://https://github.com/costezki/model2owl#">Glossary</h1>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Class names and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Class name</th>
+                     <th>Definition</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>candidate</td>
+                     <td>An individual who uses the system to find job opportunities.</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>A geographic area or place characterized by its physical coordinates and corresponding
+                        time zone.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Benefits</td>
+                     <td>Represents additional advantages provided to employees beyond their salary, such as
+                        health insurance or retirement plans.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:CandidateProfile</td>
+                     <td>Represents the detailed profile of a candidate, including credentials, skills experience,
+                        and location.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Certification</td>
+                     <td> The official recognition of a candidate's expertise or proficiency in a specific
+                        domain, typically obtained through examination or evaluation by a professional body.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Company</td>
+                     <td>An organization or business entity that employs individuals.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Contract</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>poc:Credential</td>
+                     <td>An academic or professional qualification obtained by a candidate, such as degrees
+                        or certifications.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Education</td>
+                     <td>The academic qualifications of a Candidate.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Experience</td>
+                     <td>Represents the practical knowledge and proficiency gained by a candidate through previous
+                        work engagements, projects, or hands-on activities.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>A job opening posted by a company, including job details and requirements.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Qualification</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>poc:Role</td>
+                     <td>Represents the specific job occupations, positions, or professions for which candidates
+                        may be qualified or seeking employment opportunities.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:ShortTime</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>poc:Skill</td>
+                     <td>A specific capability or proficiency possessed by a candidate, often acquired through
+                        training, practice, or experience.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:TypeOfEngagement</td>
+                     <td> Represents various arrangements under which individuals are employed, such as part-time,
+                        full-time, or contractual roles.</td>
+                  </tr>
+               </tbody>
+            </table>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Attributes (datatype properties) names and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Class name</th>
+                     <th>Attribute name</th>
+                     <th>Definition</th>
+                     <th>Data type / cardinality</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>poc:Benefits<br>poc:Certification<br>poc:Company<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br></td>
+                     <td>dct:description</td>
+                     <td>     </td>
+                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>candidate<br>poc:Credential<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
+                     <td>dct:title</td>
+                     <td>      </td>
+                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:Plainliteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>candidate</td>
+                     <td>foaf:homepage</td>
+                     <td></td>
+                     <td>xsd:anyURI [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>candidate</td>
+                     <td>foaf:mbox</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>candidate</td>
+                     <td>foaf:name</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>locn:geographicName</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>poc:availability</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Benefits</td>
+                     <td>poc:BenefitName</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Company</td>
+                     <td>poc:companyName</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Credential</td>
+                     <td>poc:dateAwarded</td>
+                     <td></td>
+                     <td>xsd:date [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Education</td>
+                     <td>poc:educationDegree</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:TypeOfEngagement</td>
+                     <td>poc:engagementType</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Company</td>
+                     <td>poc:industry</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>poc:jobId</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>candidate</td>
+                     <td>poc:phoneNumber</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:CandidateProfile</td>
+                     <td>poc:profileId</td>
+                     <td>A unique identifier for the candidate profile.</td>
+                     <td>xsd:integer [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>poc:projectType</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>poc:rate</td>
+                     <td></td>
+                     <td>xsd:decimal [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:JobDescription</td>
+                     <td>poc:startDate</td>
+                     <td></td>
+                     <td>xsd:Date [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:CandidateProfile</td>
+                     <td>poc:targetRate</td>
+                     <td></td>
+                     <td>xsd:double [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>poc:timeZone</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Experience</td>
+                     <td>poc:yearsOfExperience</td>
+                     <td></td>
+                     <td>xsd:Integer [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Skill</td>
+                     <td>poc:yearsOfSkill</td>
+                     <td></td>
+                     <td>xsd:integer [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Qualification<br>poc:Role<br>poc:Skill<br>poc:TypeOfEngagement<br></td>
+                     <td>skos:altLabel</td>
+                     <td>   </td>
+                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
+                     <td>skos:prefLabel</td>
+                     <td>  </td>
+                     <td>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                  </tr>
+               </tbody>
+            </table>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Predicates (object properties) and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Predicate name</th>
+                     <th>Definition</th>
+                     <th>Domain, Range and Cardinality</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>poc:essentialFor</td>
+                     <td> Indicates that a particular resource or characteristic is necessary or crucial for
+                        a specific entity or concept within the ontology to fulfill its intended purpose.</td>
+                     <td>poc:Skill -&gt; poc:Role [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasBenefits</td>
+                     <td>Indicates the benefits associated with a specific type of job engagement.</td>
+                     <td>poc:TypeOfEngagement -&gt; poc:Benefits [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasCredential</td>
+                     <td>Academic qualifications and professional certifications obtained by a candidate.</td>
+                     <td>poc:CandidateProfile -&gt; poc:Credential [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasEngagement</td>
+                     <td></td>
+                     <td>poc:JobDescription -&gt; poc:TypeOfEngagement [1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasExperience</td>
+                     <td>Represents the work experience details of a CandidateProfile.</td>
+                     <td>poc:CandidateProfile -&gt; poc:Experience [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasLocation</td>
+                     <td>Specifies the geographical location and timezone relevant to CandidateProfile.</td>
+                     <td>poc:CandidateProfile -&gt; dct:Location [1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasProfile</td>
+                     <td></td>
+                     <td>candidate -&gt; poc:CandidateProfile []</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasQualification</td>
+                     <td></td>
+                     <td>poc:CandidateProfile -&gt; poc:Qualification [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasSkills</td>
+                     <td>Indicates that a CandidateProfile possesses a specific skill.</td>
+                     <td>poc:CandidateProfile -&gt; poc:Skill [1..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:hasSkillUsed</td>
+                     <td>Indicates that a specific skill was utilized in a particular experience.</td>
+                     <td>poc:Experience -&gt; poc:Skill [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:isRelatedTo</td>
+                     <td>Indicates that a specific resource is associated with a particular other resource. Indicates that a specific resource is associated with a particular other resource.
+                        </td>
+                     <td>poc:Experience -&gt; poc:Role [0..*]<br>poc:Experience -&gt; poc:Qualification [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>poc:offersPosition</td>
+                     <td>Indicates the job position offered by a JobDescription.</td>
+                     <td>poc:JobDescription -&gt; poc:Role [1]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:optionalFor</td>
+                     <td></td>
+                     <td>poc:Skill -&gt; poc:Role [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:posts</td>
+                     <td>Indicates that a Company publishes a JobDescription.</td>
+                     <td>poc:Company -&gt; poc:JobDescription [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:receivesJobDesciption</td>
+                     <td>Indicates that a CandidateProfile receives a JobDescription from the system.</td>
+                     <td>poc:CandidateProfile -&gt; poc:JobDescription [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:requiresCredential</td>
+                     <td></td>
+                     <td>poc:JobDescription -&gt; poc:Credential [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:requiresExperience</td>
+                     <td>Specifies the type and level of experience required for a JobDescription.</td>
+                     <td>poc:JobDescription -&gt; poc:Experience [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:requiresQualification</td>
+                     <td>Specifies the qualifications required for a JobDescription.</td>
+                     <td>poc:JobDescription -&gt; poc:Qualification [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:requiresSkill</td>
+                     <td>Specifies the skills that are necessary for a JobDescription.</td>
+                     <td>poc:JobDescription -&gt; poc:Skill [1..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:specifiesLocation</td>
+                     <td>Specifies the geographical location and timezone relevant to JobDescription.</td>
+                     <td>poc:JobDescription -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>poc:targetOccupation</td>
+                     <td>Indicates the job roles or occupations that a CandidateProfileis interested in or
+                        qualified for.</td>
+                     <td>poc:CandidateProfile -&gt; poc:Role []</td>
+                  </tr>
+                  <tr>
+                     <td>skos:inScheme</td>
+                     <td>A Concept Scheme in which the Concept is included. A Concept may be a member of more
+                        than one concept scheme. A Concept Scheme in which the Concept is included. A Concept may be a member of more
+                        than one concept scheme. A Concept Scheme in which the Concept is included. A Concept may be a member of more
+                        than one concept scheme.</td>
+                     <td>poc:Qualification -&gt; esco:Qualification []<br>poc:Role -&gt; esco:Occupation []<br>poc:Skill -&gt; esco:Skill []<br></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </main>
+      <footer class="text-center"><br><br><p> This document is generated automatically by the <a href="https://github.com/costezki/model2owl" target="_blank">model2owl tool</a>
+            developed in the context of <a href="https://joinup.ec.europa.eu/solution/eprocurement-ontology">the
+               eProcurement Ontology initiative</a>.</p>
+         <p>The template of this report is based on the <a href="https://github.com/thomaspark/pubcss">PubCSS library</a>.</p>
+         <p>© Publications Office of the European Union, 2023</p>
+      </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/jquery-ui.min.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/jquery.tocify.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script><script>
+            $(function () {
+            //Calls the tocify method on your HTML div.
+            $("#toc").tocify({
+            selectors: "h2",
+            theme: "bootstrap",
+            hashGenerator: "pretty",
+            ignoreSelector: ".skip-toc"
+            });
+            });
+            
+        </script><script>
+            $(document).ready(function () {
+            
+            $("table.display").DataTable({
+            buttons: [],
+            "lengthMenu": [[-1], ["All"]],
+            responsive: {
+            details: true
+            }
+            });
+            
+            });
+        </script></body>
+</html>
