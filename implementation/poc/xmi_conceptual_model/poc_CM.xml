@@ -360,7 +360,7 @@
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000085__3872_40f3_AFEC_A84B1FACA503" value="0"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000086__3872_40f3_AFEC_A84B1FACA503" value="*"/>
 				</ownedAttribute>
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst58F12A_54B5_49a9_ABC3_8664FDB41C91" name="poc:requiresCredential " association="EAID_9D58F12A_54B5_49a9_ABC3_8664FDB41C91">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst58F12A_54B5_49a9_ABC3_8664FDB41C91" name="poc:requiresCredential" association="EAID_9D58F12A_54B5_49a9_ABC3_8664FDB41C91">
 					<type xmi:idref="EAID_D8600145_E8DC_460b_A93C_6399A93424EA"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000087__54B5_49a9_ABC3_8664FDB41C91" value="0"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000088__54B5_49a9_ABC3_8664FDB41C91" value="*"/>
@@ -2291,7 +2291,7 @@
 				</source>
 				<target xmi:idref="EAID_D8600145_E8DC_460b_A93C_6399A93424EA">
 					<model ea_localid="18" type="Class" name="poc:Credential"/>
-					<role name="poc:requiresCredential " visibility="Public" targetScope="instance"/>
+					<role name="poc:requiresCredential" visibility="Public" targetScope="instance"/>
 					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
@@ -2306,7 +2306,7 @@
 				<parameterSubstitutions/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..*" rt="+poc:requiresCredential "/>
+				<labels rb="0..*" rt="+poc:requiresCredential"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
