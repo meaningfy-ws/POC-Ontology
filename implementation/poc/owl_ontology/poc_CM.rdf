@@ -379,6 +379,9 @@
    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
       <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+      <skos:definition xml:lang="en">It represents the title or name of a resource. (candidate) It represents the title or name of a resource. (poc:Credential) It represents the title or name of a resource. (poc:Experience) It represents the title or name of a resource. (poc:JobDescription) It represents the title or name of a resource. (poc:Qualification) It represents the title or name of a resource. (poc:Role) It represents the title or name of a resource. (poc:Skill)</skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
       <skos:prefLabel xml:lang="en">Homepage</skos:prefLabel>
@@ -466,9 +469,15 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
       <skos:prefLabel xml:lang="en">Alt label</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+      <skos:definition xml:lang="en">An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Qualification) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Skill) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:TypeOfEngagement)</skos:definition>
+   </rdf:Description>
    <rdf:Property rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
       <skos:prefLabel xml:lang="en">Pref label</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+      <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language. (poc:Qualification) The preferred lexical label for a resource, in a given language. (poc:Skill)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#yearsOfSkill"/>
    <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfSkill">
@@ -477,5 +486,8 @@
    <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#engagementType"/>
    <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
       <skos:prefLabel xml:lang="en">Engagement type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
+      <skos:definition xml:lang="en">It includes part-time, full-time, or contractual roles. (poc:TypeOfEngagement)</skos:definition>
    </rdf:Description>
 </rdf:RDF>

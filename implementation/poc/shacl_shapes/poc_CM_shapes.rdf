@@ -291,6 +291,9 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
@@ -579,6 +582,9 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Credential-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Credential-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Credential-dct-title">
@@ -655,6 +661,9 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-title">
@@ -704,6 +713,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-title">
       <sh:name>Title</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -836,6 +848,9 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-title">
@@ -853,6 +868,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-altLabel">
       <sh:name>Alt label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-altLabel">
+      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-altLabel">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -874,6 +892,9 @@
       <sh:name>Pref label</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-prefLabel">
+      <sh:description>The preferred lexical label for a resource, in a given language.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-prefLabel">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-prefLabel">
@@ -888,6 +909,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role-dct-title">
       <sh:name>Title</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -944,6 +968,9 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-dct-title">
@@ -982,6 +1009,9 @@
       <sh:name>Alt label</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-altLabel">
+      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-altLabel">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-altLabel">
@@ -999,6 +1029,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-prefLabel">
       <sh:name>Pref label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-prefLabel">
+      <sh:description>The preferred lexical label for a resource, in a given language.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-skos-prefLabel">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -1020,6 +1053,9 @@
       <sh:name>Engagement type</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-poc-engagementType">
+      <sh:description>It includes part-time, full-time, or contractual roles.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-poc-engagementType">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-poc-engagementType">
@@ -1037,6 +1073,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-skos-altLabel">
       <sh:name>Alt label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-skos-altLabel">
+      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-skos-altLabel">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
