@@ -521,13 +521,6 @@
    <rdf:Description>
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
       <owl:members rdf:parseType="Collection">
-         <rdf:Description rdf:about="http://index.dev/ontology/poc#Contract"/>
-         <rdf:Description rdf:about="http://index.dev/ontology/poc#ShortTime"/>
-      </owl:members>
-   </rdf:Description>
-   <rdf:Description>
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-      <owl:members rdf:parseType="Collection">
          <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification"/>
          <rdf:Description rdf:about="http://index.dev/ontology/poc#Role"/>
          <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill"/>

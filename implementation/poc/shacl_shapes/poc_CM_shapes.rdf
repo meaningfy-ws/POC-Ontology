@@ -251,15 +251,6 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-ShortTime">
-      <sh:targetClass rdf:resource="http://index.dev/ontology/poc#ShortTime"/>
-   </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-ShortTime">
-      <rdfs:label>Short time</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-ShortTime">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill">
       <sh:targetClass rdf:resource="http://index.dev/ontology/poc#Skill"/>
    </sh:NodeShape>

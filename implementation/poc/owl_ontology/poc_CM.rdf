@@ -176,10 +176,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
       <skos:definition xml:lang="en">Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#ShortTime"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#ShortTime">
-      <skos:prefLabel xml:lang="en">Short time</skos:prefLabel>
-   </rdf:Description>
    <owl:Class rdf:about="http://index.dev/ontology/poc#Skill"/>
    <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
       <skos:prefLabel xml:lang="en">Skill</skos:prefLabel>
@@ -222,9 +218,6 @@
       <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#Credential"/>
    </owl:Class>
    <owl:Class rdf:about="http://index.dev/ontology/poc#Contract">
-      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#ShortTime">
       <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
    </owl:Class>
    <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification">
