@@ -40,7 +40,7 @@
     <prefix name="vcard" value="http://www.w3.org/2006/vcard/ns#" importURI="http://www.w3.org/2006/vcard/ns"/>
     <prefix name="at-voc" value="http://publications.europa.eu/resource/authority/" importURI="http://publications.europa.eu/resource/authority/"/>
      <prefix name="sf" value="http://www.opengis.net/ont/sf#" importURI="http://www.opengis.net/ont/sf"/>
-     <prefix name = "poc" value="http://index.dev/ontology/poc# "/>
+     <prefix name = "poc" value="http://index.dev/ontology/poc#"/>
     <prefix name="esco" value="http://data.europa.eu/esco/model#" importURI="http://data.europa.eu/esco/model"/>
 
 
