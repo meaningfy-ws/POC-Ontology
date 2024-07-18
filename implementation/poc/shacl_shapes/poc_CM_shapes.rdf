@@ -70,7 +70,7 @@
       <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech-restriction"/>
-      <dct:title xml:lang="en">common SRC_AP Ontology - core shapes</dct:title>
+      <dct:title xml:lang="en">POC _AP Ontology - core shapes</dct:title>
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>

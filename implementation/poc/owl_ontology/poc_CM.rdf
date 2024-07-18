@@ -65,7 +65,7 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
-      <dct:title xml:lang="en">technical package  - core</dct:title>
+      <dct:title xml:lang="en">POC Ontology  - core</dct:title>
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>

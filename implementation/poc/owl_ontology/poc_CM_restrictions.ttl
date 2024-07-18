@@ -17,11 +17,11 @@
 :tech-restriction a owl:Ontology ;
     rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
+    dcterms:description "he HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis.."@en ;
     dcterms:issued "2024-07-18"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "common SRC_AP Ontology - core restrictions"@en ;
+    dcterms:title "POC Ontology_AP Ontology - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from poc_CM.xml on 
@@ -262,10 +262,10 @@ skos:prefLabel a owl:FunctionalProperty ;
 poc:Credential a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:dateAwarded ],
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:title ] .
+            owl:onProperty poc:dateAwarded ] .
 
 poc:TypeOfEngagement a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -277,10 +277,10 @@ poc:TypeOfEngagement a owl:Class ;
 
 dcterms:Location rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:timeZone ],
+            owl:onProperty locn:geographicName ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty locn:geographicName ] .
+            owl:onProperty poc:timeZone ] .
 
 skos:altLabel a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
@@ -290,7 +290,7 @@ skos:altLabel a owl:FunctionalProperty ;
 poc:Company a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:industry ],
+            owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty poc:companyName ],
@@ -299,24 +299,24 @@ poc:Company a owl:Class ;
             owl:onProperty poc:hasLocation ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:description ] .
+            owl:onProperty poc:industry ] .
 
 poc:Candidate a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
+            owl:onProperty foaf:homepage ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
             owl:onProperty foaf:name ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty foaf:mbox ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:phoneNumber ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty foaf:homepage ] .
+            owl:onProperty foaf:mbox ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty poc:phoneNumber ] .
 
 dcterms:description a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
@@ -326,13 +326,13 @@ dcterms:description a owl:FunctionalProperty ;
 poc:Experience a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:description ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:yearsOfExperience ] .
+            owl:onProperty poc:yearsOfExperience ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:description ] .
 
 dcterms:title a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
@@ -346,29 +346,43 @@ poc:Qualification a owl:Class ;
             owl:onProperty skos:altLabel ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:description ],
+            owl:onProperty skos:prefLabel ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty skos:prefLabel ] .
+            owl:onProperty dcterms:description ] .
 
 poc:CandidateProfile rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:targetRate ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty poc:hasSkills ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty poc:hasLocation ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty poc:profileId ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:hasLocation ] .
+            owl:onProperty poc:targetRate ] .
 
 poc:Role a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:title ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty skos:altLabel ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty skos:prefLabel ] .
+
+poc:Skill a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty poc:yearsOfSkill ],
+        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
@@ -378,57 +392,43 @@ poc:Role a owl:Class ;
             owl:cardinality 1 ;
             owl:onProperty skos:altLabel ] .
 
-poc:Skill a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty skos:prefLabel ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty dcterms:title ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty skos:altLabel ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:yearsOfSkill ] .
-
 poc:JobDescription a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:hasEngagement ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:availability ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:projectType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty poc:requiresSkill ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:title ],
+            owl:onProperty poc:hasEngagement ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:startDate ],
+            owl:onProperty poc:rate ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty poc:projectType ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty poc:offersPosition ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
+            owl:onProperty poc:startDate ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:title ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
             owl:onProperty poc:jobId ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:rate ] .
+            owl:onProperty poc:availability ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty poc:requiresSkill ] .
 
 rdf:PlainLiteral a owl:Class .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( poc:Certification poc:Education ) .
+    owl:members ( poc:Qualification poc:Role poc:Skill ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( poc:Qualification poc:Role poc:Skill ) .
+    owl:members ( poc:Certification poc:Education ) .
 
