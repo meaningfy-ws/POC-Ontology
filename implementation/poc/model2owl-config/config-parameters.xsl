@@ -142,8 +142,8 @@
     <!--                            RESPEC SECTION                               -->
     <!-- _______________________________________________________________________   -->
 
-    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/eurovoc-pipelines'"/>
-    <xsl:variable name="respecDescription" select="'Common AP is an Application Profile designed to includes common entities that can be used as a foundational framework for all other APs.'"/>
+    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/POC-Ontology'"/>
+    <xsl:variable name="respecDescription" select="'The HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis. '"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
     <xsl:variable name="authors" select="('Author One', 'Author Two')"/>
     <xsl:variable name="editors" select="('Editor One', 'Editor Two')"/>
