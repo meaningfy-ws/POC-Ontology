@@ -74,12 +74,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-16</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-18</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-16</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-18</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -89,18 +89,6 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#candidate"/>
-   </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <rdfs:label>Candidate</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <rdfs:comment>An individual who uses the system to find job opportunities.</rdfs:comment>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
       <sh:targetClass rdf:resource="http://purl.org/dc/terms/Location"/>
    </sh:NodeShape>
@@ -120,9 +108,21 @@
       <rdfs:label>Benefits</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits">
-      <rdfs:comment>Represents additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.</rdfs:comment>
+      <rdfs:comment>Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:targetClass rdf:resource="http://index.dev/ontology/poc#Candidate"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <rdfs:label>Candidate</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <rdfs:comment>An individual who uses the system to find job opportunities.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile">
@@ -132,7 +132,7 @@
       <rdfs:label>Candidate profile</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile">
-      <rdfs:comment>Represents the detailed profile of a candidate, including credentials, skills experience, and location.</rdfs:comment>
+      <rdfs:comment>Represents the detailed profile of a Candidate, including credentials, skills experience, and location.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -234,6 +234,9 @@
       <rdfs:label>Qualification</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification">
+      <rdfs:comment>Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role">
@@ -281,104 +284,6 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-dct-title"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <sh:name>Title</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage">
-      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage">
-      <sh:name>Homepage</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage">
-      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-homepage">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox">
-      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox">
-      <sh:name>Mbox</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-mbox">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-foaf-name"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-name">
-      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/name"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-name">
-      <sh:name>Name</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-name">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-name">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-foaf-name">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber">
-      <sh:path rdf:resource="http://index.dev/ontology/poc#phoneNumber"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber">
-      <sh:name>Phone number</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-phoneNumber">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
       <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName"/>
    </rdf:Description>
@@ -387,6 +292,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
       <sh:name>Geographic name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <sh:description>A textual description for a Location.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -408,6 +316,9 @@
       <sh:name>Time zone</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-poc-timeZone">
+      <sh:description>An area which observes a uniform standard time for legal, commercial and social purposes.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-poc-timeZone">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-poc-timeZone">
@@ -425,6 +336,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits-dct-description">
       <sh:name>Description</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -452,6 +366,110 @@
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Benefits-poc-BenefitName">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <sh:name>Title</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <sh:description>Represents the title or the name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-dct-title">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage">
+      <sh:name>Homepage</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-homepage">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox">
+      <sh:name>Mbox</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-mbox">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <sh:name>Name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <sh:description>The complete name of the Candidate as one string.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-foaf-name">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
+      <sh:path rdf:resource="http://index.dev/ontology/poc#phoneNumber"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
+      <sh:name>Phone number</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
+      <sh:description>A telephone number through which the Candidate can be contacted.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-phoneNumber">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
@@ -506,6 +524,9 @@
       <sh:name>Description</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Certification-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Certification-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Certification-dct-description">
@@ -523,6 +544,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-dct-description">
       <sh:name>Description</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -582,7 +606,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Credential-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Credential-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -642,6 +666,9 @@
       <sh:name>Description</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-description">
@@ -661,7 +688,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -696,6 +723,9 @@
       <sh:name>Description</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-description">
@@ -715,7 +745,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -829,6 +859,9 @@
       <sh:name>Description</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-description">
+      <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-description">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-description">
@@ -848,7 +881,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -911,7 +944,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Role-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -968,7 +1001,7 @@
       <sh:name>Title</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-dct-title">
-      <sh:description>It represents the title or name of a resource.</sh:description>
+      <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -1087,23 +1120,6 @@
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-hasProfile">
-      <sh:class rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-hasProfile">
-      <sh:sparql rdf:parseType="Resource">
-         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/poc#hasProfile&gt; ?that . ?that &lt;http://index.dev/ontology/poc#hasProfile&gt; ?this .}</sh:select>
-      </sh:sparql>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#candidate-poc-hasProfile"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-hasProfile">
-      <sh:path rdf:resource="http://index.dev/ontology/poc#hasProfile"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#candidate-poc-hasProfile">
-      <sh:name>Has profile</sh:name>
-   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-specifiesLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
    </rdf:Description>
@@ -1123,6 +1139,30 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-specifiesLocation">
       <sh:description>Specifies the geographical location and timezone relevant to JobDescription.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/poc#hasLocation&gt; ?that . ?that &lt;http://index.dev/ontology/poc#hasLocation&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:path rdf:resource="http://index.dev/ontology/poc#hasLocation"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:name>Has location</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Company-poc-hasLocation">
+      <sh:description>Specifies the geographical location and timezone relevant to CandidateProfile.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile-poc-hasLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
@@ -1167,6 +1207,26 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-TypeOfEngagement-poc-hasBenefits">
       <sh:description>Indicates the benefits associated with a specific type of job engagement.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile">
+      <sh:class rdf:resource="http://index.dev/ontology/poc#CandidateProfile"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/poc#hasProfile&gt; ?that . ?that &lt;http://index.dev/ontology/poc#hasProfile&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile">
+      <sh:path rdf:resource="http://index.dev/ontology/poc#hasProfile"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile">
+      <sh:name>Has profile</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Candidate-poc-hasProfile">
+      <sh:description>Indicates the CandidateProfile of a specific Candidate.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile-poc-hasExperience">
       <sh:class rdf:resource="http://index.dev/ontology/poc#Experience"/>
@@ -1226,7 +1286,7 @@
       <sh:name>Target occupation</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile-poc-targetOccupation">
-      <sh:description>Indicates the job roles or occupations that a CandidateProfileis interested in or qualified for.</sh:description>
+      <sh:description>Indicates the job roles or occupations that a CandidateProfile is interested in or qualified for.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-CandidateProfile-poc-hasQualification">
       <sh:class rdf:resource="http://index.dev/ontology/poc#Qualification"/>
@@ -1324,6 +1384,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-requiresCredential">
       <sh:name>Requires credential</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-requiresCredential">
+      <sh:description>Indicates that a JobDescription may require one or more Academic qualifications and/or professional certifications.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Experience-poc-isRelatedTo">
       <sh:class rdf:resource="http://index.dev/ontology/poc#Role"/>
@@ -1426,6 +1489,9 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-hasEngagement">
       <sh:name>Has engagement</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-hasEngagement">
+      <sh:description>Indicates what TypeOfEngagement a specific JobDescription entails.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-JobDescription-poc-requiresQualification">
       <sh:class rdf:resource="http://index.dev/ontology/poc#Qualification"/>
    </rdf:Description>
@@ -1510,6 +1576,9 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-poc-optionalFor">
       <sh:name>Optional for</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-poc-optionalFor">
+      <sh:description>Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-poc-essentialFor">
       <sh:class rdf:resource="http://index.dev/ontology/poc#Role"/>
    </rdf:Description>
@@ -1528,7 +1597,7 @@
       <sh:name>Essential for</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Skill-poc-essentialFor">
-      <sh:description>Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology to fulfill its intended purpose.</sh:description>
+      <sh:description>Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#poc-Qualification-skos-inScheme">
       <sh:class rdf:resource="http://data.europa.eu/esco/model#Qualification"/>
