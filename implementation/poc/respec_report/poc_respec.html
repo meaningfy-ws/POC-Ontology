@@ -68,7 +68,7 @@
    
     var respecConfig = {
       postProcess: [quickreference],
-      publishDate: "2024-07-16",
+      publishDate: "2024-07-18",
       shortName: "technical package  - core",
         editors: editors,
       authors: authors,
@@ -184,9 +184,9 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
             
                 <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
             
-                <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
-            
                 <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            
+                <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
             
             </tbody>
         </table>
@@ -207,10 +207,310 @@ The main entities are those that form the core of the Application Profile.
 
    
         <section>
-            <h3 id="Candidate">
-                <a href="http://data.europa.eu/a4g/ontology#candidate"
+            <h3 id="Location">
+                <a href="http://purl.org/dc/terms/Location"
                    data-toggle="tooltip"
-                   data-content="http://data.europa.eu/a4g/ontology#candidate"
+                   data-content="http://purl.org/dc/terms/Location"
+                   data-placement="right">Location</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A geographic area or place characterized by its physical coordinates and corresponding time zone.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A geographic area or place characterized by its physical coordinates and corresponding time zone.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Location.Geographicname">Geographic name</a>
+                            , <a href="#Location.Timezone">Time zone</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Location.Geographicname"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geographicName"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Geographic name%20in%20Location" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geographicName"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geographicName"
+                                           data-placement="right">
+                                        Geographic name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A textual description for a Location.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Location.Timezone"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#timeZone"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Time zone%20in%20Location" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#timeZone"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#timeZone"
+                                           data-placement="right">
+                                        Time zone</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An area which observes a uniform standard time for legal, commercial and social purposes.
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Benefits">
+                <a href="http://index.dev/ontology/poc#Benefits"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Benefits"
+                   data-placement="right">Benefits</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Benefits.Description">Description</a>
+                            , <a href="#Benefits.Benefitname">Benefit name</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Benefits.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Description%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Benefits.Benefitname"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#BenefitName"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Benefit name%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#BenefitName"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#BenefitName"
+                                           data-placement="right">
+                                        Benefit name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Candidate">
+                <a href="http://index.dev/ontology/poc#Candidate"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Candidate"
                    data-placement="right">Candidate</a>
 
             </h3>
@@ -303,7 +603,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -417,7 +717,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    The complete name of the Candidate as one string.
                                 </td>
 
 
@@ -455,7 +755,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    A telephone number through which the Candidate can be contacted.
                                 </td>
 
 
@@ -513,306 +813,6 @@ The main entities are those that form the core of the Application Profile.
 
    
         <section>
-            <h3 id="Location">
-                <a href="http://purl.org/dc/terms/Location"
-                   data-toggle="tooltip"
-                   data-content="http://purl.org/dc/terms/Location"
-                   data-placement="right">Location</a>
-
-            </h3>
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    A geographic area or place characterized by its physical coordinates and corresponding time zone.
-                </dd>
-                
-                    <dt>
-                        Usage Note
-                    </dt>
-                    <dd>
-                        A geographic area or place characterized by its physical coordinates and corresponding time zone.
-                    </dd>
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Location.Geographicname">Geographic name</a>
-                            , <a href="#Location.Timezone">Time zone</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition
-                            </th>
-
-
-
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Location.Geographicname"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/locn#geographicName"
-                                class="class mandatory">
-                                <td>
-
-                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Geographic name%20in%20Location" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-
-                                    <i class="fa-regular fa-message"></i>
-                                    </a>
-
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/ns/locn#geographicName"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/locn#geographicName"
-                                           data-placement="right">
-                                        Geographic name</a>
-                                </td>
-                                <td>
-                                    
-
-                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
-
-                                    
-                                </td>
-                                <td>
-                                    1..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-
-
-
-                            </tr>
-                        
-                            <tr id="Location.Timezone"
-                                typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#timeZone"
-                                class="class mandatory">
-                                <td>
-
-                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Time zone%20in%20Location" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-
-                                    <i class="fa-regular fa-message"></i>
-                                    </a>
-
-                                </td>
-                                <td>
-                                        <a href="http://index.dev/ontology/poc#timeZone"
-                                           data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#timeZone"
-                                           data-placement="right">
-                                        Time zone</a>
-                                </td>
-                                <td>
-                                    
-
-                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
-
-                                    
-                                </td>
-                                <td>
-                                    1..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-
-
-
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
-            <h3 id="Benefits">
-                <a href="http://index.dev/ontology/poc#Benefits"
-                   data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Benefits"
-                   data-placement="right">Benefits</a>
-
-            </h3>
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    Represents additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
-                </dd>
-                
-                    <dt>
-                        Usage Note
-                    </dt>
-                    <dd>
-                        Represents additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
-                    </dd>
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Benefits.Description">Description</a>
-                            , <a href="#Benefits.Benefitname">Benefit name</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition
-                            </th>
-
-
-
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Benefits.Description"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/description"
-                                class="class mandatory">
-                                <td>
-
-                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Description%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-
-                                    <i class="fa-regular fa-message"></i>
-                                    </a>
-
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/description"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/description"
-                                           data-placement="right">
-                                        Description</a>
-                                </td>
-                                <td>
-                                    
-
-                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
-
-                                    
-                                </td>
-                                <td>
-                                    1..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-
-
-
-                            </tr>
-                        
-                            <tr id="Benefits.Benefitname"
-                                typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#BenefitName"
-                                class="class mandatory">
-                                <td>
-
-                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Benefit name%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-
-                                    <i class="fa-regular fa-message"></i>
-                                    </a>
-
-                                </td>
-                                <td>
-                                        <a href="http://index.dev/ontology/poc#BenefitName"
-                                           data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#BenefitName"
-                                           data-placement="right">
-                                        Benefit name</a>
-                                </td>
-                                <td>
-                                    
-
-                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
-
-                                    
-                                </td>
-                                <td>
-                                    1..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-
-
-
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
             <h3 id="Candidateprofile">
                 <a href="http://index.dev/ontology/poc#CandidateProfile"
                    data-toggle="tooltip"
@@ -825,14 +825,14 @@ The main entities are those that form the core of the Application Profile.
                     Definition
                 </dt>
                 <dd>
-                    Represents the detailed profile of a candidate, including credentials, skills experience, and location.
+                    Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
                 </dd>
                 
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
-                        Represents the detailed profile of a candidate, including credentials, skills experience, and location.
+                        Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
                     </dd>
                 
                 
@@ -1334,7 +1334,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
                                 </td>
 
 
@@ -1385,6 +1385,7 @@ The main entities are those that form the core of the Application Profile.
                             For this entity the following properties are defined: <a href="#Company.Description">Description</a>
                             , <a href="#Company.Companyname">Company name</a>
                             , <a href="#Company.Industry">Industry</a>
+                            , <a href="#Company.Haslocation">Has location</a>
                             , <a href="#Company.Posts">Posts</a>
                             .
                     </dd>
@@ -1448,7 +1449,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
                                 </td>
 
 
@@ -1522,6 +1523,44 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                                 <td>
                                     1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Company.Haslocation"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasLocation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Has location%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasLocation"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasLocation"
+                                           data-placement="right">
+                                        Has location</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
                                 </td>
                                 <td property="rdfs:comment">
                                     
@@ -1717,7 +1756,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -1989,7 +2028,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
                                 </td>
 
 
@@ -2027,7 +2066,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -2303,7 +2342,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
                                 </td>
 
 
@@ -2341,7 +2380,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -2940,8 +2979,15 @@ The main entities are those that form the core of the Application Profile.
                     Definition
                 </dt>
                 <dd>
-                    
+                    Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
                 </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
+                    </dd>
                 
                 
                     <dt>
@@ -3023,7 +3069,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
                                 </td>
 
 
@@ -3061,7 +3107,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -3296,7 +3342,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 
@@ -3577,7 +3623,7 @@ The main entities are those that form the core of the Application Profile.
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    It represents the title or name of a resource.
+                                    Represents the title or the name of a resource.
                                 </td>
 
 

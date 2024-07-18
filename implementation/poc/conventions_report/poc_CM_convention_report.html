@@ -19,7 +19,7 @@
    <body>
       <header class="counter-skip">
          <h1 class="title">UML Conventions Comformance Report</h1>
-         <h2>[ 16/07/2024 ]</h2>
+         <h2>[ 18/07/2024 ]</h2>
          <div class="authors col-span">
             <div class="author">
                <div>Publications Office of the European Union</div>
@@ -56,14 +56,14 @@
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
             <p>The UML model in file <em>poc_CM.xml</em> 
-               was tested at 13:02 on July 16, 2024.</p>
+               was tested at 09:33 on July 18, 2024.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#" class="display-in-two-columns">
-            <li><a href="#candidate">candidate</a></li>
             <li><a href="#dct:Location">dct:Location</a></li>
             <li><a href="#poc:Benefits">poc:Benefits</a></li>
+            <li><a href="#poc:Candidate">poc:Candidate</a></li>
             <li><a href="#poc:CandidateProfile">poc:CandidateProfile</a></li>
             <li><a href="#poc:Certification">poc:Certification</a></li>
             <li><a href="#poc:Company">poc:Company</a></li>
@@ -89,7 +89,7 @@
                      <li>poc:Qualification (rdf:PlainLiteral) [1..1]</li></em></ul>
             </li>
             <li><a href="#attribute-dct:title-usage">dct:title (7)</a><ul><em>
-                     <li>candidate (rdf:PlainLiteral) [1..1]</li>
+                     <li>poc:Candidate (rdf:PlainLiteral) [1..1]</li>
                      <li>poc:Credential (rdf:PlainLiteral) [1..1]</li>
                      <li>poc:Experience (rdf:Plainliteral) [1..1]</li>
                      <li>poc:JobDescription (rdf:PlainLiteral) [1..1]</li>
@@ -137,7 +137,10 @@
             <li>poc:hasCredential</li>
             <li>poc:hasEngagement</li>
             <li>poc:hasExperience</li>
-            <li>poc:hasLocation</li>
+            <li><a href="#connector-poc:hasLocation">poc:hasLocation (2)</a><ul><em>
+                     <li>poc:Company -&gt; dct:Location [1]</li>
+                     <li>poc:CandidateProfile -&gt; dct:Location [1]</li></em></ul>
+            </li>
             <li>poc:hasProfile</li>
             <li>poc:hasQualification</li>
             <li>poc:hasSkills</li>
@@ -163,47 +166,6 @@
             </li>
          </ul>
          <h1 class="selector-heading" id="classes">Classes</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="candidate">candidate</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name candidate does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element candidate is missing a prefix. The name should comprise a prefix
-                  respecing the syntax prefix:localSegment.</dd>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class name candidate is invalid. The class name must start with a capital case.</dd>
-            </dl>
-            <dl id="attribute-foaf:homepage">
-               <dt>foaf:homepage</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>foaf:homepage is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-foaf:mbox">
-               <dt>foaf:mbox</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>foaf:mbox is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-foaf:name">
-               <dt>foaf:name</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>foaf:name is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-poc:phoneNumber">
-               <dt>poc:phoneNumber</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:phoneNumber is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="dct:Location">dct:Location</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-locn:geographicName">
-               <dt>locn:geographicName</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>locn:geographicName is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-poc:timeZone">
-               <dt>poc:timeZone</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:timeZone is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:Benefits">poc:Benefits</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -211,15 +173,22 @@
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name (poc:Benefits) is possibly in plural grammatical number. Names shall be usually
                   provided in singular number.</dd>
             </dl>
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-poc:BenefitName">
                <dt>poc:BenefitName</dt>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:BenefitName is missing a description. All concepts should be defined or described.</dd>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute name poc:BenefitName is invalid. The attribute name must start with
                   a lower case.</dd>
+            </dl>
+         </section>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:Candidate">poc:Candidate</h2>
+         <section xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dl id="attribute-foaf:homepage">
+               <dt>foaf:homepage</dt>
+               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>foaf:homepage is missing a description. All concepts should be defined or described.</dd>
+            </dl>
+            <dl id="attribute-foaf:mbox">
+               <dt>foaf:mbox</dt>
+               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>foaf:mbox is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:CandidateProfile">poc:CandidateProfile</h2>
@@ -229,19 +198,8 @@
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:targetRate is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:Certification">poc:Certification</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:Company">poc:Company</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-poc:companyName">
                <dt>poc:companyName</dt>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:companyName is missing a description. All concepts should be defined or described.</dd>
@@ -275,10 +233,6 @@
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:Experience">poc:Experience</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:title">
                <dt>dct:title</dt>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type rdf:Plainliteral type is invalid. Attributes must use types that
@@ -296,10 +250,6 @@
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="poc:JobDescription">poc:JobDescription</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-poc:availability">
                <dt>poc:availability</dt>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:availability is missing a description. All concepts should be defined or described.</dd>
@@ -343,15 +293,10 @@
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>poc:Qualification is missing a description. All concepts should be defined or described.</dd>
                <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter errors"><i class="fa fa-times-circle error"></i>The name poc:Qualification is not unique. The Concept names should be unique within
                   the model. The following specifies the names of the which things are not to be reused
                   as the names of which other things: elements (Class, Datatype, Enumeration, Object)
                   -&gt; elements, attributes, connector roles (dependency and association)</dd>
-            </dl>
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-skos:prefLabel">
                <dt>skos:prefLabel</dt>
@@ -449,13 +394,11 @@
                should be built employing at least two subclasses for each class or not at all.</dd>
          </dl>
          <h1 class="selector-heading" id="associations">Associations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">candidate -&gt; poc:CandidateProfile (+poc:hasProfile)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:Candidate -&gt; poc:CandidateProfile (+poc:hasProfile)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet association conventions </dt>
-            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role of candidate -&gt; poc:CandidateProfile (+poc:hasProfile) has no multiplicity.
-               Cardinality must be provided for each role.</dd>
+            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role of poc:Candidate -&gt; poc:CandidateProfile (+poc:hasProfile) has no
+               multiplicity. Cardinality must be provided for each role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:CandidateProfile -&gt; poc:Role (+poc:targetOccupation)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
@@ -464,24 +407,6 @@
                multiplicity. Cardinality must be provided for each role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:CandidateProfile -&gt; poc:Qualification (+poc:hasQualification)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet association conventions </dt>
-            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:JobDescription -&gt; poc:Credential (+poc:requiresCredential)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet association conventions </dt>
-            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:JobDescription -&gt; poc:TypeOfEngagement (+poc:hasEngagement)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet association conventions </dt>
-            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">poc:Skill -&gt; poc:Role (+poc:optionalFor)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet association conventions </dt>
             <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
@@ -523,6 +448,18 @@
             <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorsUsage">Connectors with multiple usages</h1>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-poc:hasLocation">
+            <dt>poc:hasLocation</dt>
+         </dl>
+         <dd xmlns:f="http://https://github.com/costezki/model2owl#" xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
+            is expected to be the same. In this case, multiple definitions are found: 
+            <ul>
+               <li>Specifies the geographical location and timezone relevant to CandidateProfile.
+                  (poc:Company -&gt; dct:Location (+poc:hasLocation)) </li>
+               <li>Specifies the geographical location and timezone relevant to CandidateProfile. (poc:CandidateProfile
+                  -&gt; dct:Location (+poc:hasLocation)) </li>
+            </ul>
+         </dd>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-poc:isRelatedTo">
             <dt>poc:isRelatedTo</dt>
          </dl>
@@ -553,13 +490,64 @@
             </ul>
          </dd>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesUsage">Class attributes with multiple usages</h1>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-dct:description-usage">
+            <dt>dct:description</dt>
+            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:description is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource.
+                     (poc:Benefits) </li>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource.
+                     (poc:Certification) </li>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource.
+                     (poc:Company) </li>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource.
+                     (poc:Experience) </li>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource. (poc:JobDescription) </li>
+                  <li>An account of the resource. Additional Information: Description may include but is
+                     not limited to: an abstract, a table of contents, a graphical representation, or a
+                     free-text account of the resource.
+                     (poc:Qualification) </li>
+               </ul>
+            </dd>
+         </dl>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-dct:title-usage">
             <dt>dct:title</dt>
+            <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:title is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>Represents the title or the name of a resource.
+                     (poc:Candidate) </li>
+                  <li>Represents the title or the name of a resource.
+                     (poc:Credential) </li>
+                  <li>Represents the title or the name of a resource. (poc:Experience) </li>
+                  <li>Represents the title or the name of a resource.
+                     (poc:JobDescription) </li>
+                  <li>Represents the title or the name of a resource.
+                     (poc:Qualification) </li>
+                  <li>Represents the title or the name of a resource.
+                     (poc:Role) </li>
+                  <li>Represents the title or the name of a resource.
+                     (poc:Skill) </li>
+               </ul>
+            </dd>
             <dd xmlns:svrl="http://purl.oclc.org/dsdl/svrl" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:title is has different datatypes in reuse contexts.When a property
                is reused in multiple contexts, the data-type is expected to be the same.In this case,
                multiple data-types are found: 
                <ul>
-                  <li>rdf:PlainLiteral (candidate) </li>
+                  <li>rdf:PlainLiteral (poc:Candidate) </li>
                   <li>rdf:PlainLiteral (poc:Credential) </li>
                   <li>rdf:Plainliteral (poc:Experience) </li>
                   <li>rdf:PlainLiteral (poc:JobDescription) </li>

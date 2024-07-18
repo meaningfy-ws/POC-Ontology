@@ -41,22 +41,22 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>candidate</td>
-                     <td>An individual who uses the system to find job opportunities.</td>
-                  </tr>
-                  <tr>
                      <td>dct:Location</td>
                      <td>A geographic area or place characterized by its physical coordinates and corresponding
                         time zone.</td>
                   </tr>
                   <tr>
                      <td>poc:Benefits</td>
-                     <td>Represents additional advantages provided to employees beyond their salary, such as
-                        health insurance or retirement plans.</td>
+                     <td>Additional advantages provided to employees beyond their salary, such as health insurance
+                        or retirement plans.</td>
+                  </tr>
+                  <tr>
+                     <td>poc:Candidate</td>
+                     <td>An individual who uses the system to find job opportunities.</td>
                   </tr>
                   <tr>
                      <td>poc:CandidateProfile</td>
-                     <td>Represents the detailed profile of a candidate, including credentials, skills experience,
+                     <td>Represents the detailed profile of a Candidate, including credentials, skills experience,
                         and location.</td>
                   </tr>
                   <tr>
@@ -92,7 +92,11 @@
                   </tr>
                   <tr>
                      <td>poc:Qualification</td>
-                     <td></td>
+                     <td>Qualifications are the formal outcome of an assessment and validation process by a
+                        competent body determining that an individual has achieved learning outcomes to given
+                        standards.
+                        
+                        </td>
                   </tr>
                   <tr>
                      <td>poc:Role</td>
@@ -129,37 +133,60 @@
                   <tr>
                      <td>poc:Benefits<br>poc:Certification<br>poc:Company<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br></td>
                      <td>dct:description</td>
-                     <td>     </td>
+                     <td>An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource.
+                         An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource.
+                         An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource.
+                         An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource.
+                         An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource. An account of the resource. Additional Information: Description may include but is
+                        not limited to: an abstract, a table of contents, a graphical representation, or a
+                        free-text account of the resource.
+                        </td>
                      <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
                   </tr>
                   <tr>
-                     <td>candidate<br>poc:Credential<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
+                     <td>poc:Candidate<br>poc:Credential<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
                      <td>dct:title</td>
-                     <td>It represents the title or name of a resource. It represents the title or name of a resource. It represents the title or name of a resource. It represents the title or name of a resource. It represents the title or name of a resource. It represents the title or name of a resource. It represents the title or name of a resource.</td>
+                     <td>Represents the title or the name of a resource.
+                         Represents the title or the name of a resource.
+                         Represents the title or the name of a resource. Represents the title or the name of a resource.
+                         Represents the title or the name of a resource.
+                         Represents the title or the name of a resource.
+                         Represents the title or the name of a resource.
+                        </td>
                      <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:Plainliteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
                   </tr>
                   <tr>
-                     <td>candidate</td>
+                     <td>poc:Candidate</td>
                      <td>foaf:homepage</td>
                      <td></td>
                      <td>xsd:anyURI [1..1]</td>
                   </tr>
                   <tr>
-                     <td>candidate</td>
+                     <td>poc:Candidate</td>
                      <td>foaf:mbox</td>
                      <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>candidate</td>
+                     <td>poc:Candidate</td>
                      <td>foaf:name</td>
-                     <td></td>
+                     <td>The complete name of the Candidate as one string.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
                      <td>dct:Location</td>
                      <td>locn:geographicName</td>
-                     <td></td>
+                     <td>A textual description for a Location.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
@@ -212,9 +239,9 @@
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>candidate</td>
+                     <td>poc:Candidate</td>
                      <td>poc:phoneNumber</td>
-                     <td></td>
+                     <td>A telephone number through which the Candidate can be contacted.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
@@ -250,7 +277,8 @@
                   <tr>
                      <td>dct:Location</td>
                      <td>poc:timeZone</td>
-                     <td></td>
+                     <td>An area which observes a uniform standard time for legal, commercial and social purposes.
+                        </td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
@@ -300,8 +328,10 @@
                <tbody>
                   <tr>
                      <td>poc:essentialFor</td>
-                     <td> Indicates that a particular resource or characteristic is necessary or crucial for
-                        a specific entity or concept within the ontology to fulfill its intended purpose.</td>
+                     <td>Indicates that a particular resource or characteristic is necessary or crucial for
+                        a specific entity or concept within the ontology in order to fulfill its intended
+                        purpose.
+                        </td>
                      <td>poc:Skill -&gt; poc:Role [0..*]</td>
                   </tr>
                   <tr>
@@ -316,7 +346,7 @@
                   </tr>
                   <tr>
                      <td>poc:hasEngagement</td>
-                     <td></td>
+                     <td>Indicates what TypeOfEngagement a specific JobDescription entails.</td>
                      <td>poc:JobDescription -&gt; poc:TypeOfEngagement [1]</td>
                   </tr>
                   <tr>
@@ -326,13 +356,14 @@
                   </tr>
                   <tr>
                      <td>poc:hasLocation</td>
-                     <td>Specifies the geographical location and timezone relevant to CandidateProfile.</td>
-                     <td>poc:CandidateProfile -&gt; dct:Location [1]</td>
+                     <td>Specifies the geographical location and timezone relevant to CandidateProfile.
+                         Specifies the geographical location and timezone relevant to CandidateProfile.</td>
+                     <td>poc:Company -&gt; dct:Location [1]<br>poc:CandidateProfile -&gt; dct:Location [1]<br></td>
                   </tr>
                   <tr>
                      <td>poc:hasProfile</td>
-                     <td></td>
-                     <td>candidate -&gt; poc:CandidateProfile []</td>
+                     <td>Indicates the CandidateProfile of a specific Candidate.</td>
+                     <td>poc:Candidate -&gt; poc:CandidateProfile []</td>
                   </tr>
                   <tr>
                      <td>poc:hasQualification</td>
@@ -362,7 +393,9 @@
                   </tr>
                   <tr>
                      <td>poc:optionalFor</td>
-                     <td></td>
+                     <td>Indicates that a particular resource or characteristic is optional or non-compulsory
+                        for  a specific entity or concept within the ontology.
+                        </td>
                      <td>poc:Skill -&gt; poc:Role [0..*]</td>
                   </tr>
                   <tr>
@@ -377,7 +410,8 @@
                   </tr>
                   <tr>
                      <td>poc:requiresCredential</td>
-                     <td></td>
+                     <td>Indicates that a JobDescription may require one or more Academic qualifications and/or
+                        professional certifications.</td>
                      <td>poc:JobDescription -&gt; poc:Credential [0..*]</td>
                   </tr>
                   <tr>
@@ -402,7 +436,7 @@
                   </tr>
                   <tr>
                      <td>poc:targetOccupation</td>
-                     <td>Indicates the job roles or occupations that a CandidateProfileis interested in or
+                     <td>Indicates the job roles or occupations that a CandidateProfile is interested in or
                         qualified for.</td>
                      <td>poc:CandidateProfile -&gt; poc:Role []</td>
                   </tr>
