@@ -469,9 +469,6 @@
 					<type xmi:idref="EAID_0AD13A79_5200_458a_BE34_7731130D54F1"/>
 				</ownedEnd>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_58B73802_145B_4488_9B82_B7C50EAE626B" name="poc:ShortTime">
-				<generalization xmi:type="uml:Generalization" xmi:id="EAID_F1FFFFA1_6862_49d4_9207_C0640240FCA8" general="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC"/>
-			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_0AD13A79_5200_458a_BE34_7731130D54F1" name="poc:Skill">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_D37FBB55_8CEC_44b1_B630_3AC0E38AB243" name="dct:title">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000107_8CEC_44b1_B630_3AC0E38AB243" value="1"/>
@@ -1733,19 +1730,6 @@
 					<Association xmi:id="EAID_9D7F3BEF_E6BA_46ca_9EC5_575B43C009FB" start="EAID_080A510A_3260_4589_ABA7_3032F61F2E11" end="EAID_07AAC528_40B6_45dd_9A05_EBBE2AD5A373"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_58B73802_145B_4488_9B82_B7C50EAE626B" xmi:type="uml:Class" name="poc:ShortTime" scope="public">
-				<model package="EAPK_9B7DCA51_9AB0_414a_84D2_4032C0DCEACE" tpos="0" ea_localid="27" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="janaa" version="1.0" phase="1.0" created="2024-06-10 16:51:39" modified="2024-06-10 16:51:51" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="POC "/>
-				<links>
-					<Generalization xmi:id="EAID_F1FFFFA1_6862_49d4_9207_C0640240FCA8" start="EAID_58B73802_145B_4488_9B82_B7C50EAE626B" end="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC"/>
-				</links>
-			</element>
 			<element xmi:idref="EAID_0AD13A79_5200_458a_BE34_7731130D54F1" xmi:type="uml:Class" name="poc:Skill" scope="public">
 				<model package="EAPK_9B7DCA51_9AB0_414a_84D2_4032C0DCEACE" tpos="0" ea_localid="33" ea_eleType="element"/>
 				<properties documentation="A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
@@ -1872,7 +1856,6 @@
 					<Association xmi:id="EAID_E245C450_82AF_486b_BB7B_1159119F3166" start="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC" end="EAID_E7D34C23_7B4E_4fc7_8DAE_AA1943F46059"/>
 					<Association xmi:id="EAID_227BD4AD_D717_4005_8675_68F4F8784E13" start="EAID_001BCA22_14EF_45f6_941F_C1E61971B7C4" end="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC"/>
 					<Generalization xmi:id="EAID_EC0A32DF_D5CF_4e19_9C55_E64446A08A6D" start="EAID_A9CEEC37_A89D_41a9_9D0F_6EE1E2E07912" end="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC"/>
-					<Generalization xmi:id="EAID_F1FFFFA1_6862_49d4_9207_C0640240FCA8" start="EAID_58B73802_145B_4488_9B82_B7C50EAE626B" end="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC"/>
 				</links>
 			</element>
 			<element xmi:idref="EAID_30A797BD_26F4_4c16_B9EC_EB9D84270E93" xmi:type="uml:Enumeration" name="esco:Occupation" scope="public">
@@ -2956,40 +2939,6 @@
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+poc:essentialFor"/>
 				<extendedProperties/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_F1FFFFA1_6862_49d4_9207_C0640240FCA8">
-				<source xmi:idref="EAID_58B73802_145B_4488_9B82_B7C50EAE626B">
-					<model ea_localid="27" type="Class" name="poc:ShortTime"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_CE59DF61_8BDD_4977_8852_E92CF878D0EC">
-					<model ea_localid="25" type="Class" name="poc:TypeOfEngagement"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="21"/>
-				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
