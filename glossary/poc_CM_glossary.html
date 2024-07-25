@@ -46,52 +46,48 @@
                         time zone.</td>
                   </tr>
                   <tr>
-                     <td>poc:Benefits</td>
+                     <td>rmo:Benefits</td>
                      <td>Additional advantages provided to employees beyond their salary, such as health insurance
                         or retirement plans.</td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate</td>
+                     <td>rmo:Candidate</td>
                      <td>An individual who uses the system to find job opportunities.</td>
                   </tr>
                   <tr>
-                     <td>poc:CandidateProfile</td>
+                     <td>rmo:CandidateProfile</td>
                      <td>Represents the detailed profile of a Candidate, including credentials, skills experience,
                         and location.</td>
                   </tr>
                   <tr>
-                     <td>poc:Certification</td>
+                     <td>rmo:Certification</td>
                      <td> The official recognition of a candidate's expertise or proficiency in a specific
                         domain, typically obtained through examination or evaluation by a professional body.</td>
                   </tr>
                   <tr>
-                     <td>poc:Company</td>
+                     <td>rmo:Company</td>
                      <td>An organization or business entity that employs individuals.</td>
                   </tr>
                   <tr>
-                     <td>poc:Contract</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td>poc:Credential</td>
+                     <td>rmo:Credential</td>
                      <td>An academic or professional qualification obtained by a candidate, such as degrees
                         or certifications.</td>
                   </tr>
                   <tr>
-                     <td>poc:Education</td>
+                     <td>rmo:Education</td>
                      <td>The academic qualifications of a Candidate.</td>
                   </tr>
                   <tr>
-                     <td>poc:Experience</td>
+                     <td>rmo:Experience</td>
                      <td>Represents the practical knowledge and proficiency gained by a candidate through previous
                         work engagements, projects, or hands-on activities.</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
+                     <td>rmo:JobDescription</td>
                      <td>A job opening posted by a company, including job details and requirements.</td>
                   </tr>
                   <tr>
-                     <td>poc:Qualification</td>
+                     <td>rmo:Qualification</td>
                      <td>Qualifications are the formal outcome of an assessment and validation process by a
                         competent body determining that an individual has achieved learning outcomes to given
                         standards.
@@ -99,17 +95,17 @@
                         </td>
                   </tr>
                   <tr>
-                     <td>poc:Role</td>
+                     <td>rmo:Role</td>
                      <td>Represents the specific job occupations, positions, or professions for which candidates
                         may be qualified or seeking employment opportunities.</td>
                   </tr>
                   <tr>
-                     <td>poc:Skill</td>
+                     <td>rmo:Skill</td>
                      <td>A specific capability or proficiency possessed by a candidate, often acquired through
                         training, practice, or experience.</td>
                   </tr>
                   <tr>
-                     <td>poc:TypeOfEngagement</td>
+                     <td>rmo:TypeOfEngagement</td>
                      <td> Represents various arrangements under which individuals are employed, such as part-time,
                         full-time, or contractual roles.</td>
                   </tr>
@@ -127,7 +123,7 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>poc:Benefits<br>poc:Certification<br>poc:Company<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br></td>
+                     <td>rmo:Benefits<br>rmo:Certification<br>rmo:Company<br>rmo:Experience<br>rmo:JobDescription<br>rmo:Qualification<br></td>
                      <td>dct:description</td>
                      <td>An account of the resource. Additional Information: Description may include but is
                         not limited to: an abstract, a table of contents, a graphical representation, or a
@@ -150,7 +146,7 @@
                      <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate<br>poc:Credential<br>poc:Experience<br>poc:JobDescription<br>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
+                     <td>rmo:Candidate<br>rmo:Credential<br>rmo:Experience<br>rmo:JobDescription<br>rmo:Qualification<br>rmo:Role<br>rmo:Skill<br></td>
                      <td>dct:title</td>
                      <td>Represents the title or the name of a resource.
                          Represents the title or the name of a resource.
@@ -162,19 +158,19 @@
                      <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:Plainliteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate</td>
+                     <td>rmo:Candidate</td>
                      <td>foaf:homepage</td>
                      <td></td>
                      <td>xsd:anyURI [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate</td>
+                     <td>rmo:Candidate</td>
                      <td>foaf:mbox</td>
                      <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate</td>
+                     <td>rmo:Candidate</td>
                      <td>foaf:name</td>
                      <td>The complete name of the Candidate as one string.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
@@ -186,111 +182,124 @@
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
-                     <td>poc:availability</td>
+                     <td>rmo:JobDescription</td>
+                     <td>rmo:availability</td>
+                     <td>Indicates when the job position is open for applications, including specific dates
+                        or time frames such as "immediate" or "within three months."</td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>rmo:Benefits</td>
+                     <td>rmo:BenefitName</td>
                      <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Benefits</td>
-                     <td>poc:BenefitName</td>
-                     <td></td>
+                     <td>rmo:Company</td>
+                     <td>rmo:companyName</td>
+                     <td>The name of the organization or business entity that has posted a job description.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Company</td>
-                     <td>poc:companyName</td>
-                     <td></td>
-                     <td>rdf:PlainLiteral [1..1]</td>
-                  </tr>
-                  <tr>
-                     <td>poc:Credential</td>
-                     <td>poc:dateAwarded</td>
-                     <td></td>
+                     <td>rmo:Credential</td>
+                     <td>rmo:dateAwarded</td>
+                     <td>The date when a candidate was granted a particular credential, such as a degree or
+                        certification.</td>
                      <td>xsd:date [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Education</td>
-                     <td>poc:educationDegree</td>
+                     <td>rmo:Education</td>
+                     <td>rmo:educationDegree</td>
                      <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:TypeOfEngagement</td>
-                     <td>poc:engagementType</td>
+                     <td>rmo:TypeOfEngagement</td>
+                     <td>rmo:engagementType</td>
                      <td>It includes part-time, full-time, or contractual roles.
                         </td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Company</td>
-                     <td>poc:industry</td>
+                     <td>rmo:Company</td>
+                     <td>rmo:industry</td>
                      <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
-                     <td>poc:jobId</td>
-                     <td></td>
+                     <td>rmo:JobDescription</td>
+                     <td>rmo:jobId</td>
+                     <td>A unique identifier for a job description, used to distinguish it from other job description.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Candidate</td>
-                     <td>poc:phoneNumber</td>
+                     <td>rmo:Candidate</td>
+                     <td>rmo:phoneNumber</td>
                      <td>A telephone number through which the Candidate can be contacted.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:CandidateProfile</td>
-                     <td>poc:profileId</td>
+                     <td>rmo:CandidateProfile</td>
+                     <td>rmo:profileId</td>
                      <td>A unique identifier for the candidate profile.</td>
                      <td>xsd:integer [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
-                     <td>poc:projectType</td>
-                     <td></td>
+                     <td>rmo:JobDescription</td>
+                     <td>rmo:projectType</td>
+                     <td>Represents the nature or category of a project, such as software development, research,
+                        or marketing.
+                        
+                        
+                        
+                        
+                        
+                        
+                        </td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
-                     <td>poc:rate</td>
-                     <td></td>
+                     <td>rmo:JobDescription</td>
+                     <td>rmo:rate</td>
+                     <td>Specifies the compensation for the job, typically expressed as an hourly rate, salary,
+                        or contract amount.</td>
                      <td>xsd:decimal [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:JobDescription</td>
-                     <td>poc:startDate</td>
-                     <td></td>
+                     <td>rmo:JobDescription</td>
+                     <td>rmo:startDate</td>
+                     <td>Represents the date when a job description, project, or engagement is scheduled to
+                        begin.</td>
                      <td>xsd:Date [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:CandidateProfile</td>
-                     <td>poc:targetRate</td>
-                     <td></td>
+                     <td>rmo:CandidateProfile</td>
+                     <td>rmo:targetRate</td>
+                     <td>Specifies the desired hourly or annual rate of pay for the candidate, indicating their
+                        expected compensation for a job.</td>
                      <td>xsd:double [1..1]</td>
                   </tr>
                   <tr>
                      <td>dct:Location</td>
-                     <td>poc:timeZone</td>
+                     <td>rmo:timeZone</td>
                      <td>An area which observes a uniform standard time for legal, commercial and social purposes.
                         </td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Experience</td>
-                     <td>poc:yearsOfExperience</td>
-                     <td></td>
+                     <td>rmo:Experience</td>
+                     <td>rmo:yearsOfExperience</td>
+                     <td> Indicates the total number of years a candidate has worked in their field or occupation.</td>
                      <td>xsd:Integer [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Skill</td>
-                     <td>poc:yearsOfSkill</td>
-                     <td></td>
+                     <td>rmo:Skill</td>
+                     <td>rmo:yearsOfSkill</td>
+                     <td>Indicates the number of years a candidate has utilized a specific skill.</td>
                      <td>xsd:integer [1..1]</td>
                   </tr>
                   <tr>
-                     <td>poc:Qualification<br>poc:Role<br>poc:Skill<br>poc:TypeOfEngagement<br></td>
+                     <td>rmo:Qualification<br>rmo:Role<br>rmo:Skill<br>rmo:TypeOfEngagement<br></td>
                      <td>skos:altLabel</td>
                      <td>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants,
                         and irregular plural/singular forms may be included among the alternative labels for
@@ -304,7 +313,7 @@
                      <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
                   </tr>
                   <tr>
-                     <td>poc:Qualification<br>poc:Role<br>poc:Skill<br></td>
+                     <td>rmo:Qualification<br>rmo:Role<br>rmo:Skill<br></td>
                      <td>skos:prefLabel</td>
                      <td>The preferred lexical label for a resource, in a given language.   The preferred lexical label for a resource, in a given language. 
                         </td>
@@ -323,118 +332,118 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>poc:essentialFor</td>
+                     <td>rmo:essentialFor</td>
                      <td>Indicates that a particular resource or characteristic is necessary or crucial for
                         a specific entity or concept within the ontology in order to fulfill its intended
                         purpose.
                         </td>
-                     <td>poc:Skill -&gt; poc:Role [0..*]</td>
+                     <td>rmo:Skill -&gt; rmo:Role [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasBenefits</td>
+                     <td>rmo:hasBenefits</td>
                      <td>Indicates the benefits associated with a specific type of job engagement.</td>
-                     <td>poc:TypeOfEngagement -&gt; poc:Benefits [0..*]</td>
+                     <td>rmo:TypeOfEngagement -&gt; rmo:Benefits [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasCredential</td>
+                     <td>rmo:hasCredential</td>
                      <td>Academic qualifications and professional certifications obtained by a candidate.</td>
-                     <td>poc:CandidateProfile -&gt; poc:Credential [0..*]</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:Credential [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasEngagement</td>
-                     <td>Indicates what TypeOfEngagement a specific JobDescription entails.</td>
-                     <td>poc:JobDescription -&gt; poc:TypeOfEngagement [1]</td>
+                     <td>rmo:hasEngagement</td>
+                     <td>Indicates what type of engagement a specific job description entails.</td>
+                     <td>rmo:JobDescription -&gt; rmo:TypeOfEngagement [1]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasExperience</td>
-                     <td>Represents the work experience details of a CandidateProfile.</td>
-                     <td>poc:CandidateProfile -&gt; poc:Experience [0..*]</td>
+                     <td>rmo:hasExperience</td>
+                     <td>Represents the work experience details of a candidate profile.</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:Experience [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasLocation</td>
-                     <td>Specifies the geographical location and timezone relevant to CandidateProfile.
+                     <td>rmo:hasLocation</td>
+                     <td>Specifies the geographical location and time zone relevant to candidate profile.
                          Specifies the geographical location and timezone relevant to CandidateProfile.</td>
-                     <td>poc:Company -&gt; dct:Location [1]<br>poc:CandidateProfile -&gt; dct:Location [1]<br></td>
+                     <td>rmo:Company -&gt; dct:Location [1]<br>rmo:CandidateProfile -&gt; dct:Location [1]<br></td>
                   </tr>
                   <tr>
-                     <td>poc:hasProfile</td>
-                     <td>Indicates the CandidateProfile of a specific Candidate.</td>
-                     <td>poc:Candidate -&gt; poc:CandidateProfile []</td>
+                     <td>rmo:hasProfile</td>
+                     <td>Indicates the candidate profile of a specific Candidate.</td>
+                     <td>rmo:Candidate -&gt; rmo:CandidateProfile []</td>
                   </tr>
                   <tr>
-                     <td>poc:hasQualification</td>
+                     <td>rmo:hasQualification</td>
                      <td></td>
-                     <td>poc:CandidateProfile -&gt; poc:Qualification [0..*]</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:Qualification [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasSkills</td>
-                     <td>Indicates that a CandidateProfile possesses a specific skill.</td>
-                     <td>poc:CandidateProfile -&gt; poc:Skill [1..*]</td>
+                     <td>rmo:hasSkills</td>
+                     <td>Indicates that a candidate profile possesses a specific skill.</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:Skill [1..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:hasSkillUsed</td>
+                     <td>rmo:hasSkillUsed</td>
                      <td>Indicates that a specific skill was utilized in a particular experience.</td>
-                     <td>poc:Experience -&gt; poc:Skill [0..*]</td>
+                     <td>rmo:Experience -&gt; rmo:Skill [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:isRelatedTo</td>
+                     <td>rmo:isRelatedTo</td>
                      <td>Indicates that a specific resource is associated with a particular other resource. Indicates that a specific resource is associated with a particular other resource.
                         </td>
-                     <td>poc:Experience -&gt; poc:Role [0..*]<br>poc:Experience -&gt; poc:Qualification [0..*]<br></td>
+                     <td>rmo:Experience -&gt; rmo:Role [0..*]<br>rmo:Experience -&gt; rmo:Qualification [0..*]<br></td>
                   </tr>
                   <tr>
-                     <td>poc:offersPosition</td>
-                     <td>Indicates the job position offered by a JobDescription.</td>
-                     <td>poc:JobDescription -&gt; poc:Role [1]</td>
+                     <td>rmo:offersPosition</td>
+                     <td>Indicates the job position offered by a job description.</td>
+                     <td>rmo:JobDescription -&gt; rmo:Role [1]</td>
                   </tr>
                   <tr>
-                     <td>poc:optionalFor</td>
+                     <td>rmo:optionalFor</td>
                      <td>Indicates that a particular resource or characteristic is optional or non-compulsory
                         for  a specific entity or concept within the ontology.
                         </td>
-                     <td>poc:Skill -&gt; poc:Role [0..*]</td>
+                     <td>rmo:Skill -&gt; rmo:Role [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:posts</td>
-                     <td>Indicates that a Company publishes a JobDescription.</td>
-                     <td>poc:Company -&gt; poc:JobDescription [0..*]</td>
+                     <td>rmo:posts</td>
+                     <td>Indicates that a Company publishes a job description.</td>
+                     <td>rmo:Company -&gt; rmo:JobDescription [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:receivesJobDesciption</td>
-                     <td>Indicates that a CandidateProfile receives a JobDescription from the system.</td>
-                     <td>poc:CandidateProfile -&gt; poc:JobDescription [0..*]</td>
+                     <td>rmo:receivesJobDesciption</td>
+                     <td>Indicates that a candidate profile receives a job description from the system.</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:JobDescription [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:requiresCredential</td>
-                     <td>Indicates that a JobDescription may require one or more Academic qualifications and/or
+                     <td>rmo:requiresCredential</td>
+                     <td>Indicates that a job description may require one or more Academic qualifications and/or
                         professional certifications.</td>
-                     <td>poc:JobDescription -&gt; poc:Credential [0..*]</td>
+                     <td>rmo:JobDescription -&gt; rmo:Credential [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:requiresExperience</td>
-                     <td>Specifies the type and level of experience required for a JobDescription.</td>
-                     <td>poc:JobDescription -&gt; poc:Experience [0..*]</td>
+                     <td>rmo:requiresExperience</td>
+                     <td>Specifies the type and level of experience required for a job description.</td>
+                     <td>rmo:JobDescription -&gt; rmo:Experience [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:requiresQualification</td>
-                     <td>Specifies the qualifications required for a JobDescription.</td>
-                     <td>poc:JobDescription -&gt; poc:Qualification [0..*]</td>
+                     <td>rmo:requiresQualification</td>
+                     <td>Specifies the qualifications required for a job description.</td>
+                     <td>rmo:JobDescription -&gt; rmo:Qualification [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:requiresSkill</td>
-                     <td>Specifies the skills that are necessary for a JobDescription.</td>
-                     <td>poc:JobDescription -&gt; poc:Skill [1..*]</td>
+                     <td>rmo:requiresSkill</td>
+                     <td>Specifies the skills that are necessary for a job description.</td>
+                     <td>rmo:JobDescription -&gt; rmo:Skill [1..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:specifiesLocation</td>
-                     <td>Specifies the geographical location and timezone relevant to JobDescription.</td>
-                     <td>poc:JobDescription -&gt; dct:Location [0..*]</td>
+                     <td>rmo:specifiesLocation</td>
+                     <td>Specifies the geographical location and time zone relevant to job description.</td>
+                     <td>rmo:JobDescription -&gt; dct:Location [0..*]</td>
                   </tr>
                   <tr>
-                     <td>poc:targetOccupation</td>
-                     <td>Indicates the job roles or occupations that a CandidateProfile is interested in or
+                     <td>rmo:targetOccupation</td>
+                     <td>Indicates the job roles or occupations that a candidate profile is interested in or
                         qualified for.</td>
-                     <td>poc:CandidateProfile -&gt; poc:Role []</td>
+                     <td>rmo:CandidateProfile -&gt; rmo:Role []</td>
                   </tr>
                   <tr>
                      <td>skos:inScheme</td>
@@ -442,7 +451,7 @@
                         than one concept scheme. A Concept Scheme in which the Concept is included. A Concept may be a member of more
                         than one concept scheme. A Concept Scheme in which the Concept is included. A Concept may be a member of more
                         than one concept scheme.</td>
-                     <td>poc:Qualification -&gt; esco:Qualification []<br>poc:Role -&gt; esco:Occupation []<br>poc:Skill -&gt; esco:Skill []<br></td>
+                     <td>rmo:Qualification -&gt; esco:Qualification []<br>rmo:Role -&gt; esco:Occupation []<br>rmo:Skill -&gt; esco:Skill []<br></td>
                   </tr>
                </tbody>
             </table>
