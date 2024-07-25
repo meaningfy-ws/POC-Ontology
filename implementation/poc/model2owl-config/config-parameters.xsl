@@ -100,9 +100,9 @@
 <xsl:variable name="ontologyLabelRestrictions" select="'Core Public Organisation Vocabulary - core restrictions'"/>
 <xsl:variable name="ontologyLabelShapes" select="'Core Public Organisation Vocabulary - core shapes'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'POC Ontology  - core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'POC Ontology_AP Ontology - core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'POC _AP Ontology - core shapes'"/>
+    <xsl:variable name="ontologyTitleCore" select="'RMO Ontology  - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'RMO Ontology_AP Ontology - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'RMO _AP Ontology - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
         select="'The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
@@ -143,7 +143,7 @@
     <!-- _______________________________________________________________________   -->
 
     <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/POC-Ontology'"/>
-    <xsl:variable name="respecDescription" select="'The HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis. '"/>
+    <xsl:variable name="respecDescription" select="'The RMO ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis. '"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
     <xsl:variable name="authors" select="('Jana Ahmad', 'Achilles Dougali')"/>
     <xsl:variable name="editors" select="('Eugen Costezki', 'Andi Stan','Eugene Garla','Mihai Golovatenco')"/>
