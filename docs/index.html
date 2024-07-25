@@ -6,20 +6,20 @@
     
 	
     <meta charset="utf-8" />
-    <title>POC Ontology  - core</title>
+    <title>RMO Ontology  - core</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
 
 
-		
+
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
 	};
 
     	var editors = [
-	    
-		
+
+
 		   {
 		    name: "Eugen Costezki",
 		    companyURL: "",
@@ -27,8 +27,8 @@
 		    mailto: ""
 
 		    }
-		, 
-		
+		,
+
 		   {
 		    name: "Andi Stan",
 		    companyURL: "",
@@ -36,8 +36,8 @@
 		    mailto: ""
 
 		    }
-		, 
-		
+		,
+
 		   {
 		    name: "Eugene Garla",
 		    companyURL: "",
@@ -45,8 +45,8 @@
 		    mailto: ""
 
 		    }
-		, 
-		
+		,
+
 		   {
 		    name: "Mihai Golovatenco",
 		    companyURL: "",
@@ -54,14 +54,14 @@
 		    mailto: ""
 
 		    }
-		
-		
-             
+
+
+
 		]
 
         	var authors = [
-	    
-		
+
+
 		   {
 		    name: "Jana Ahmad",
 		    companyURL: "",
@@ -69,8 +69,8 @@
 		    mailto: ""
 
 		    }
-		, 
-		
+		,
+
 		   {
 		    name: "Achilles Dougalis",
 		    companyURL: "",
@@ -78,27 +78,31 @@
 		    mailto: ""
 
 		    }
-		
-		
-             
+
+
+
 		]
 
-   
+
     var respecConfig = {
       postProcess: [quickreference],
-      publishDate: "2024-07-19",
-      shortName: "POC Ontology  - core",
+      publishDate: "2024-07-25",
+      shortName: "RMO Ontology  - core",
         editors: editors,
       authors: authors,
         github: "https://github.com/meaningfy-ws/POC-Ontology",
       xref: "web-platform",
       generatedSubtitle: "",
-      additionalrightHolders: ""
+      additionalCopyrightHolders: ""
     };
 
-    
 
-     
+
+
+
+
+
+
 
 
 
@@ -152,11 +156,11 @@
       height: auto;
       }
     </style>
-    
-    <p class="right">
-        Copyright © 2024
+
+    <p class="copyright">
+        Copyright © 2023
     </p>
-    
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -169,7 +173,7 @@
 
 <section id="abstract">
     <h2>Summary</h2>
-        The HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis.
+        The RMO ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis.
 </section>
 
 
@@ -189,23 +193,24 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
-            
-                <tr><td><code>poc</code></td><td><code>http://index.dev/ontology/poc#</code></td></tr>
-            
+
+                <tr><td><code>rmo</code></td><td><code>http://index.dev/ontology/rmo#</code></td></tr>
+
                 <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
-            
+
                 <tr><td><code>esco</code></td><td><code>http://data.europa.eu/esco/model#</code></td></tr>
-            
+
                 <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            
+
                 <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
-            
+
                 <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
-            
+
             </tbody>
         </table>
 
 </section>
+
 <section>
         <h3>Conceptual Model</h3>
         <img src="Images/EAID_F409FC12_A009_48ad_92B5_A889DB11BCB8.jpg" alt="Conceptual Model Image">
@@ -213,7 +218,10 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
 <section>
 
 
-    
+<section>
+
+
+
 
 <h2>
    Main Entities
@@ -222,7 +230,7 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Location">
                 <a href="http://purl.org/dc/terms/Location"
@@ -238,28 +246,28 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     A geographic area or place characterized by its physical coordinates and corresponding time zone.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         A geographic area or place characterized by its physical coordinates and corresponding time zone.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Location.Geographicname">Geographic name</a>
                             , <a href="#Location.Timezone">Time zone</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -284,7 +292,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Location.Geographicname"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/ns/locn#geographicName"
@@ -306,11 +314,11 @@ The main entities are those that form the core of the Application Profile.
                                         Geographic name</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -322,10 +330,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Location.Timezone"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#timeZone"
+                                resource="http://index.dev/ontology/rmo#timeZone"
                                 class="class mandatory">
                                 <td>
 
@@ -337,18 +345,18 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#timeZone"
+                                        <a href="http://index.dev/ontology/rmo#timeZone"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#timeZone"
+                                           data-content="http://index.dev/ontology/rmo#timeZone"
                                            data-placement="right">
                                         Time zone</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -360,11 +368,11 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -372,12 +380,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Benefits">
-                <a href="http://index.dev/ontology/poc#Benefits"
+                <a href="http://index.dev/ontology/rmo#Benefits"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Benefits"
+                   data-content="http://index.dev/ontology/rmo#Benefits"
                    data-placement="right">Benefits</a>
 
             </h3>
@@ -388,28 +396,28 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Benefits.Description">Description</a>
                             , <a href="#Benefits.Benefitname">Benefit name</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -434,7 +442,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Benefits.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -456,11 +464,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -472,10 +480,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Benefits.Benefitname"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#BenefitName"
+                                resource="http://index.dev/ontology/rmo#BenefitName"
                                 class="class mandatory">
                                 <td>
 
@@ -487,34 +495,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#BenefitName"
+                                        <a href="http://index.dev/ontology/rmo#BenefitName"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#BenefitName"
+                                           data-content="http://index.dev/ontology/rmo#BenefitName"
                                            data-placement="right">
                                         Benefit name</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -522,12 +530,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Candidate">
-                <a href="http://index.dev/ontology/poc#Candidate"
+                <a href="http://index.dev/ontology/rmo#Candidate"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Candidate"
+                   data-content="http://index.dev/ontology/rmo#Candidate"
                    data-placement="right">Candidate</a>
 
             </h3>
@@ -538,19 +546,19 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     An individual who uses the system to find job opportunities.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         An individual who uses the system to find job opportunities.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Candidate.Title">Title</a>
                             , <a href="#Candidate.Homepage">Homepage</a>
@@ -560,10 +568,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Candidate.Hasprofile">Has profile</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -588,7 +596,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Candidate.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -610,11 +618,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -626,7 +634,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Candidate.Homepage"
                                 typeof="rdfs:Property"
                                 resource="http://xmlns.com/foaf/0.1/homepage"
@@ -648,23 +656,23 @@ The main entities are those that form the core of the Application Profile.
                                         Homepage</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#anyURI" data-placement="right">xsd:anyURI</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidate.Mbox"
                                 typeof="rdfs:Property"
                                 resource="http://xmlns.com/foaf/0.1/mbox"
@@ -686,23 +694,23 @@ The main entities are those that form the core of the Application Profile.
                                         Mbox</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidate.Name"
                                 typeof="rdfs:Property"
                                 resource="http://xmlns.com/foaf/0.1/name"
@@ -724,11 +732,11 @@ The main entities are those that form the core of the Application Profile.
                                         Name</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -740,10 +748,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Candidate.Phonenumber"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#phoneNumber"
+                                resource="http://index.dev/ontology/rmo#phoneNumber"
                                 class="class mandatory">
                                 <td>
 
@@ -755,18 +763,18 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#phoneNumber"
+                                        <a href="http://index.dev/ontology/rmo#phoneNumber"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#phoneNumber"
+                                           data-content="http://index.dev/ontology/rmo#phoneNumber"
                                            data-placement="right">
                                         Phone number</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -778,10 +786,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Candidate.Hasprofile"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasProfile"
+                                resource="http://index.dev/ontology/rmo#hasProfile"
                                 class="class mandatory">
                                 <td>
 
@@ -793,34 +801,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasProfile"
+                                        <a href="http://index.dev/ontology/rmo#hasProfile"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasProfile"
+                                           data-content="http://index.dev/ontology/rmo#hasProfile"
                                            data-placement="right">
                                         Has profile</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#CandidateProfile" data-placement="right">poc:CandidateProfile</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#CandidateProfile" data-placement="right">rmo:CandidateProfile</a>
+
+
                                 </td>
                                 <td>
-                                    
+
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -828,12 +836,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Candidateprofile">
-                <a href="http://index.dev/ontology/poc#CandidateProfile"
+                <a href="http://index.dev/ontology/rmo#CandidateProfile"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#CandidateProfile"
+                   data-content="http://index.dev/ontology/rmo#CandidateProfile"
                    data-placement="right">Candidate profile</a>
 
             </h3>
@@ -844,19 +852,19 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Candidateprofile.Profileid">Profile id</a>
                             , <a href="#Candidateprofile.Targetrate">Target rate</a>
@@ -869,10 +877,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Candidateprofile.Hasskills">Has skills</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -897,10 +905,10 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Candidateprofile.Profileid"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#profileId"
+                                resource="http://index.dev/ontology/rmo#profileId"
                                 class="class mandatory">
                                 <td>
 
@@ -912,18 +920,18 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#profileId"
+                                        <a href="http://index.dev/ontology/rmo#profileId"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#profileId"
+                                           data-content="http://index.dev/ontology/rmo#profileId"
                                            data-placement="right">
                                         Profile id</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">xsd:integer</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -935,10 +943,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Targetrate"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#targetRate"
+                                resource="http://index.dev/ontology/rmo#targetRate"
                                 class="class mandatory">
                                 <td>
 
@@ -950,33 +958,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#targetRate"
+                                        <a href="http://index.dev/ontology/rmo#targetRate"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#targetRate"
+                                           data-content="http://index.dev/ontology/rmo#targetRate"
                                            data-placement="right">
                                         Target rate</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#double" data-placement="right">xsd:double</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Haslocation"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasLocation"
+                                resource="http://index.dev/ontology/rmo#hasLocation"
                                 class="class mandatory">
                                 <td>
 
@@ -988,33 +996,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasLocation"
+                                        <a href="http://index.dev/ontology/rmo#hasLocation"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasLocation"
+                                           data-content="http://index.dev/ontology/rmo#hasLocation"
                                            data-placement="right">
                                         Has location</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Hasexperience"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasExperience"
+                                resource="http://index.dev/ontology/rmo#hasExperience"
                                 class="class mandatory">
                                 <td>
 
@@ -1026,33 +1034,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasExperience"
+                                        <a href="http://index.dev/ontology/rmo#hasExperience"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasExperience"
+                                           data-content="http://index.dev/ontology/rmo#hasExperience"
                                            data-placement="right">
                                         Has experience</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Experience" data-placement="right">poc:Experience</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Experience" data-placement="right">rmo:Experience</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Receivesjobdesciption"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#receivesJobDesciption"
+                                resource="http://index.dev/ontology/rmo#receivesJobDesciption"
                                 class="class mandatory">
                                 <td>
 
@@ -1064,33 +1072,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#receivesJobDesciption"
+                                        <a href="http://index.dev/ontology/rmo#receivesJobDesciption"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#receivesJobDesciption"
+                                           data-content="http://index.dev/ontology/rmo#receivesJobDesciption"
                                            data-placement="right">
                                         Receives job desciption</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#JobDescription" data-placement="right">poc:JobDescription</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#JobDescription" data-placement="right">rmo:JobDescription</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Targetoccupation"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#targetOccupation"
+                                resource="http://index.dev/ontology/rmo#targetOccupation"
                                 class="class mandatory">
                                 <td>
 
@@ -1102,33 +1110,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#targetOccupation"
+                                        <a href="http://index.dev/ontology/rmo#targetOccupation"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#targetOccupation"
+                                           data-content="http://index.dev/ontology/rmo#targetOccupation"
                                            data-placement="right">
                                         Target occupation</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Role" data-placement="right">rmo:Role</a>
+
+
                                 </td>
                                 <td>
-                                    
+
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Hasqualification"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasQualification"
+                                resource="http://index.dev/ontology/rmo#hasQualification"
                                 class="class mandatory">
                                 <td>
 
@@ -1140,33 +1148,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasQualification"
+                                        <a href="http://index.dev/ontology/rmo#hasQualification"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasQualification"
+                                           data-content="http://index.dev/ontology/rmo#hasQualification"
                                            data-placement="right">
                                         Has qualification</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Qualification" data-placement="right">rmo:Qualification</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Hascredential"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasCredential"
+                                resource="http://index.dev/ontology/rmo#hasCredential"
                                 class="class mandatory">
                                 <td>
 
@@ -1178,33 +1186,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasCredential"
+                                        <a href="http://index.dev/ontology/rmo#hasCredential"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasCredential"
+                                           data-content="http://index.dev/ontology/rmo#hasCredential"
                                            data-placement="right">
                                         Has credential</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Credential" data-placement="right">poc:Credential</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Credential" data-placement="right">rmo:Credential</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Candidateprofile.Hasskills"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasSkills"
+                                resource="http://index.dev/ontology/rmo#hasSkills"
                                 class="class mandatory">
                                 <td>
 
@@ -1216,34 +1224,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasSkills"
+                                        <a href="http://index.dev/ontology/rmo#hasSkills"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasSkills"
+                                           data-content="http://index.dev/ontology/rmo#hasSkills"
                                            data-placement="right">
                                         Has skills</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Skill" data-placement="right">rmo:Skill</a>
+
+
                                 </td>
                                 <td>
                                     1..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -1251,12 +1259,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Certification">
-                <a href="http://index.dev/ontology/poc#Certification"
+                <a href="http://index.dev/ontology/rmo#Certification"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Certification"
+                   data-content="http://index.dev/ontology/rmo#Certification"
                    data-placement="right">Certification</a>
 
             </h3>
@@ -1267,34 +1275,34 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.
                     </dd>
-                
-                
+
+
                     <dt>
                         Subclass of
                         <dt>
                             <dd> <a href="">Credential</a>
-                                
+
                         </dd>
-                    
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Certification.Description">Description</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -1319,7 +1327,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Certification.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -1341,11 +1349,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -1357,11 +1365,11 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -1369,12 +1377,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Company">
-                <a href="http://index.dev/ontology/poc#Company"
+                <a href="http://index.dev/ontology/rmo#Company"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Company"
+                   data-content="http://index.dev/ontology/rmo#Company"
                    data-placement="right">Company</a>
 
             </h3>
@@ -1385,19 +1393,19 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     An organization or business entity that employs individuals.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         An organization or business entity that employs individuals.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Company.Description">Description</a>
                             , <a href="#Company.Companyname">Company name</a>
@@ -1406,10 +1414,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Company.Posts">Posts</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -1434,7 +1442,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Company.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -1456,11 +1464,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -1472,10 +1480,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Company.Companyname"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#companyName"
+                                resource="http://index.dev/ontology/rmo#companyName"
                                 class="class mandatory">
                                 <td>
 
@@ -1487,33 +1495,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#companyName"
+                                        <a href="http://index.dev/ontology/rmo#companyName"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#companyName"
+                                           data-content="http://index.dev/ontology/rmo#companyName"
                                            data-placement="right">
                                         Company name</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    The name of the organization or business entity that has posted a job description.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Company.Industry"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#industry"
+                                resource="http://index.dev/ontology/rmo#industry"
                                 class="class mandatory">
                                 <td>
 
@@ -1525,33 +1533,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#industry"
+                                        <a href="http://index.dev/ontology/rmo#industry"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#industry"
+                                           data-content="http://index.dev/ontology/rmo#industry"
                                            data-placement="right">
                                         Industry</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Company.Haslocation"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasLocation"
+                                resource="http://index.dev/ontology/rmo#hasLocation"
                                 class="class mandatory">
                                 <td>
 
@@ -1563,33 +1571,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasLocation"
+                                        <a href="http://index.dev/ontology/rmo#hasLocation"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasLocation"
+                                           data-content="http://index.dev/ontology/rmo#hasLocation"
                                            data-placement="right">
                                         Has location</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Company.Posts"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#posts"
+                                resource="http://index.dev/ontology/rmo#posts"
                                 class="class mandatory">
                                 <td>
 
@@ -1601,34 +1609,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#posts"
+                                        <a href="http://index.dev/ontology/rmo#posts"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#posts"
+                                           data-content="http://index.dev/ontology/rmo#posts"
                                            data-placement="right">
                                         Posts</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#JobDescription" data-placement="right">poc:JobDescription</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#JobDescription" data-placement="right">rmo:JobDescription</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -1636,55 +1644,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
-        <section>
-            <h3 id="Contract">
-                <a href="http://index.dev/ontology/poc#Contract"
-                   data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Contract"
-                   data-placement="right">Contract</a>
 
-            </h3>
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    
-                </dd>
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="">Type of engagement</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
         <section>
             <h3 id="Credential">
-                <a href="http://index.dev/ontology/poc#Credential"
+                <a href="http://index.dev/ontology/rmo#Credential"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Credential"
+                   data-content="http://index.dev/ontology/rmo#Credential"
                    data-placement="right">Credential</a>
 
             </h3>
@@ -1695,28 +1660,28 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     An academic or professional qualification obtained by a candidate, such as degrees or certifications.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         An academic or professional qualification obtained by a candidate, such as degrees or certifications.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Credential.Title">Title</a>
                             , <a href="#Credential.Dateawarded">Date awarded</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -1741,7 +1706,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Credential.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -1763,11 +1728,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -1779,10 +1744,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Credential.Dateawarded"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#dateAwarded"
+                                resource="http://index.dev/ontology/rmo#dateAwarded"
                                 class="class mandatory">
                                 <td>
 
@@ -1794,34 +1759,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#dateAwarded"
+                                        <a href="http://index.dev/ontology/rmo#dateAwarded"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#dateAwarded"
+                                           data-content="http://index.dev/ontology/rmo#dateAwarded"
                                            data-placement="right">
                                         Date awarded</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    The date when a candidate was granted a particular credential, such as a degree or certification.
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -1829,12 +1794,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Education">
-                <a href="http://index.dev/ontology/poc#Education"
+                <a href="http://index.dev/ontology/rmo#Education"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Education"
+                   data-content="http://index.dev/ontology/rmo#Education"
                    data-placement="right">Education</a>
 
             </h3>
@@ -1845,34 +1810,34 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     The academic qualifications of a Candidate.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         The academic qualifications of a Candidate.
                     </dd>
-                
-                
+
+
                     <dt>
                         Subclass of
                         <dt>
                             <dd> <a href="">Credential</a>
-                                
+
                         </dd>
-                    
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Education.Educationdegree">Education degree</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -1897,10 +1862,10 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Education.Educationdegree"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#educationDegree"
+                                resource="http://index.dev/ontology/rmo#educationDegree"
                                 class="class mandatory">
                                 <td>
 
@@ -1912,34 +1877,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#educationDegree"
+                                        <a href="http://index.dev/ontology/rmo#educationDegree"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#educationDegree"
+                                           data-content="http://index.dev/ontology/rmo#educationDegree"
                                            data-placement="right">
                                         Education degree</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -1947,12 +1912,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Experience">
-                <a href="http://index.dev/ontology/poc#Experience"
+                <a href="http://index.dev/ontology/rmo#Experience"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Experience"
+                   data-content="http://index.dev/ontology/rmo#Experience"
                    data-placement="right">Experience</a>
 
             </h3>
@@ -1963,19 +1928,19 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Experience.Description">Description</a>
                             , <a href="#Experience.Title">Title</a>
@@ -1985,10 +1950,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Experience.Hasskillused">Has skill used</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -2013,7 +1978,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Experience.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -2035,11 +2000,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -2051,7 +2016,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Experience.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -2073,11 +2038,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Plainliteral" data-placement="right">rdf:Plainliteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -2089,10 +2054,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Experience.Yearsofexperience"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#yearsOfExperience"
+                                resource="http://index.dev/ontology/rmo#yearsOfExperience"
                                 class="class mandatory">
                                 <td>
 
@@ -2104,33 +2069,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#yearsOfExperience"
+                                        <a href="http://index.dev/ontology/rmo#yearsOfExperience"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#yearsOfExperience"
+                                           data-content="http://index.dev/ontology/rmo#yearsOfExperience"
                                            data-placement="right">
                                         Years of experience</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#Integer" data-placement="right">xsd:Integer</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Indicates the total number of years a candidate has worked in their field or occupation.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Experience.Isrelatedto"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#isRelatedTo"
+                                resource="http://index.dev/ontology/rmo#isRelatedTo"
                                 class="class mandatory">
                                 <td>
 
@@ -2142,33 +2107,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#isRelatedTo"
+                                        <a href="http://index.dev/ontology/rmo#isRelatedTo"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-content="http://index.dev/ontology/rmo#isRelatedTo"
                                            data-placement="right">
                                         Is related to</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Role" data-placement="right">rmo:Role</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Experience.Isrelatedto"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#isRelatedTo"
+                                resource="http://index.dev/ontology/rmo#isRelatedTo"
                                 class="class mandatory">
                                 <td>
 
@@ -2180,33 +2145,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#isRelatedTo"
+                                        <a href="http://index.dev/ontology/rmo#isRelatedTo"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-content="http://index.dev/ontology/rmo#isRelatedTo"
                                            data-placement="right">
                                         Is related to</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Qualification" data-placement="right">rmo:Qualification</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Experience.Hasskillused"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasSkillUsed"
+                                resource="http://index.dev/ontology/rmo#hasSkillUsed"
                                 class="class mandatory">
                                 <td>
 
@@ -2218,34 +2183,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasSkillUsed"
+                                        <a href="http://index.dev/ontology/rmo#hasSkillUsed"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasSkillUsed"
+                                           data-content="http://index.dev/ontology/rmo#hasSkillUsed"
                                            data-placement="right">
                                         Has skill used</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Skill" data-placement="right">rmo:Skill</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -2253,12 +2218,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Jobdescription">
-                <a href="http://index.dev/ontology/poc#JobDescription"
+                <a href="http://index.dev/ontology/rmo#JobDescription"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#JobDescription"
+                   data-content="http://index.dev/ontology/rmo#JobDescription"
                    data-placement="right">Job description</a>
 
             </h3>
@@ -2269,19 +2234,19 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     A job opening posted by a company, including job details and requirements.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         A job opening posted by a company, including job details and requirements.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Jobdescription.Description">Description</a>
                             , <a href="#Jobdescription.Title">Title</a>
@@ -2299,10 +2264,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Jobdescription.Requiresskill">Requires skill</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -2327,7 +2292,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Jobdescription.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -2349,11 +2314,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -2365,7 +2330,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -2387,11 +2352,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -2403,10 +2368,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Availability"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#availability"
+                                resource="http://index.dev/ontology/rmo#availability"
                                 class="class mandatory">
                                 <td>
 
@@ -2418,33 +2383,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#availability"
+                                        <a href="http://index.dev/ontology/rmo#availability"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#availability"
+                                           data-content="http://index.dev/ontology/rmo#availability"
                                            data-placement="right">
                                         Availability</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Indicates when the job position is open for applications, including specific dates or time frames such as immediate or within three months.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Jobid"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#jobId"
+                                resource="http://index.dev/ontology/rmo#jobId"
                                 class="class mandatory">
                                 <td>
 
@@ -2456,33 +2421,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#jobId"
+                                        <a href="http://index.dev/ontology/rmo#jobId"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#jobId"
+                                           data-content="http://index.dev/ontology/rmo#jobId"
                                            data-placement="right">
                                         Job id</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    A unique identifier for a job description, used to distinguish it from other job description.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Projecttype"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#projectType"
+                                resource="http://index.dev/ontology/rmo#projectType"
                                 class="class mandatory">
                                 <td>
 
@@ -2494,33 +2459,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#projectType"
+                                        <a href="http://index.dev/ontology/rmo#projectType"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#projectType"
+                                           data-content="http://index.dev/ontology/rmo#projectType"
                                            data-placement="right">
                                         Project type</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Represents the nature or category of a project, such as software development, research, or marketing.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Rate"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#rate"
+                                resource="http://index.dev/ontology/rmo#rate"
                                 class="class mandatory">
                                 <td>
 
@@ -2532,33 +2497,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#rate"
+                                        <a href="http://index.dev/ontology/rmo#rate"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#rate"
+                                           data-content="http://index.dev/ontology/rmo#rate"
                                            data-placement="right">
                                         Rate</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">xsd:decimal</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Startdate"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#startDate"
+                                resource="http://index.dev/ontology/rmo#startDate"
                                 class="class mandatory">
                                 <td>
 
@@ -2570,33 +2535,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#startDate"
+                                        <a href="http://index.dev/ontology/rmo#startDate"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#startDate"
+                                           data-content="http://index.dev/ontology/rmo#startDate"
                                            data-placement="right">
                                         Start date</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#Date" data-placement="right">xsd:Date</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Represents the date when a job description, project, or engagement is scheduled to begin.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Specifieslocation"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#specifiesLocation"
+                                resource="http://index.dev/ontology/rmo#specifiesLocation"
                                 class="class mandatory">
                                 <td>
 
@@ -2608,33 +2573,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#specifiesLocation"
+                                        <a href="http://index.dev/ontology/rmo#specifiesLocation"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#specifiesLocation"
+                                           data-content="http://index.dev/ontology/rmo#specifiesLocation"
                                            data-placement="right">
                                         Specifies location</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Requirescredential"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#requiresCredential"
+                                resource="http://index.dev/ontology/rmo#requiresCredential"
                                 class="class mandatory">
                                 <td>
 
@@ -2646,33 +2611,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#requiresCredential"
+                                        <a href="http://index.dev/ontology/rmo#requiresCredential"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#requiresCredential"
+                                           data-content="http://index.dev/ontology/rmo#requiresCredential"
                                            data-placement="right">
                                         Requires credential</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Credential" data-placement="right">poc:Credential</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Credential" data-placement="right">rmo:Credential</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Requiresexperience"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#requiresExperience"
+                                resource="http://index.dev/ontology/rmo#requiresExperience"
                                 class="class mandatory">
                                 <td>
 
@@ -2684,33 +2649,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#requiresExperience"
+                                        <a href="http://index.dev/ontology/rmo#requiresExperience"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#requiresExperience"
+                                           data-content="http://index.dev/ontology/rmo#requiresExperience"
                                            data-placement="right">
                                         Requires experience</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Experience" data-placement="right">poc:Experience</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Experience" data-placement="right">rmo:Experience</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Hasengagement"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasEngagement"
+                                resource="http://index.dev/ontology/rmo#hasEngagement"
                                 class="class mandatory">
                                 <td>
 
@@ -2722,33 +2687,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasEngagement"
+                                        <a href="http://index.dev/ontology/rmo#hasEngagement"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasEngagement"
+                                           data-content="http://index.dev/ontology/rmo#hasEngagement"
                                            data-placement="right">
                                         Has engagement</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#TypeOfEngagement" data-placement="right">poc:TypeOfEngagement</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#TypeOfEngagement" data-placement="right">rmo:TypeOfEngagement</a>
+
+
                                 </td>
                                 <td>
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Requiresqualification"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#requiresQualification"
+                                resource="http://index.dev/ontology/rmo#requiresQualification"
                                 class="class mandatory">
                                 <td>
 
@@ -2760,33 +2725,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#requiresQualification"
+                                        <a href="http://index.dev/ontology/rmo#requiresQualification"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#requiresQualification"
+                                           data-content="http://index.dev/ontology/rmo#requiresQualification"
                                            data-placement="right">
                                         Requires qualification</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Qualification" data-placement="right">rmo:Qualification</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Offersposition"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#offersPosition"
+                                resource="http://index.dev/ontology/rmo#offersPosition"
                                 class="class mandatory">
                                 <td>
 
@@ -2798,33 +2763,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#offersPosition"
+                                        <a href="http://index.dev/ontology/rmo#offersPosition"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#offersPosition"
+                                           data-content="http://index.dev/ontology/rmo#offersPosition"
                                            data-placement="right">
                                         Offers position</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Role" data-placement="right">rmo:Role</a>
+
+
                                 </td>
                                 <td>
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Jobdescription.Requiresskill"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#requiresSkill"
+                                resource="http://index.dev/ontology/rmo#requiresSkill"
                                 class="class mandatory">
                                 <td>
 
@@ -2836,34 +2801,34 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#requiresSkill"
+                                        <a href="http://index.dev/ontology/rmo#requiresSkill"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#requiresSkill"
+                                           data-content="http://index.dev/ontology/rmo#requiresSkill"
                                            data-placement="right">
                                         Requires skill</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Skill" data-placement="right">rmo:Skill</a>
+
+
                                 </td>
                                 <td>
                                     1..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -2871,123 +2836,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Qualification">
-                <a href="http://index.dev/ontology/poc#Qualification"
+                <a href="http://index.dev/ontology/rmo#Qualification"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Qualification"
-                   data-placement="right">Qualification</a>
-
-            </h3>
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    
-                </dd>
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="">Concept</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Qualification.Inscheme">In scheme</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition
-                            </th>
-
-
-
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Qualification.Inscheme"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
-                                class="class mandatory">
-                                <td>
-
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-
-                                    <i class="fa-regular fa-message"></i>
-                                    </a>
-
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
-                                           data-placement="right">
-                                        In scheme</a>
-                                </td>
-                                <td>
-                                    
-
-                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
-
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-
-
-
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
-            <h3 id="Qualification">
-                <a href="http://index.dev/ontology/poc#Qualification"
-                   data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Qualification"
+                   data-content="http://index.dev/ontology/rmo#Qualification"
                    data-placement="right">Qualification</a>
 
             </h3>
@@ -2998,26 +2852,26 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
                     </dd>
-                
-                
+
+
                     <dt>
                         Subclass of
                         <dt>
                             <dd> <a href="">Concept</a>
-                                
+
                         </dd>
-                    
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Qualification.Description">Description</a>
                             , <a href="#Qualification.Title">Title</a>
@@ -3026,10 +2880,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Qualification.Inscheme">In scheme</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -3054,7 +2908,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Qualification.Description"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/description"
@@ -3076,11 +2930,11 @@ The main entities are those that form the core of the Application Profile.
                                         Description</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3092,7 +2946,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Qualification.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -3114,11 +2968,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3130,7 +2984,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Qualification.Altlabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#altLabel"
@@ -3152,11 +3006,11 @@ The main entities are those that form the core of the Application Profile.
                                         Alt label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3168,7 +3022,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Qualification.Preflabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#prefLabel"
@@ -3190,11 +3044,11 @@ The main entities are those that form the core of the Application Profile.
                                         Pref label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral" data-placement="right">rdf:plainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3206,7 +3060,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Qualification.Inscheme"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#inScheme"
@@ -3228,27 +3082,27 @@ The main entities are those that form the core of the Application Profile.
                                         In scheme</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
 
-                                    
+
                                 </td>
                                 <td>
-                                    
+
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -3256,12 +3110,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Role">
-                <a href="http://index.dev/ontology/poc#Role"
+                <a href="http://index.dev/ontology/rmo#Role"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Role"
+                   data-content="http://index.dev/ontology/rmo#Role"
                    data-placement="right">Role</a>
 
             </h3>
@@ -3272,26 +3126,26 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.
                     </dd>
-                
-                
+
+
                     <dt>
                         Subclass of
                         <dt>
                             <dd> <a href="">Concept</a>
-                                
+
                         </dd>
-                    
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Role.Title">Title</a>
                             , <a href="#Role.Altlabel">Alt label</a>
@@ -3299,10 +3153,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Role.Inscheme">In scheme</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -3327,7 +3181,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Role.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -3349,11 +3203,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral" data-placement="right">rdf:plainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3365,7 +3219,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Role.Altlabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#altLabel"
@@ -3387,23 +3241,23 @@ The main entities are those that form the core of the Application Profile.
                                         Alt label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Role.Preflabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#prefLabel"
@@ -3425,23 +3279,23 @@ The main entities are those that form the core of the Application Profile.
                                         Pref label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Role.Inscheme"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#inScheme"
@@ -3463,27 +3317,27 @@ The main entities are those that form the core of the Application Profile.
                                         In scheme</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
 
-                                    
+
                                 </td>
                                 <td>
-                                    
+
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -3491,12 +3345,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Skill">
-                <a href="http://index.dev/ontology/poc#Skill"
+                <a href="http://index.dev/ontology/rmo#Skill"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#Skill"
+                   data-content="http://index.dev/ontology/rmo#Skill"
                    data-placement="right">Skill</a>
 
             </h3>
@@ -3507,26 +3361,26 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.
                     </dd>
-                
-                
+
+
                     <dt>
                         Subclass of
                         <dt>
                             <dd> <a href="">Concept</a>
-                                
+
                         </dd>
-                    
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Skill.Title">Title</a>
                             , <a href="#Skill.Yearsofskill">Years of skill</a>
@@ -3537,10 +3391,10 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Skill.Inscheme">In scheme</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -3565,7 +3419,7 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Skill.Title"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/title"
@@ -3587,11 +3441,11 @@ The main entities are those that form the core of the Application Profile.
                                         Title</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3603,10 +3457,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Yearsofskill"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#yearsOfSkill"
+                                resource="http://index.dev/ontology/rmo#yearsOfSkill"
                                 class="class mandatory">
                                 <td>
 
@@ -3618,30 +3472,30 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#yearsOfSkill"
+                                        <a href="http://index.dev/ontology/rmo#yearsOfSkill"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#yearsOfSkill"
+                                           data-content="http://index.dev/ontology/rmo#yearsOfSkill"
                                            data-placement="right">
                                         Years of skill</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">xsd:integer</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+                                    Indicates the number of years a candidate has utilized a specific skill.
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Altlabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#altLabel"
@@ -3663,11 +3517,11 @@ The main entities are those that form the core of the Application Profile.
                                         Alt label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3679,7 +3533,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Preflabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#prefLabel"
@@ -3701,11 +3555,11 @@ The main entities are those that form the core of the Application Profile.
                                         Pref label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3717,10 +3571,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Optionalfor"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#optionalFor"
+                                resource="http://index.dev/ontology/rmo#optionalFor"
                                 class="class mandatory">
                                 <td>
 
@@ -3732,33 +3586,33 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#optionalFor"
+                                        <a href="http://index.dev/ontology/rmo#optionalFor"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#optionalFor"
+                                           data-content="http://index.dev/ontology/rmo#optionalFor"
                                            data-placement="right">
                                         Optional for</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Role" data-placement="right">rmo:Role</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Essentialfor"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#essentialFor"
+                                resource="http://index.dev/ontology/rmo#essentialFor"
                                 class="class mandatory">
                                 <td>
 
@@ -3770,30 +3624,30 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#essentialFor"
+                                        <a href="http://index.dev/ontology/rmo#essentialFor"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#essentialFor"
+                                           data-content="http://index.dev/ontology/rmo#essentialFor"
                                            data-placement="right">
                                         Essential for</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
 
-                                    
+                                            <a href="http://index.dev/ontology/rmo#Role" data-placement="right">rmo:Role</a>
+
+
                                 </td>
                                 <td>
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                             <tr id="Skill.Inscheme"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#inScheme"
@@ -3815,27 +3669,27 @@ The main entities are those that form the core of the Application Profile.
                                         In scheme</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
 
-                                    
+
                                 </td>
                                 <td>
-                                    
+
                                 </td>
                                 <td property="rdfs:comment">
-                                    
+
                                 </td>
 
 
 
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
+
     </div>
 </section>
 
@@ -3843,12 +3697,12 @@ The main entities are those that form the core of the Application Profile.
 
 
 
-   
+
         <section>
             <h3 id="Typeofengagement">
-                <a href="http://index.dev/ontology/poc#TypeOfEngagement"
+                <a href="http://index.dev/ontology/rmo#TypeOfEngagement"
                    data-toggle="tooltip"
-                   data-content="http://index.dev/ontology/poc#TypeOfEngagement"
+                   data-content="http://index.dev/ontology/rmo#TypeOfEngagement"
                    data-placement="right">Type of engagement</a>
 
             </h3>
@@ -3859,29 +3713,29 @@ The main entities are those that form the core of the Application Profile.
                 <dd>
                     Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.
                 </dd>
-                
+
                     <dt>
                         Usage Note
                     </dt>
                     <dd>
                         Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.
                     </dd>
-                
-                
+
+
                     <dt>
                         Properties
                     </dt>
-                    
+
                         <dd>
                             For this entity the following properties are defined: <a href="#Typeofengagement.Engagementtype">Engagement type</a>
                             , <a href="#Typeofengagement.Altlabel">Alt label</a>
                             , <a href="#Typeofengagement.Hasbenefits">Has benefits</a>
                             .
                     </dd>
-                
+
             </dl>
         </div>
-        
+
             <div class="u-table-overflow">
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
@@ -3906,10 +3760,10 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
+
                             <tr id="Typeofengagement.Engagementtype"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#engagementType"
+                                resource="http://index.dev/ontology/rmo#engagementType"
                                 class="class mandatory">
                                 <td>
 
@@ -3921,18 +3775,18 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#engagementType"
+                                        <a href="http://index.dev/ontology/rmo#engagementType"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#engagementType"
+                                           data-content="http://index.dev/ontology/rmo#engagementType"
                                            data-placement="right">
                                         Engagement type</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3944,7 +3798,7 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Typeofengagement.Altlabel"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#altLabel"
@@ -3966,11 +3820,11 @@ The main entities are those that form the core of the Application Profile.
                                         Alt label</a>
                                 </td>
                                 <td>
-                                    
+
 
                                             <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
 
-                                    
+
                                 </td>
                                 <td>
                                     1..1
@@ -3982,10 +3836,10 @@ The main entities are those that form the core of the Application Profile.
 
 
                             </tr>
-                        
+
                             <tr id="Typeofengagement.Hasbenefits"
                                 typeof="rdfs:Property"
-                                resource="http://index.dev/ontology/poc#hasBenefits"
+                                resource="http://index.dev/ontology/rmo#hasBenefits"
                                 class="class mandatory">
                                 <td>
 
@@ -3997,16 +3851,16 @@ The main entities are those that form the core of the Application Profile.
 
                                 </td>
                                 <td>
-                                        <a href="http://index.dev/ontology/poc#hasBenefits"
+                                        <a href="http://index.dev/ontology/rmo#hasBenefits"
                                            data-toggle="tooltip"
-                                           data-content="http://index.dev/ontology/poc#hasBenefits"
+                                           data-content="http://index.dev/ontology/rmo#hasBenefits"
                                            data-placement="right">
                                         Has benefits</a>
                                 </td>
                                 <td>
-                                    
 
-                                            <a href="http://index.dev/ontology/poc#Benefits" data-placement="right">poc:Benefits</a>
+
+                                            <a href="http://index.dev/ontology/rmo#Benefits" data-placement="right">rmo:Benefits</a>
 
                                     
                                 </td>
