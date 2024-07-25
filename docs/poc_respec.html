@@ -1,0 +1,4155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+	
+    <meta charset="utf-8" />
+    <title>POC Ontology  - core</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+
+		
+	function quickreference() {
+		$('#table-quickoverview').DataTable();
+	};
+
+    	var editors = [
+	    
+		
+		   {
+		    name: "Eugen Costezki",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Andi Stan",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Eugene Garla",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Mihai Golovatenco",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+        	var authors = [
+	    
+		
+		   {
+		    name: "Jana Ahmad",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Achilles Dougali",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+   
+    var respecConfig = {
+      postProcess: [quickreference],
+      publishDate: "2024-07-19",
+      shortName: "POC Ontology  - core",
+        editors: editors,
+      authors: authors,
+        github: "https://github.com/meaningfy-ws/POC-Ontology",
+      xref: "web-platform",
+      generatedSubtitle: "",
+      additionalCopyrightHolders: ""
+    };
+
+    
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+    
+    <p class="copyright">
+        Copyright © 2023
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+
+
+
+
+<section id="abstract">
+    <h2>Summary</h2>
+        The HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis.
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+<p>
+An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
+</p><p>
+A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
+A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.
+
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            
+                <tr><td><code>poc</code></td><td><code>http://index.dev/ontology/poc#</code></td></tr>
+            
+                <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            
+                <tr><td><code>esco</code></td><td><code>http://data.europa.eu/esco/model#</code></td></tr>
+            
+                <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            
+                <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            
+                <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+            
+            </tbody>
+        </table>
+
+</section>
+<section>
+        <h3>Conceptual Model</h3>
+        <img src="../xmi_conceptual_model/Images/EAID_F409FC12_A009_48ad_92B5_A889DB11BCB8.jpg" alt="Conceptual Model Image">
+    </section>
+<section>
+
+
+    
+
+<h2>
+   Main Entities
+</h2>
+The main entities are those that form the core of the Application Profile.
+
+
+
+   
+        <section>
+            <h3 id="Location">
+                <a href="http://purl.org/dc/terms/Location"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/Location"
+                   data-placement="right">Location</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A geographic area or place characterized by its physical coordinates and corresponding time zone.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A geographic area or place characterized by its physical coordinates and corresponding time zone.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Location.Geographicname">Geographic name</a>
+                            , <a href="#Location.Timezone">Time zone</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Location.Geographicname"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geographicName"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Geographic name%20in%20Location" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geographicName"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geographicName"
+                                           data-placement="right">
+                                        Geographic name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A textual description for a Location.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Location.Timezone"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#timeZone"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Time zone%20in%20Location" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#timeZone"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#timeZone"
+                                           data-placement="right">
+                                        Time zone</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An area which observes a uniform standard time for legal, commercial and social purposes.
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Benefits">
+                <a href="http://index.dev/ontology/poc#Benefits"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Benefits"
+                   data-placement="right">Benefits</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Benefits.Description">Description</a>
+                            , <a href="#Benefits.Benefitname">Benefit name</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Benefits.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Benefits.Benefitname"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#BenefitName"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Benefit name%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#BenefitName"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#BenefitName"
+                                           data-placement="right">
+                                        Benefit name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Candidate">
+                <a href="http://index.dev/ontology/poc#Candidate"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Candidate"
+                   data-placement="right">Candidate</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An individual who uses the system to find job opportunities.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        An individual who uses the system to find job opportunities.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Candidate.Title">Title</a>
+                            , <a href="#Candidate.Homepage">Homepage</a>
+                            , <a href="#Candidate.Mbox">Mbox</a>
+                            , <a href="#Candidate.Name">Name</a>
+                            , <a href="#Candidate.Phonenumber">Phone number</a>
+                            , <a href="#Candidate.Hasprofile">Has profile</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Candidate.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidate.Homepage"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/homepage"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Homepage%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/homepage"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/homepage"
+                                           data-placement="right">
+                                        Homepage</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" data-placement="right">xsd:anyURI</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidate.Mbox"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/mbox"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Mbox%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/mbox"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/mbox"
+                                           data-placement="right">
+                                        Mbox</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidate.Name"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/name"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Name%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/name"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/name"
+                                           data-placement="right">
+                                        Name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The complete name of the Candidate as one string.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidate.Phonenumber"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#phoneNumber"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Phone number%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#phoneNumber"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#phoneNumber"
+                                           data-placement="right">
+                                        Phone number</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A telephone number through which the Candidate can be contacted.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidate.Hasprofile"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasProfile"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has profile%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasProfile"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasProfile"
+                                           data-placement="right">
+                                        Has profile</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#CandidateProfile" data-placement="right">poc:CandidateProfile</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Candidateprofile">
+                <a href="http://index.dev/ontology/poc#CandidateProfile"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#CandidateProfile"
+                   data-placement="right">Candidate profile</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Represents the detailed profile of a Candidate, including credentials, skills experience, and location.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Candidateprofile.Profileid">Profile id</a>
+                            , <a href="#Candidateprofile.Targetrate">Target rate</a>
+                            , <a href="#Candidateprofile.Haslocation">Has location</a>
+                            , <a href="#Candidateprofile.Hasexperience">Has experience</a>
+                            , <a href="#Candidateprofile.Receivesjobdesciption">Receives job desciption</a>
+                            , <a href="#Candidateprofile.Targetoccupation">Target occupation</a>
+                            , <a href="#Candidateprofile.Hasqualification">Has qualification</a>
+                            , <a href="#Candidateprofile.Hascredential">Has credential</a>
+                            , <a href="#Candidateprofile.Hasskills">Has skills</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Candidateprofile.Profileid"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#profileId"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Profile id%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#profileId"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#profileId"
+                                           data-placement="right">
+                                        Profile id</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">xsd:integer</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A unique identifier for the candidate profile.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Targetrate"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#targetRate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Target rate%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#targetRate"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#targetRate"
+                                           data-placement="right">
+                                        Target rate</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#double" data-placement="right">xsd:double</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Haslocation"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasLocation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has location%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasLocation"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasLocation"
+                                           data-placement="right">
+                                        Has location</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Hasexperience"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasExperience"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has experience%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasExperience"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasExperience"
+                                           data-placement="right">
+                                        Has experience</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Experience" data-placement="right">poc:Experience</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Receivesjobdesciption"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#receivesJobDesciption"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Receives job desciption%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#receivesJobDesciption"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#receivesJobDesciption"
+                                           data-placement="right">
+                                        Receives job desciption</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#JobDescription" data-placement="right">poc:JobDescription</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Targetoccupation"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#targetOccupation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Target occupation%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#targetOccupation"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#targetOccupation"
+                                           data-placement="right">
+                                        Target occupation</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Hasqualification"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasQualification"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has qualification%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasQualification"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasQualification"
+                                           data-placement="right">
+                                        Has qualification</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Hascredential"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasCredential"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has credential%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasCredential"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasCredential"
+                                           data-placement="right">
+                                        Has credential</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Credential" data-placement="right">poc:Credential</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Candidateprofile.Hasskills"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasSkills"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has skills%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasSkills"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasSkills"
+                                           data-placement="right">
+                                        Has skills</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Certification">
+                <a href="http://index.dev/ontology/poc#Certification"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Certification"
+                   data-placement="right">Certification</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Credential</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Certification.Description">Description</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Certification.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Certification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Company">
+                <a href="http://index.dev/ontology/poc#Company"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Company"
+                   data-placement="right">Company</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An organization or business entity that employs individuals.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        An organization or business entity that employs individuals.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Company.Description">Description</a>
+                            , <a href="#Company.Companyname">Company name</a>
+                            , <a href="#Company.Industry">Industry</a>
+                            , <a href="#Company.Haslocation">Has location</a>
+                            , <a href="#Company.Posts">Posts</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Company.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Company.Companyname"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#companyName"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Company name%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#companyName"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#companyName"
+                                           data-placement="right">
+                                        Company name</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Company.Industry"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#industry"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Industry%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#industry"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#industry"
+                                           data-placement="right">
+                                        Industry</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Company.Haslocation"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasLocation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has location%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasLocation"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasLocation"
+                                           data-placement="right">
+                                        Has location</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Company.Posts"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#posts"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Posts%20in%20Company" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#posts"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#posts"
+                                           data-placement="right">
+                                        Posts</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#JobDescription" data-placement="right">poc:JobDescription</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Contract">
+                <a href="http://index.dev/ontology/poc#Contract"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Contract"
+                   data-placement="right">Contract</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Type of engagement</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Credential">
+                <a href="http://index.dev/ontology/poc#Credential"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Credential"
+                   data-placement="right">Credential</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An academic or professional qualification obtained by a candidate, such as degrees or certifications.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        An academic or professional qualification obtained by a candidate, such as degrees or certifications.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Credential.Title">Title</a>
+                            , <a href="#Credential.Dateawarded">Date awarded</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Credential.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Credential" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Credential.Dateawarded"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#dateAwarded"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Date awarded%20in%20Credential" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#dateAwarded"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#dateAwarded"
+                                           data-placement="right">
+                                        Date awarded</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Education">
+                <a href="http://index.dev/ontology/poc#Education"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Education"
+                   data-placement="right">Education</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The academic qualifications of a Candidate.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The academic qualifications of a Candidate.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Credential</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Education.Educationdegree">Education degree</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Education.Educationdegree"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#educationDegree"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Education degree%20in%20Education" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#educationDegree"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#educationDegree"
+                                           data-placement="right">
+                                        Education degree</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Experience">
+                <a href="http://index.dev/ontology/poc#Experience"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Experience"
+                   data-placement="right">Experience</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Experience.Description">Description</a>
+                            , <a href="#Experience.Title">Title</a>
+                            , <a href="#Experience.Yearsofexperience">Years of experience</a>
+                            , <a href="#Experience.Isrelatedto">Is related to</a>
+                            , <a href="#Experience.Isrelatedto">Is related to</a>
+                            , <a href="#Experience.Hasskillused">Has skill used</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Experience.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Experience.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Plainliteral" data-placement="right">rdf:Plainliteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Experience.Yearsofexperience"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#yearsOfExperience"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Years of experience%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#yearsOfExperience"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#yearsOfExperience"
+                                           data-placement="right">
+                                        Years of experience</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#Integer" data-placement="right">xsd:Integer</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Experience.Isrelatedto"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#isRelatedTo"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-placement="right">
+                                        Is related to</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Experience.Isrelatedto"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#isRelatedTo"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#isRelatedTo"
+                                           data-placement="right">
+                                        Is related to</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Experience.Hasskillused"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasSkillUsed"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has skill used%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasSkillUsed"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasSkillUsed"
+                                           data-placement="right">
+                                        Has skill used</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Jobdescription">
+                <a href="http://index.dev/ontology/poc#JobDescription"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#JobDescription"
+                   data-placement="right">Job description</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A job opening posted by a company, including job details and requirements.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A job opening posted by a company, including job details and requirements.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Jobdescription.Description">Description</a>
+                            , <a href="#Jobdescription.Title">Title</a>
+                            , <a href="#Jobdescription.Availability">Availability</a>
+                            , <a href="#Jobdescription.Jobid">Job id</a>
+                            , <a href="#Jobdescription.Projecttype">Project type</a>
+                            , <a href="#Jobdescription.Rate">Rate</a>
+                            , <a href="#Jobdescription.Startdate">Start date</a>
+                            , <a href="#Jobdescription.Specifieslocation">Specifies location</a>
+                            , <a href="#Jobdescription.Requirescredential">Requires credential</a>
+                            , <a href="#Jobdescription.Requiresexperience">Requires experience</a>
+                            , <a href="#Jobdescription.Hasengagement">Has engagement</a>
+                            , <a href="#Jobdescription.Requiresqualification">Requires qualification</a>
+                            , <a href="#Jobdescription.Offersposition">Offers position</a>
+                            , <a href="#Jobdescription.Requiresskill">Requires skill</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Jobdescription.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Availability"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#availability"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Availability%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#availability"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#availability"
+                                           data-placement="right">
+                                        Availability</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Jobid"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#jobId"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Job id%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#jobId"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#jobId"
+                                           data-placement="right">
+                                        Job id</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Projecttype"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#projectType"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Project type%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#projectType"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#projectType"
+                                           data-placement="right">
+                                        Project type</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Rate"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#rate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Rate%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#rate"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#rate"
+                                           data-placement="right">
+                                        Rate</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">xsd:decimal</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Start date%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#Date" data-placement="right">xsd:Date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Specifieslocation"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#specifiesLocation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Specifies location%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#specifiesLocation"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#specifiesLocation"
+                                           data-placement="right">
+                                        Specifies location</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://purl.org/dc/terms/Location" data-placement="right">dct:Location</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Requirescredential"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#requiresCredential"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires credential%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#requiresCredential"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#requiresCredential"
+                                           data-placement="right">
+                                        Requires credential</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Credential" data-placement="right">poc:Credential</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Requiresexperience"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#requiresExperience"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires experience%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#requiresExperience"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#requiresExperience"
+                                           data-placement="right">
+                                        Requires experience</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Experience" data-placement="right">poc:Experience</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Hasengagement"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasEngagement"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has engagement%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasEngagement"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasEngagement"
+                                           data-placement="right">
+                                        Has engagement</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#TypeOfEngagement" data-placement="right">poc:TypeOfEngagement</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Requiresqualification"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#requiresQualification"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires qualification%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#requiresQualification"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#requiresQualification"
+                                           data-placement="right">
+                                        Requires qualification</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Qualification" data-placement="right">poc:Qualification</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Offersposition"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#offersPosition"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Offers position%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#offersPosition"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#offersPosition"
+                                           data-placement="right">
+                                        Offers position</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Jobdescription.Requiresskill"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#requiresSkill"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires skill%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#requiresSkill"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#requiresSkill"
+                                           data-placement="right">
+                                        Requires skill</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Skill" data-placement="right">poc:Skill</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Qualification">
+                <a href="http://index.dev/ontology/poc#Qualification"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Qualification"
+                   data-placement="right">Qualification</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Qualification.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Qualification.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Qualification">
+                <a href="http://index.dev/ontology/poc#Qualification"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Qualification"
+                   data-placement="right">Qualification</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Qualification.Description">Description</a>
+                            , <a href="#Qualification.Title">Title</a>
+                            , <a href="#Qualification.Altlabel">Alt label</a>
+                            , <a href="#Qualification.Preflabel">Pref label</a>
+                            , <a href="#Qualification.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Qualification.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Qualification.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Qualification.Altlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#altLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-placement="right">
+                                        Alt label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Qualification.Preflabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-placement="right">
+                                        Pref label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral" data-placement="right">rdf:plainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The preferred lexical label for a resource, in a given language.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Qualification.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Role">
+                <a href="http://index.dev/ontology/poc#Role"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Role"
+                   data-placement="right">Role</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Role.Title">Title</a>
+                            , <a href="#Role.Altlabel">Alt label</a>
+                            , <a href="#Role.Preflabel">Pref label</a>
+                            , <a href="#Role.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Role.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Role" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#plainLiteral" data-placement="right">rdf:plainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Role.Altlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#altLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Role" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-placement="right">
+                                        Alt label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Role.Preflabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Role" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-placement="right">
+                                        Pref label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Role.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Role" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Skill">
+                <a href="http://index.dev/ontology/poc#Skill"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#Skill"
+                   data-placement="right">Skill</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Skill.Title">Title</a>
+                            , <a href="#Skill.Yearsofskill">Years of skill</a>
+                            , <a href="#Skill.Altlabel">Alt label</a>
+                            , <a href="#Skill.Preflabel">Pref label</a>
+                            , <a href="#Skill.Optionalfor">Optional for</a>
+                            , <a href="#Skill.Essentialfor">Essential for</a>
+                            , <a href="#Skill.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Skill.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the title or the name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Yearsofskill"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#yearsOfSkill"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Years of skill%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#yearsOfSkill"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#yearsOfSkill"
+                                           data-placement="right">
+                                        Years of skill</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">xsd:integer</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Altlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#altLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-placement="right">
+                                        Alt label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Preflabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-placement="right">
+                                        Pref label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The preferred lexical label for a resource, in a given language.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Optionalfor"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#optionalFor"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Optional for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#optionalFor"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#optionalFor"
+                                           data-placement="right">
+                                        Optional for</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Essentialfor"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#essentialFor"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Essential for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#essentialFor"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#essentialFor"
+                                           data-placement="right">
+                                        Essential for</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Role" data-placement="right">poc:Role</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Skill.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Typeofengagement">
+                <a href="http://index.dev/ontology/poc#TypeOfEngagement"
+                   data-toggle="tooltip"
+                   data-content="http://index.dev/ontology/poc#TypeOfEngagement"
+                   data-placement="right">Type of engagement</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Typeofengagement.Engagementtype">Engagement type</a>
+                            , <a href="#Typeofengagement.Altlabel">Alt label</a>
+                            , <a href="#Typeofengagement.Hasbenefits">Has benefits</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Typeofengagement.Engagementtype"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#engagementType"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Engagement type%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#engagementType"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#engagementType"
+                                           data-placement="right">
+                                        Engagement type</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It includes part-time, full-time, or contractual roles.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Typeofengagement.Altlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#altLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#altLabel"
+                                           data-placement="right">
+                                        Alt label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Typeofengagement.Hasbenefits"
+                                typeof="rdfs:Property"
+                                resource="http://index.dev/ontology/poc#hasBenefits"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has benefits%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://index.dev/ontology/poc#hasBenefits"
+                                           data-toggle="tooltip"
+                                           data-content="http://index.dev/ontology/poc#hasBenefits"
+                                           data-placement="right">
+                                        Has benefits</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://index.dev/ontology/poc#Benefits" data-placement="right">poc:Benefits</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+</section>
+
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</html>
