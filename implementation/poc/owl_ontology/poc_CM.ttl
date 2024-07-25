@@ -7,9 +7,9 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix poc: <http://index.dev/ontology/poc#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rmo: <http://index.dev/ontology/rmo#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,13 +18,13 @@
     rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2024-07-19"^^xsd:date ;
+    dcterms:issued "2024-07-25"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "POC Ontology  - core"@en ;
+    dcterms:title "RMO Ontology  - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-19" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-25" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -68,195 +68,205 @@ esco:Skill a owl:NamedIndividual,
         skos:ConceptScheme ;
     skos:prefLabel "Skill"@en .
 
-poc:BenefitName a owl:DatatypeProperty ;
+rmo:BenefitName a owl:DatatypeProperty ;
     skos:prefLabel "Benefit name"@en .
 
-poc:Benefits a owl:Class ;
+rmo:Benefits a owl:Class ;
     skos:definition "Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans."@en ;
     skos:prefLabel "Benefits"@en .
 
-poc:Candidate a owl:Class ;
+rmo:Candidate a owl:Class ;
     skos:definition "An individual who uses the system to find job opportunities."@en ;
     skos:prefLabel "Candidate"@en .
 
-poc:CandidateProfile a owl:Class ;
+rmo:CandidateProfile a owl:Class ;
     skos:definition "Represents the detailed profile of a Candidate, including credentials, skills experience, and location."@en ;
     skos:prefLabel "Candidate profile"@en .
 
-poc:Certification a owl:Class ;
-    rdfs:subClassOf poc:Credential ;
+rmo:Certification a owl:Class ;
+    rdfs:subClassOf rmo:Credential ;
     skos:definition "The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body."@en ;
     skos:prefLabel "Certification"@en .
 
-poc:Company a owl:Class ;
+rmo:Company a owl:Class ;
     skos:definition "An organization or business entity that employs individuals."@en ;
     skos:prefLabel "Company"@en .
 
-poc:Contract a owl:Class ;
-    rdfs:subClassOf poc:TypeOfEngagement ;
-    skos:prefLabel "Contract"@en .
-
-poc:Education a owl:Class ;
-    rdfs:subClassOf poc:Credential ;
+rmo:Education a owl:Class ;
+    rdfs:subClassOf rmo:Credential ;
     skos:definition "The academic qualifications of a Candidate."@en ;
     skos:prefLabel "Education"@en .
 
-poc:Experience a owl:Class ;
+rmo:Experience a owl:Class ;
     skos:definition "Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities."@en ;
     skos:prefLabel "Experience"@en .
 
-poc:JobDescription a owl:Class ;
+rmo:JobDescription a owl:Class ;
     skos:definition "A job opening posted by a company, including job details and requirements."@en ;
     skos:prefLabel "Job description"@en .
 
-poc:Qualification a owl:Class ;
+rmo:Qualification a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards."@en ;
     skos:prefLabel "Qualification"@en .
 
-poc:Role a owl:Class ;
+rmo:Role a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities."@en ;
     skos:prefLabel "Role"@en .
 
-poc:Skill a owl:Class ;
+rmo:Skill a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience."@en ;
     skos:prefLabel "Skill"@en .
 
-poc:availability a owl:DatatypeProperty ;
+rmo:TypeOfEngagement a owl:Class ;
+    skos:definition "Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles."@en ;
+    skos:prefLabel "Type of engagement"@en .
+
+rmo:availability a owl:DatatypeProperty ;
+    skos:definition "Indicates when the job position is open for applications, including specific dates or time frames such as \"immediate\" or \"within three months.\" (rmo:JobDescription)"@en ;
     skos:prefLabel "Availability"@en .
 
-poc:companyName a owl:DatatypeProperty ;
+rmo:companyName a owl:DatatypeProperty ;
+    skos:definition "The name of the organization or business entity that has posted a job description. (rmo:Company)"@en ;
     skos:prefLabel "Company name"@en .
 
-poc:dateAwarded a owl:DatatypeProperty ;
+rmo:dateAwarded a owl:DatatypeProperty ;
+    skos:definition "The date when a candidate was granted a particular credential, such as a degree or certification. (rmo:Credential)"@en ;
     skos:prefLabel "Date awarded"@en .
 
-poc:educationDegree a owl:DatatypeProperty ;
+rmo:educationDegree a owl:DatatypeProperty ;
     skos:prefLabel "Education degree"@en .
 
-poc:engagementType a owl:DatatypeProperty ;
-    skos:definition "It includes part-time, full-time, or contractual roles. (poc:TypeOfEngagement)"@en ;
+rmo:engagementType a owl:DatatypeProperty ;
+    skos:definition "It includes part-time, full-time, or contractual roles. (rmo:TypeOfEngagement)"@en ;
     skos:prefLabel "Engagement type"@en .
 
-poc:essentialFor a owl:ObjectProperty ;
-    skos:definition "Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose. (poc:Skill -> poc:Role (+poc:essentialFor))"@en ;
+rmo:essentialFor a owl:ObjectProperty ;
+    skos:definition "Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose. (rmo:Skill -> rmo:Role (+rmo:essentialFor))"@en ;
     skos:prefLabel "Essential for"@en .
 
-poc:hasBenefits a owl:ObjectProperty ;
-    skos:definition "Indicates the benefits associated with a specific type of job engagement. (poc:TypeOfEngagement -> poc:Benefits (+poc:hasBenefits))"@en ;
+rmo:hasBenefits a owl:ObjectProperty ;
+    skos:definition "Indicates the benefits associated with a specific type of job engagement. (rmo:TypeOfEngagement -> rmo:Benefits (+rmo:hasBenefits))"@en ;
     skos:prefLabel "Has benefits"@en .
 
-poc:hasCredential a owl:ObjectProperty ;
-    skos:definition "Academic qualifications and professional certifications obtained by a candidate. (poc:CandidateProfile -> poc:Credential (+poc:hasCredential))"@en ;
+rmo:hasCredential a owl:ObjectProperty ;
+    skos:definition "Academic qualifications and professional certifications obtained by a candidate. (rmo:CandidateProfile -> rmo:Credential (+rmo:hasCredential))"@en ;
     skos:prefLabel "Has credential"@en .
 
-poc:hasEngagement a owl:ObjectProperty ;
-    skos:definition "Indicates what TypeOfEngagement a specific JobDescription entails. (poc:JobDescription -> poc:TypeOfEngagement (+poc:hasEngagement))"@en ;
+rmo:hasEngagement a owl:ObjectProperty ;
+    skos:definition "Indicates what type of engagement a specific job description entails. (rmo:JobDescription -> rmo:TypeOfEngagement (+rmo:hasEngagement))"@en ;
     skos:prefLabel "Has engagement"@en .
 
-poc:hasExperience a owl:ObjectProperty ;
-    skos:definition "Represents the work experience details of a CandidateProfile. (poc:CandidateProfile -> poc:Experience (+poc:hasExperience))"@en ;
+rmo:hasExperience a owl:ObjectProperty ;
+    skos:definition "Represents the work experience details of a candidate profile. (rmo:CandidateProfile -> rmo:Experience (+rmo:hasExperience))"@en ;
     skos:prefLabel "Has experience"@en .
 
-poc:hasLocation a owl:ObjectProperty ;
-    skos:definition "Specifies the geographical location and timezone relevant to CandidateProfile. (poc:Company -> dct:Location (+poc:hasLocation)) Specifies the geographical location and timezone relevant to CandidateProfile. (poc:CandidateProfile -> dct:Location (+poc:hasLocation))"@en ;
+rmo:hasLocation a owl:ObjectProperty ;
+    skos:definition "Specifies the geographical location and time zone relevant to candidate profile. (rmo:Company -> dct:Location (+rmo:hasLocation)) Specifies the geographical location and timezone relevant to CandidateProfile. (rmo:CandidateProfile -> dct:Location (+rmo:hasLocation))"@en ;
     skos:prefLabel "Has location"@en .
 
-poc:hasProfile a owl:ObjectProperty ;
-    skos:definition "Indicates the CandidateProfile of a specific Candidate. (poc:Candidate -> poc:CandidateProfile (+poc:hasProfile))"@en ;
+rmo:hasProfile a owl:ObjectProperty ;
+    skos:definition "Indicates the candidate profile of a specific Candidate. (rmo:Candidate -> rmo:CandidateProfile (+rmo:hasProfile))"@en ;
     skos:prefLabel "Has profile"@en .
 
-poc:hasQualification a owl:ObjectProperty ;
+rmo:hasQualification a owl:ObjectProperty ;
     skos:prefLabel "Has qualification"@en .
 
-poc:hasSkillUsed a owl:ObjectProperty ;
-    skos:definition "Indicates that a specific skill was utilized in a particular experience. (poc:Experience -> poc:Skill (+poc:hasSkillUsed))"@en ;
+rmo:hasSkillUsed a owl:ObjectProperty ;
+    skos:definition "Indicates that a specific skill was utilized in a particular experience. (rmo:Experience -> rmo:Skill (+rmo:hasSkillUsed))"@en ;
     skos:prefLabel "Has skill used"@en .
 
-poc:hasSkills a owl:ObjectProperty ;
-    skos:definition "Indicates that a CandidateProfile possesses a specific skill. (poc:CandidateProfile -> poc:Skill (+poc:hasSkills))"@en ;
+rmo:hasSkills a owl:ObjectProperty ;
+    skos:definition "Indicates that a candidate profile possesses a specific skill. (rmo:CandidateProfile -> rmo:Skill (+rmo:hasSkills))"@en ;
     skos:prefLabel "Has skills"@en .
 
-poc:industry a owl:DatatypeProperty ;
+rmo:industry a owl:DatatypeProperty ;
     skos:prefLabel "Industry"@en .
 
-poc:isRelatedTo a owl:ObjectProperty ;
-    skos:definition "Indicates that a specific resource is associated with a particular other resource. (poc:Experience -> poc:Role (+poc:isRelatedTo)) Indicates that a specific resource is associated with a particular other resource. (poc:Experience -> poc:Qualification (+poc:isRelatedTo))"@en ;
+rmo:isRelatedTo a owl:ObjectProperty ;
+    skos:definition "Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -> rmo:Role (+rmo:isRelatedTo)) Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -> rmo:Qualification (+rmo:isRelatedTo))"@en ;
     skos:prefLabel "Is related to"@en .
 
-poc:jobId a owl:DatatypeProperty ;
+rmo:jobId a owl:DatatypeProperty ;
+    skos:definition "A unique identifier for a job description, used to distinguish it from other job description. (rmo:JobDescription)"@en ;
     skos:prefLabel "Job id"@en .
 
-poc:offersPosition a owl:ObjectProperty ;
-    skos:definition "Indicates the job position offered by a JobDescription. (poc:JobDescription -> poc:Role (+poc:offersPosition))"@en ;
+rmo:offersPosition a owl:ObjectProperty ;
+    skos:definition "Indicates the job position offered by a job description. (rmo:JobDescription -> rmo:Role (+rmo:offersPosition))"@en ;
     skos:prefLabel "Offers position"@en .
 
-poc:optionalFor a owl:ObjectProperty ;
-    skos:definition "Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology. (poc:Skill -> poc:Role (+poc:optionalFor))"@en ;
+rmo:optionalFor a owl:ObjectProperty ;
+    skos:definition "Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology. (rmo:Skill -> rmo:Role (+rmo:optionalFor))"@en ;
     skos:prefLabel "Optional for"@en .
 
-poc:phoneNumber a owl:DatatypeProperty ;
-    skos:definition "A telephone number through which the Candidate can be contacted. (poc:Candidate)"@en ;
+rmo:phoneNumber a owl:DatatypeProperty ;
+    skos:definition "A telephone number through which the Candidate can be contacted. (rmo:Candidate)"@en ;
     skos:prefLabel "Phone number"@en .
 
-poc:posts a owl:ObjectProperty ;
-    skos:definition "Indicates that a Company publishes a JobDescription. (poc:Company -> poc:JobDescription (+poc:posts))"@en ;
+rmo:posts a owl:ObjectProperty ;
+    skos:definition "Indicates that a Company publishes a job description. (rmo:Company -> rmo:JobDescription (+rmo:posts))"@en ;
     skos:prefLabel "Posts"@en .
 
-poc:profileId a owl:DatatypeProperty ;
-    skos:definition "A unique identifier for the candidate profile. (poc:CandidateProfile)"@en ;
+rmo:profileId a owl:DatatypeProperty ;
+    skos:definition "A unique identifier for the candidate profile. (rmo:CandidateProfile)"@en ;
     skos:prefLabel "Profile id"@en .
 
-poc:projectType a owl:DatatypeProperty ;
+rmo:projectType a owl:DatatypeProperty ;
+    skos:definition "Represents the nature or category of a project, such as software development, research, or marketing. (rmo:JobDescription)"@en ;
     skos:prefLabel "Project type"@en .
 
-poc:rate a owl:DatatypeProperty ;
+rmo:rate a owl:DatatypeProperty ;
+    skos:definition "Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount. (rmo:JobDescription)"@en ;
     skos:prefLabel "Rate"@en .
 
-poc:receivesJobDesciption a owl:ObjectProperty ;
-    skos:definition "Indicates that a CandidateProfile receives a JobDescription from the system. (poc:CandidateProfile -> poc:JobDescription (+poc:receivesJobDesciption))"@en ;
+rmo:receivesJobDesciption a owl:ObjectProperty ;
+    skos:definition "Indicates that a candidate profile receives a job description from the system. (rmo:CandidateProfile -> rmo:JobDescription (+rmo:receivesJobDesciption))"@en ;
     skos:prefLabel "Receives job desciption"@en .
 
-poc:requiresCredential a owl:ObjectProperty ;
-    skos:definition "Indicates that a JobDescription may require one or more Academic qualifications and/or professional certifications. (poc:JobDescription -> poc:Credential (+poc:requiresCredential))"@en ;
+rmo:requiresCredential a owl:ObjectProperty ;
+    skos:definition "Indicates that a job description may require one or more Academic qualifications and/or professional certifications. (rmo:JobDescription -> rmo:Credential (+rmo:requiresCredential))"@en ;
     skos:prefLabel "Requires credential"@en .
 
-poc:requiresExperience a owl:ObjectProperty ;
-    skos:definition "Specifies the type and level of experience required for a JobDescription. (poc:JobDescription -> poc:Experience (+poc:requiresExperience))"@en ;
+rmo:requiresExperience a owl:ObjectProperty ;
+    skos:definition "Specifies the type and level of experience required for a job description. (rmo:JobDescription -> rmo:Experience (+rmo:requiresExperience))"@en ;
     skos:prefLabel "Requires experience"@en .
 
-poc:requiresQualification a owl:ObjectProperty ;
-    skos:definition "Specifies the qualifications required for a JobDescription. (poc:JobDescription -> poc:Qualification (+poc:requiresQualification))"@en ;
+rmo:requiresQualification a owl:ObjectProperty ;
+    skos:definition "Specifies the qualifications required for a job description. (rmo:JobDescription -> rmo:Qualification (+rmo:requiresQualification))"@en ;
     skos:prefLabel "Requires qualification"@en .
 
-poc:requiresSkill a owl:ObjectProperty ;
-    skos:definition "Specifies the skills that are necessary for a JobDescription. (poc:JobDescription -> poc:Skill (+poc:requiresSkill))"@en ;
+rmo:requiresSkill a owl:ObjectProperty ;
+    skos:definition "Specifies the skills that are necessary for a job description. (rmo:JobDescription -> rmo:Skill (+rmo:requiresSkill))"@en ;
     skos:prefLabel "Requires skill"@en .
 
-poc:specifiesLocation a owl:ObjectProperty ;
-    skos:definition "Specifies the geographical location and timezone relevant to JobDescription. (poc:JobDescription -> dct:Location (+poc:specifiesLocation))"@en ;
+rmo:specifiesLocation a owl:ObjectProperty ;
+    skos:definition "Specifies the geographical location and time zone relevant to job description. (rmo:JobDescription -> dct:Location (+rmo:specifiesLocation))"@en ;
     skos:prefLabel "Specifies location"@en .
 
-poc:startDate a rdf:Property ;
+rmo:startDate a rdf:Property ;
+    skos:definition "Represents the date when a job description, project, or engagement is scheduled to begin. (rmo:JobDescription)"@en ;
     skos:prefLabel "Start date"@en .
 
-poc:targetOccupation a owl:ObjectProperty ;
-    skos:definition "Indicates the job roles or occupations that a CandidateProfile is interested in or qualified for. (poc:CandidateProfile -> poc:Role (+poc:targetOccupation))"@en ;
+rmo:targetOccupation a owl:ObjectProperty ;
+    skos:definition "Indicates the job roles or occupations that a candidate profile is interested in or qualified for. (rmo:CandidateProfile -> rmo:Role (+rmo:targetOccupation))"@en ;
     skos:prefLabel "Target occupation"@en .
 
-poc:targetRate a owl:DatatypeProperty ;
+rmo:targetRate a owl:DatatypeProperty ;
+    skos:definition "Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job. (rmo:CandidateProfile)"@en ;
     skos:prefLabel "Target rate"@en .
 
-poc:timeZone a owl:DatatypeProperty ;
+rmo:timeZone a owl:DatatypeProperty ;
     skos:definition "An area which observes a uniform standard time for legal, commercial and social purposes. (dct:Location)"@en ;
     skos:prefLabel "Time zone"@en .
 
-poc:yearsOfExperience a rdf:Property ;
+rmo:yearsOfExperience a rdf:Property ;
+    skos:definition "Indicates the total number of years a candidate has worked in their field or occupation. (rmo:Experience)"@en ;
     skos:prefLabel "Years of experience"@en .
 
-poc:yearsOfSkill a owl:DatatypeProperty ;
+rmo:yearsOfSkill a owl:DatatypeProperty ;
+    skos:definition "Indicates the number of years a candidate has utilized a specific skill. (rmo:Skill)"@en ;
     skos:prefLabel "Years of skill"@en .
 
 dcterms:Location a owl:Class ;
@@ -264,23 +274,23 @@ dcterms:Location a owl:Class ;
     skos:prefLabel "Location"@en .
 
 dcterms:description a owl:DatatypeProperty ;
-    skos:definition "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Benefits) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Certification) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Company) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Experience) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:JobDescription) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Qualification)"@en ;
+    skos:definition "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Benefits) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Certification) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Company) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Experience) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:JobDescription) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Qualification)"@en ;
     skos:prefLabel "Description"@en .
 
 dcterms:title a owl:DatatypeProperty ;
-    skos:definition "Represents the title or the name of a resource. (poc:Candidate) Represents the title or the name of a resource. (poc:Credential) Represents the title or the name of a resource. (poc:Experience) Represents the title or the name of a resource. (poc:JobDescription) Represents the title or the name of a resource. (poc:Qualification) Represents the title or the name of a resource. (poc:Role) Represents the title or the name of a resource. (poc:Skill)"@en ;
+    skos:definition "Represents the title or the name of a resource. (rmo:Candidate) Represents the title or the name of a resource. (rmo:Credential) Represents the title or the name of a resource. (rmo:Experience) Represents the title or the name of a resource. (rmo:JobDescription) Represents the title or the name of a resource. (rmo:Qualification) Represents the title or the name of a resource. (rmo:Role) Represents the title or the name of a resource. (rmo:Skill)"@en ;
     skos:prefLabel "Title"@en .
 
 skos:altLabel a owl:DatatypeProperty ;
-    skos:definition "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Qualification) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Skill) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:TypeOfEngagement)"@en ;
+    skos:definition "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:Qualification) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:Skill) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:TypeOfEngagement)"@en ;
     skos:prefLabel "Alt label"@en .
 
 skos:inScheme a owl:ObjectProperty ;
-    skos:definition "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Qualification -> esco:Qualification (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Role -> esco:Occupation (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Skill -> esco:Skill (+skos:inScheme))"@en ;
+    skos:definition "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Qualification -> esco:Qualification (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Role -> esco:Occupation (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Skill -> esco:Skill (+skos:inScheme))"@en ;
     skos:prefLabel "In scheme"@en .
 
 skos:prefLabel a rdf:Property ;
-    skos:definition "The preferred lexical label for a resource, in a given language. (poc:Qualification) The preferred lexical label for a resource, in a given language. (poc:Skill)"@en ;
+    skos:definition "The preferred lexical label for a resource, in a given language. (rmo:Qualification) The preferred lexical label for a resource, in a given language. (rmo:Skill)"@en ;
     skos:prefLabel "Pref label"@en .
 
 locn:geographicName a owl:DatatypeProperty ;
@@ -294,14 +304,10 @@ foaf:mbox a owl:DatatypeProperty ;
     skos:prefLabel "Mbox"@en .
 
 foaf:name a owl:DatatypeProperty ;
-    skos:definition "The complete name of the Candidate as one string. (poc:Candidate)"@en ;
+    skos:definition "The complete name of the Candidate as one string. (rmo:Candidate)"@en ;
     skos:prefLabel "Name"@en .
 
-poc:TypeOfEngagement a owl:Class ;
-    skos:definition "Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles."@en ;
-    skos:prefLabel "Type of engagement"@en .
-
-poc:Credential a owl:Class ;
+rmo:Credential a owl:Class ;
     skos:definition "An academic or professional qualification obtained by a candidate, such as degrees or certifications."@en ;
     skos:prefLabel "Credential"@en .
 

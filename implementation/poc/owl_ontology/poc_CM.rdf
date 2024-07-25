@@ -26,9 +26,9 @@
          xmlns:org="http://www.w3.org/ns/org#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:person="http://www.w3.org/ns/person#"
-         xmlns:poc="http://index.dev/ontology/poc#"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rmo="http://index.dev/ontology/rmo#"
          xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
@@ -65,16 +65,16 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
-      <dct:title xml:lang="en">POC Ontology  - core</dct:title>
+      <dct:title xml:lang="en">RMO Ontology  - core</dct:title>
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-19</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-25</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-19</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-25</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -91,103 +91,95 @@
    <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
       <skos:definition xml:lang="en">A geographic area or place characterized by its physical coordinates and corresponding time zone.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Benefits"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Benefits">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Benefits"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Benefits">
       <skos:prefLabel xml:lang="en">Benefits</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Benefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Benefits">
       <skos:definition xml:lang="en">Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Candidate"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Candidate">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Candidate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Candidate">
       <skos:prefLabel xml:lang="en">Candidate</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Candidate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Candidate">
       <skos:definition xml:lang="en">An individual who uses the system to find job opportunities.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#CandidateProfile"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#CandidateProfile"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#CandidateProfile">
       <skos:prefLabel xml:lang="en">Candidate profile</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#CandidateProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#CandidateProfile">
       <skos:definition xml:lang="en">Represents the detailed profile of a Candidate, including credentials, skills experience, and location.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Certification"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Certification">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Certification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Certification">
       <skos:prefLabel xml:lang="en">Certification</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Certification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Certification">
       <skos:definition xml:lang="en">The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Company"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Company">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Company"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Company">
       <skos:prefLabel xml:lang="en">Company</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Company">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Company">
       <skos:definition xml:lang="en">An organization or business entity that employs individuals.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Contract"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Contract">
-      <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
-   </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Credential"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Credential">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Credential"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Credential">
       <skos:prefLabel xml:lang="en">Credential</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Credential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Credential">
       <skos:definition xml:lang="en">An academic or professional qualification obtained by a candidate, such as degrees or certifications.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Education"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Education">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Education"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Education">
       <skos:prefLabel xml:lang="en">Education</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Education">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Education">
       <skos:definition xml:lang="en">The academic qualifications of a Candidate.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Experience"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Experience">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Experience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Experience">
       <skos:prefLabel xml:lang="en">Experience</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Experience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Experience">
       <skos:definition xml:lang="en">Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#JobDescription"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#JobDescription"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#JobDescription">
       <skos:prefLabel xml:lang="en">Job description</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#JobDescription">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#JobDescription">
       <skos:definition xml:lang="en">A job opening posted by a company, including job details and requirements.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Qualification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
       <skos:prefLabel xml:lang="en">Qualification</skos:prefLabel>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
-      <skos:prefLabel xml:lang="en">Qualification</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Qualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
       <skos:definition xml:lang="en">Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Role"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Role"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Role">
       <skos:prefLabel xml:lang="en">Role</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Role">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Role">
       <skos:definition xml:lang="en">Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Skill"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Skill"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Skill">
       <skos:prefLabel xml:lang="en">Skill</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#Skill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Skill">
       <skos:definition xml:lang="en">A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#TypeOfEngagement"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#TypeOfEngagement">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#TypeOfEngagement"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#TypeOfEngagement">
       <skos:prefLabel xml:lang="en">Type of engagement</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#TypeOfEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#TypeOfEngagement">
       <skos:definition xml:lang="en">Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.</skos:definition>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://data.europa.eu/esco/model#Occupation"/>
@@ -211,174 +203,171 @@
    <owl:NamedIndividual rdf:about="http://data.europa.eu/esco/model#Skill">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    </owl:NamedIndividual>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Certification">
-      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#Credential"/>
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Certification">
+      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/rmo#Credential"/>
    </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Education">
-      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#Credential"/>
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Education">
+      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/rmo#Credential"/>
    </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Contract">
-      <rdfs:subClassOf rdf:resource="http://index.dev/ontology/poc#TypeOfEngagement"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Qualification">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Qualification">
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Role">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Role">
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </owl:Class>
-   <owl:Class rdf:about="http://index.dev/ontology/poc#Skill">
+   <owl:Class rdf:about="http://index.dev/ontology/rmo#Skill">
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </owl:Class>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#specifiesLocation"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#specifiesLocation">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#specifiesLocation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#specifiesLocation">
       <skos:prefLabel xml:lang="en">Specifies location</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#specifiesLocation">
-      <skos:definition xml:lang="en">Specifies the geographical location and timezone relevant to JobDescription. (poc:JobDescription -&gt; dct:Location (+poc:specifiesLocation))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#specifiesLocation">
+      <skos:definition xml:lang="en">Specifies the geographical location and time zone relevant to job description. (rmo:JobDescription -&gt; dct:Location (+rmo:specifiesLocation))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasLocation"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasLocation">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasLocation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasLocation">
       <skos:prefLabel xml:lang="en">Has location</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasLocation">
-      <skos:definition xml:lang="en">Specifies the geographical location and timezone relevant to CandidateProfile. (poc:Company -&gt; dct:Location (+poc:hasLocation)) Specifies the geographical location and timezone relevant to CandidateProfile. (poc:CandidateProfile -&gt; dct:Location (+poc:hasLocation))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasLocation">
+      <skos:definition xml:lang="en">Specifies the geographical location and time zone relevant to candidate profile. (rmo:Company -&gt; dct:Location (+rmo:hasLocation)) Specifies the geographical location and timezone relevant to CandidateProfile. (rmo:CandidateProfile -&gt; dct:Location (+rmo:hasLocation))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasBenefits"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasBenefits">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasBenefits"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasBenefits">
       <skos:prefLabel xml:lang="en">Has benefits</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasBenefits">
-      <skos:definition xml:lang="en">Indicates the benefits associated with a specific type of job engagement. (poc:TypeOfEngagement -&gt; poc:Benefits (+poc:hasBenefits))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasBenefits">
+      <skos:definition xml:lang="en">Indicates the benefits associated with a specific type of job engagement. (rmo:TypeOfEngagement -&gt; rmo:Benefits (+rmo:hasBenefits))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasProfile"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasProfile">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasProfile"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasProfile">
       <skos:prefLabel xml:lang="en">Has profile</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasProfile">
-      <skos:definition xml:lang="en">Indicates the CandidateProfile of a specific Candidate. (poc:Candidate -&gt; poc:CandidateProfile (+poc:hasProfile))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasProfile">
+      <skos:definition xml:lang="en">Indicates the candidate profile of a specific Candidate. (rmo:Candidate -&gt; rmo:CandidateProfile (+rmo:hasProfile))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasExperience"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasExperience">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasExperience">
       <skos:prefLabel xml:lang="en">Has experience</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasExperience">
-      <skos:definition xml:lang="en">Represents the work experience details of a CandidateProfile. (poc:CandidateProfile -&gt; poc:Experience (+poc:hasExperience))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasExperience">
+      <skos:definition xml:lang="en">Represents the work experience details of a candidate profile. (rmo:CandidateProfile -&gt; rmo:Experience (+rmo:hasExperience))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#receivesJobDesciption"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#receivesJobDesciption">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#receivesJobDesciption"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#receivesJobDesciption">
       <skos:prefLabel xml:lang="en">Receives job desciption</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#receivesJobDesciption">
-      <skos:definition xml:lang="en">Indicates that a CandidateProfile receives a JobDescription from the system. (poc:CandidateProfile -&gt; poc:JobDescription (+poc:receivesJobDesciption))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#receivesJobDesciption">
+      <skos:definition xml:lang="en">Indicates that a candidate profile receives a job description from the system. (rmo:CandidateProfile -&gt; rmo:JobDescription (+rmo:receivesJobDesciption))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#targetOccupation"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetOccupation">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#targetOccupation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetOccupation">
       <skos:prefLabel xml:lang="en">Target occupation</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetOccupation">
-      <skos:definition xml:lang="en">Indicates the job roles or occupations that a CandidateProfile is interested in or qualified for. (poc:CandidateProfile -&gt; poc:Role (+poc:targetOccupation))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetOccupation">
+      <skos:definition xml:lang="en">Indicates the job roles or occupations that a candidate profile is interested in or qualified for. (rmo:CandidateProfile -&gt; rmo:Role (+rmo:targetOccupation))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasQualification"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasQualification">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasQualification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasQualification">
       <skos:prefLabel xml:lang="en">Has qualification</skos:prefLabel>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasCredential"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasCredential">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasCredential"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasCredential">
       <skos:prefLabel xml:lang="en">Has credential</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasCredential">
-      <skos:definition xml:lang="en">Academic qualifications and professional certifications obtained by a candidate. (poc:CandidateProfile -&gt; poc:Credential (+poc:hasCredential))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasCredential">
+      <skos:definition xml:lang="en">Academic qualifications and professional certifications obtained by a candidate. (rmo:CandidateProfile -&gt; rmo:Credential (+rmo:hasCredential))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasSkills"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkills">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasSkills"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasSkills">
       <skos:prefLabel xml:lang="en">Has skills</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkills">
-      <skos:definition xml:lang="en">Indicates that a CandidateProfile possesses a specific skill. (poc:CandidateProfile -&gt; poc:Skill (+poc:hasSkills))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasSkills">
+      <skos:definition xml:lang="en">Indicates that a candidate profile possesses a specific skill. (rmo:CandidateProfile -&gt; rmo:Skill (+rmo:hasSkills))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#posts"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#posts">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#posts"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#posts">
       <skos:prefLabel xml:lang="en">Posts</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#posts">
-      <skos:definition xml:lang="en">Indicates that a Company publishes a JobDescription. (poc:Company -&gt; poc:JobDescription (+poc:posts))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#posts">
+      <skos:definition xml:lang="en">Indicates that a Company publishes a job description. (rmo:Company -&gt; rmo:JobDescription (+rmo:posts))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#requiresCredential"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresCredential">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#requiresCredential"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresCredential">
       <skos:prefLabel xml:lang="en">Requires credential</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresCredential">
-      <skos:definition xml:lang="en">Indicates that a JobDescription may require one or more Academic qualifications and/or professional certifications. (poc:JobDescription -&gt; poc:Credential (+poc:requiresCredential))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresCredential">
+      <skos:definition xml:lang="en">Indicates that a job description may require one or more Academic qualifications and/or professional certifications. (rmo:JobDescription -&gt; rmo:Credential (+rmo:requiresCredential))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#isRelatedTo"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#isRelatedTo">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#isRelatedTo"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#isRelatedTo">
       <skos:prefLabel xml:lang="en">Is related to</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#isRelatedTo">
-      <skos:definition xml:lang="en">Indicates that a specific resource is associated with a particular other resource. (poc:Experience -&gt; poc:Role (+poc:isRelatedTo)) Indicates that a specific resource is associated with a particular other resource. (poc:Experience -&gt; poc:Qualification (+poc:isRelatedTo))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#isRelatedTo">
+      <skos:definition xml:lang="en">Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -&gt; rmo:Role (+rmo:isRelatedTo)) Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -&gt; rmo:Qualification (+rmo:isRelatedTo))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasSkillUsed"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkillUsed">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasSkillUsed"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasSkillUsed">
       <skos:prefLabel xml:lang="en">Has skill used</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasSkillUsed">
-      <skos:definition xml:lang="en">Indicates that a specific skill was utilized in a particular experience. (poc:Experience -&gt; poc:Skill (+poc:hasSkillUsed))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasSkillUsed">
+      <skos:definition xml:lang="en">Indicates that a specific skill was utilized in a particular experience. (rmo:Experience -&gt; rmo:Skill (+rmo:hasSkillUsed))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#requiresExperience"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresExperience">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#requiresExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresExperience">
       <skos:prefLabel xml:lang="en">Requires experience</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresExperience">
-      <skos:definition xml:lang="en">Specifies the type and level of experience required for a JobDescription. (poc:JobDescription -&gt; poc:Experience (+poc:requiresExperience))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresExperience">
+      <skos:definition xml:lang="en">Specifies the type and level of experience required for a job description. (rmo:JobDescription -&gt; rmo:Experience (+rmo:requiresExperience))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#hasEngagement"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasEngagement">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#hasEngagement"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasEngagement">
       <skos:prefLabel xml:lang="en">Has engagement</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#hasEngagement">
-      <skos:definition xml:lang="en">Indicates what TypeOfEngagement a specific JobDescription entails. (poc:JobDescription -&gt; poc:TypeOfEngagement (+poc:hasEngagement))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#hasEngagement">
+      <skos:definition xml:lang="en">Indicates what type of engagement a specific job description entails. (rmo:JobDescription -&gt; rmo:TypeOfEngagement (+rmo:hasEngagement))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#requiresQualification"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresQualification">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#requiresQualification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresQualification">
       <skos:prefLabel xml:lang="en">Requires qualification</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresQualification">
-      <skos:definition xml:lang="en">Specifies the qualifications required for a JobDescription. (poc:JobDescription -&gt; poc:Qualification (+poc:requiresQualification))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresQualification">
+      <skos:definition xml:lang="en">Specifies the qualifications required for a job description. (rmo:JobDescription -&gt; rmo:Qualification (+rmo:requiresQualification))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#offersPosition"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#offersPosition">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#offersPosition"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#offersPosition">
       <skos:prefLabel xml:lang="en">Offers position</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#offersPosition">
-      <skos:definition xml:lang="en">Indicates the job position offered by a JobDescription. (poc:JobDescription -&gt; poc:Role (+poc:offersPosition))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#offersPosition">
+      <skos:definition xml:lang="en">Indicates the job position offered by a job description. (rmo:JobDescription -&gt; rmo:Role (+rmo:offersPosition))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#requiresSkill"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresSkill">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#requiresSkill"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresSkill">
       <skos:prefLabel xml:lang="en">Requires skill</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#requiresSkill">
-      <skos:definition xml:lang="en">Specifies the skills that are necessary for a JobDescription. (poc:JobDescription -&gt; poc:Skill (+poc:requiresSkill))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#requiresSkill">
+      <skos:definition xml:lang="en">Specifies the skills that are necessary for a job description. (rmo:JobDescription -&gt; rmo:Skill (+rmo:requiresSkill))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
-      <skos:definition xml:lang="en">A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Qualification -&gt; esco:Qualification (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Role -&gt; esco:Occupation (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (poc:Skill -&gt; esco:Skill (+skos:inScheme))</skos:definition>
+      <skos:definition xml:lang="en">A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Qualification -&gt; esco:Qualification (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Role -&gt; esco:Occupation (+skos:inScheme)) A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme. (rmo:Skill -&gt; esco:Skill (+skos:inScheme))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#optionalFor"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#optionalFor">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#optionalFor"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#optionalFor">
       <skos:prefLabel xml:lang="en">Optional for</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#optionalFor">
-      <skos:definition xml:lang="en">Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology. (poc:Skill -&gt; poc:Role (+poc:optionalFor))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#optionalFor">
+      <skos:definition xml:lang="en">Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology. (rmo:Skill -&gt; rmo:Role (+rmo:optionalFor))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://index.dev/ontology/poc#essentialFor"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#essentialFor">
+   <owl:ObjectProperty rdf:about="http://index.dev/ontology/rmo#essentialFor"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#essentialFor">
       <skos:prefLabel xml:lang="en">Essential for</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#essentialFor">
-      <skos:definition xml:lang="en">Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose. (poc:Skill -&gt; poc:Role (+poc:essentialFor))</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#essentialFor">
+      <skos:definition xml:lang="en">Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose. (rmo:Skill -&gt; rmo:Role (+rmo:essentialFor))</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#geographicName"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
@@ -387,11 +376,11 @@
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
       <skos:definition xml:lang="en">A textual description for a Location. (dct:Location)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#timeZone"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#timeZone">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#timeZone"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#timeZone">
       <skos:prefLabel xml:lang="en">Time zone</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#timeZone">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#timeZone">
       <skos:definition xml:lang="en">An area which observes a uniform standard time for legal, commercial and social purposes. (dct:Location)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
@@ -399,10 +388,10 @@
       <skos:prefLabel xml:lang="en">Description</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-      <skos:definition xml:lang="en">An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Benefits) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Certification) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Company) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Experience) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:JobDescription) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (poc:Qualification)</skos:definition>
+      <skos:definition xml:lang="en">An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Benefits) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Certification) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Company) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Experience) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:JobDescription) An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. (rmo:Qualification)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#BenefitName"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#BenefitName">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#BenefitName"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#BenefitName">
       <skos:prefLabel xml:lang="en">Benefit name</skos:prefLabel>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
@@ -410,7 +399,7 @@
       <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-      <skos:definition xml:lang="en">Represents the title or the name of a resource. (poc:Candidate) Represents the title or the name of a resource. (poc:Credential) Represents the title or the name of a resource. (poc:Experience) Represents the title or the name of a resource. (poc:JobDescription) Represents the title or the name of a resource. (poc:Qualification) Represents the title or the name of a resource. (poc:Role) Represents the title or the name of a resource. (poc:Skill)</skos:definition>
+      <skos:definition xml:lang="en">Represents the title or the name of a resource. (rmo:Candidate) Represents the title or the name of a resource. (rmo:Credential) Represents the title or the name of a resource. (rmo:Experience) Represents the title or the name of a resource. (rmo:JobDescription) Represents the title or the name of a resource. (rmo:Qualification) Represents the title or the name of a resource. (rmo:Role) Represents the title or the name of a resource. (rmo:Skill)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
@@ -425,89 +414,119 @@
       <skos:prefLabel xml:lang="en">Name</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
-      <skos:definition xml:lang="en">The complete name of the Candidate as one string. (poc:Candidate)</skos:definition>
+      <skos:definition xml:lang="en">The complete name of the Candidate as one string. (rmo:Candidate)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#phoneNumber"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#phoneNumber">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#phoneNumber"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#phoneNumber">
       <skos:prefLabel xml:lang="en">Phone number</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#phoneNumber">
-      <skos:definition xml:lang="en">A telephone number through which the Candidate can be contacted. (poc:Candidate)</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#phoneNumber">
+      <skos:definition xml:lang="en">A telephone number through which the Candidate can be contacted. (rmo:Candidate)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#profileId"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#profileId">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#profileId"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#profileId">
       <skos:prefLabel xml:lang="en">Profile id</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#profileId">
-      <skos:definition xml:lang="en">A unique identifier for the candidate profile. (poc:CandidateProfile)</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#profileId">
+      <skos:definition xml:lang="en">A unique identifier for the candidate profile. (rmo:CandidateProfile)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#targetRate"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#targetRate">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#targetRate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetRate">
       <skos:prefLabel xml:lang="en">Target rate</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#companyName"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#companyName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetRate">
+      <skos:definition xml:lang="en">Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job. (rmo:CandidateProfile)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#companyName"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#companyName">
       <skos:prefLabel xml:lang="en">Company name</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#industry"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#industry">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#companyName">
+      <skos:definition xml:lang="en">The name of the organization or business entity that has posted a job description. (rmo:Company)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#industry"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#industry">
       <skos:prefLabel xml:lang="en">Industry</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#dateAwarded"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#dateAwarded">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#dateAwarded"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#dateAwarded">
       <skos:prefLabel xml:lang="en">Date awarded</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#educationDegree"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#educationDegree">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#dateAwarded">
+      <skos:definition xml:lang="en">The date when a candidate was granted a particular credential, such as a degree or certification. (rmo:Credential)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#educationDegree"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#educationDegree">
       <skos:prefLabel xml:lang="en">Education degree</skos:prefLabel>
    </rdf:Description>
-   <rdf:Property rdf:about="http://index.dev/ontology/poc#yearsOfExperience"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfExperience">
+   <rdf:Property rdf:about="http://index.dev/ontology/rmo#yearsOfExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfExperience">
       <skos:prefLabel xml:lang="en">Years of experience</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#availability"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#availability">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfExperience">
+      <skos:definition xml:lang="en">Indicates the total number of years a candidate has worked in their field or occupation. (rmo:Experience)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#availability"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#availability">
       <skos:prefLabel xml:lang="en">Availability</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#jobId"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#jobId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#availability">
+      <skos:definition xml:lang="en">Indicates when the job position is open for applications, including specific dates or time frames such as "immediate" or "within three months." (rmo:JobDescription)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#jobId"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#jobId">
       <skos:prefLabel xml:lang="en">Job id</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#projectType"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#projectType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#jobId">
+      <skos:definition xml:lang="en">A unique identifier for a job description, used to distinguish it from other job description. (rmo:JobDescription)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#projectType"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#projectType">
       <skos:prefLabel xml:lang="en">Project type</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#rate"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#rate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#projectType">
+      <skos:definition xml:lang="en">Represents the nature or category of a project, such as software development, research, or marketing. (rmo:JobDescription)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#rate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#rate">
       <skos:prefLabel xml:lang="en">Rate</skos:prefLabel>
    </rdf:Description>
-   <rdf:Property rdf:about="http://index.dev/ontology/poc#startDate"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#startDate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#rate">
+      <skos:definition xml:lang="en">Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount. (rmo:JobDescription)</skos:definition>
+   </rdf:Description>
+   <rdf:Property rdf:about="http://index.dev/ontology/rmo#startDate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#startDate">
       <skos:prefLabel xml:lang="en">Start date</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#startDate">
+      <skos:definition xml:lang="en">Represents the date when a job description, project, or engagement is scheduled to begin. (rmo:JobDescription)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
       <skos:prefLabel xml:lang="en">Alt label</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
-      <skos:definition xml:lang="en">An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Qualification) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:Skill) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (poc:TypeOfEngagement)</skos:definition>
+      <skos:definition xml:lang="en">An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:Qualification) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:Skill) An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (rmo:TypeOfEngagement)</skos:definition>
    </rdf:Description>
    <rdf:Property rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
       <skos:prefLabel xml:lang="en">Pref label</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-      <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language. (poc:Qualification) The preferred lexical label for a resource, in a given language. (poc:Skill)</skos:definition>
+      <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language. (rmo:Qualification) The preferred lexical label for a resource, in a given language. (rmo:Skill)</skos:definition>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#yearsOfSkill"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#yearsOfSkill">
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#yearsOfSkill"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfSkill">
       <skos:prefLabel xml:lang="en">Years of skill</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/poc#engagementType"/>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfSkill">
+      <skos:definition xml:lang="en">Indicates the number of years a candidate has utilized a specific skill. (rmo:Skill)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://index.dev/ontology/rmo#engagementType"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#engagementType">
       <skos:prefLabel xml:lang="en">Engagement type</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/poc#engagementType">
-      <skos:definition xml:lang="en">It includes part-time, full-time, or contractual roles. (poc:TypeOfEngagement)</skos:definition>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo#engagementType">
+      <skos:definition xml:lang="en">It includes part-time, full-time, or contractual roles. (rmo:TypeOfEngagement)</skos:definition>
    </rdf:Description>
 </rdf:RDF>

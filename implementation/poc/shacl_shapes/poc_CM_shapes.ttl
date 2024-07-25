@@ -7,9 +7,9 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix poc: <http://index.dev/ontology/poc#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rmo: <http://index.dev/ontology/rmo#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tech-shape: <http://data.europa.eu/a4g/data-shape#> .
@@ -21,155 +21,150 @@ tech-shape:dct-Location a sh:NodeShape ;
     rdfs:comment "A geographic area or place characterized by its physical coordinates and corresponding time zone." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:property tech-shape:dct-Location-locn-geographicName,
-        tech-shape:dct-Location-poc-timeZone ;
+        tech-shape:dct-Location-rmo-timeZone ;
     sh:targetClass dcterms:Location .
 
-tech-shape:poc-Benefits a sh:NodeShape ;
+tech-shape:rmo-Benefits a sh:NodeShape ;
     rdfs:label "Benefits" ;
     rdfs:comment "Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Benefits-dct-description,
-        tech-shape:poc-Benefits-poc-BenefitName ;
-    sh:targetClass poc:Benefits .
+    sh:property tech-shape:rmo-Benefits-dct-description,
+        tech-shape:rmo-Benefits-rmo-BenefitName ;
+    sh:targetClass rmo:Benefits .
 
-tech-shape:poc-Candidate a sh:NodeShape ;
+tech-shape:rmo-Candidate a sh:NodeShape ;
     rdfs:label "Candidate" ;
     rdfs:comment "An individual who uses the system to find job opportunities." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Candidate-dct-title,
-        tech-shape:poc-Candidate-foaf-homepage,
-        tech-shape:poc-Candidate-foaf-mbox,
-        tech-shape:poc-Candidate-foaf-name,
-        tech-shape:poc-Candidate-poc-hasProfile,
-        tech-shape:poc-Candidate-poc-phoneNumber ;
-    sh:targetClass poc:Candidate .
+    sh:property tech-shape:rmo-Candidate-dct-title,
+        tech-shape:rmo-Candidate-foaf-homepage,
+        tech-shape:rmo-Candidate-foaf-mbox,
+        tech-shape:rmo-Candidate-foaf-name,
+        tech-shape:rmo-Candidate-rmo-hasProfile,
+        tech-shape:rmo-Candidate-rmo-phoneNumber ;
+    sh:targetClass rmo:Candidate .
 
-tech-shape:poc-CandidateProfile a sh:NodeShape ;
+tech-shape:rmo-CandidateProfile a sh:NodeShape ;
     rdfs:label "Candidate profile" ;
     rdfs:comment "Represents the detailed profile of a Candidate, including credentials, skills experience, and location." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-CandidateProfile-poc-hasCredential,
-        tech-shape:poc-CandidateProfile-poc-hasExperience,
-        tech-shape:poc-CandidateProfile-poc-hasLocation,
-        tech-shape:poc-CandidateProfile-poc-hasQualification,
-        tech-shape:poc-CandidateProfile-poc-hasSkills,
-        tech-shape:poc-CandidateProfile-poc-profileId,
-        tech-shape:poc-CandidateProfile-poc-receivesJobDesciption,
-        tech-shape:poc-CandidateProfile-poc-targetOccupation,
-        tech-shape:poc-CandidateProfile-poc-targetRate ;
-    sh:targetClass poc:CandidateProfile .
+    sh:property tech-shape:rmo-CandidateProfile-rmo-hasCredential,
+        tech-shape:rmo-CandidateProfile-rmo-hasExperience,
+        tech-shape:rmo-CandidateProfile-rmo-hasLocation,
+        tech-shape:rmo-CandidateProfile-rmo-hasQualification,
+        tech-shape:rmo-CandidateProfile-rmo-hasSkills,
+        tech-shape:rmo-CandidateProfile-rmo-profileId,
+        tech-shape:rmo-CandidateProfile-rmo-receivesJobDesciption,
+        tech-shape:rmo-CandidateProfile-rmo-targetOccupation,
+        tech-shape:rmo-CandidateProfile-rmo-targetRate ;
+    sh:targetClass rmo:CandidateProfile .
 
-tech-shape:poc-Certification a sh:NodeShape ;
+tech-shape:rmo-Certification a sh:NodeShape ;
     rdfs:label "Certification" ;
     rdfs:comment "The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Certification-dct-description ;
-    sh:targetClass poc:Certification .
+    sh:property tech-shape:rmo-Certification-dct-description ;
+    sh:targetClass rmo:Certification .
 
-tech-shape:poc-Company a sh:NodeShape ;
+tech-shape:rmo-Company a sh:NodeShape ;
     rdfs:label "Company" ;
     rdfs:comment "An organization or business entity that employs individuals." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Company-dct-description,
-        tech-shape:poc-Company-poc-companyName,
-        tech-shape:poc-Company-poc-hasLocation,
-        tech-shape:poc-Company-poc-industry,
-        tech-shape:poc-Company-poc-posts ;
-    sh:targetClass poc:Company .
+    sh:property tech-shape:rmo-Company-dct-description,
+        tech-shape:rmo-Company-rmo-companyName,
+        tech-shape:rmo-Company-rmo-hasLocation,
+        tech-shape:rmo-Company-rmo-industry,
+        tech-shape:rmo-Company-rmo-posts ;
+    sh:targetClass rmo:Company .
 
-tech-shape:poc-Contract a sh:NodeShape ;
-    rdfs:label "Contract" ;
-    rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:targetClass poc:Contract .
-
-tech-shape:poc-Credential a sh:NodeShape ;
+tech-shape:rmo-Credential a sh:NodeShape ;
     rdfs:label "Credential" ;
     rdfs:comment "An academic or professional qualification obtained by a candidate, such as degrees or certifications." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Credential-dct-title,
-        tech-shape:poc-Credential-poc-dateAwarded ;
-    sh:targetClass poc:Credential .
+    sh:property tech-shape:rmo-Credential-dct-title,
+        tech-shape:rmo-Credential-rmo-dateAwarded ;
+    sh:targetClass rmo:Credential .
 
-tech-shape:poc-Education a sh:NodeShape ;
+tech-shape:rmo-Education a sh:NodeShape ;
     rdfs:label "Education" ;
     rdfs:comment "The academic qualifications of a Candidate." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Education-poc-educationDegree ;
-    sh:targetClass poc:Education .
+    sh:property tech-shape:rmo-Education-rmo-educationDegree ;
+    sh:targetClass rmo:Education .
 
-tech-shape:poc-Experience a sh:NodeShape ;
+tech-shape:rmo-Experience a sh:NodeShape ;
     rdfs:label "Experience" ;
     rdfs:comment "Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Experience-dct-description,
-        tech-shape:poc-Experience-dct-title,
-        tech-shape:poc-Experience-poc-hasSkillUsed,
-        tech-shape:poc-Experience-poc-isRelatedTo,
-        tech-shape:poc-Experience-poc-yearsOfExperience ;
-    sh:targetClass poc:Experience .
+    sh:property tech-shape:rmo-Experience-dct-description,
+        tech-shape:rmo-Experience-dct-title,
+        tech-shape:rmo-Experience-rmo-hasSkillUsed,
+        tech-shape:rmo-Experience-rmo-isRelatedTo,
+        tech-shape:rmo-Experience-rmo-yearsOfExperience ;
+    sh:targetClass rmo:Experience .
 
-tech-shape:poc-JobDescription a sh:NodeShape ;
+tech-shape:rmo-JobDescription a sh:NodeShape ;
     rdfs:label "Job description" ;
     rdfs:comment "A job opening posted by a company, including job details and requirements." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-JobDescription-dct-description,
-        tech-shape:poc-JobDescription-dct-title,
-        tech-shape:poc-JobDescription-poc-availability,
-        tech-shape:poc-JobDescription-poc-hasEngagement,
-        tech-shape:poc-JobDescription-poc-jobId,
-        tech-shape:poc-JobDescription-poc-offersPosition,
-        tech-shape:poc-JobDescription-poc-projectType,
-        tech-shape:poc-JobDescription-poc-rate,
-        tech-shape:poc-JobDescription-poc-requiresCredential,
-        tech-shape:poc-JobDescription-poc-requiresExperience,
-        tech-shape:poc-JobDescription-poc-requiresQualification,
-        tech-shape:poc-JobDescription-poc-requiresSkill,
-        tech-shape:poc-JobDescription-poc-specifiesLocation,
-        tech-shape:poc-JobDescription-poc-startDate ;
-    sh:targetClass poc:JobDescription .
+    sh:property tech-shape:rmo-JobDescription-dct-description,
+        tech-shape:rmo-JobDescription-dct-title,
+        tech-shape:rmo-JobDescription-rmo-availability,
+        tech-shape:rmo-JobDescription-rmo-hasEngagement,
+        tech-shape:rmo-JobDescription-rmo-jobId,
+        tech-shape:rmo-JobDescription-rmo-offersPosition,
+        tech-shape:rmo-JobDescription-rmo-projectType,
+        tech-shape:rmo-JobDescription-rmo-rate,
+        tech-shape:rmo-JobDescription-rmo-requiresCredential,
+        tech-shape:rmo-JobDescription-rmo-requiresExperience,
+        tech-shape:rmo-JobDescription-rmo-requiresQualification,
+        tech-shape:rmo-JobDescription-rmo-requiresSkill,
+        tech-shape:rmo-JobDescription-rmo-specifiesLocation,
+        tech-shape:rmo-JobDescription-rmo-startDate ;
+    sh:targetClass rmo:JobDescription .
 
-tech-shape:poc-Qualification a sh:NodeShape ;
+tech-shape:rmo-Qualification a sh:NodeShape ;
     rdfs:label "Qualification" ;
     rdfs:comment "Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Qualification-dct-description,
-        tech-shape:poc-Qualification-dct-title,
-        tech-shape:poc-Qualification-skos-altLabel,
-        tech-shape:poc-Qualification-skos-inScheme,
-        tech-shape:poc-Qualification-skos-prefLabel ;
-    sh:targetClass poc:Qualification .
+    sh:property tech-shape:rmo-Qualification-dct-description,
+        tech-shape:rmo-Qualification-dct-title,
+        tech-shape:rmo-Qualification-skos-altLabel,
+        tech-shape:rmo-Qualification-skos-inScheme,
+        tech-shape:rmo-Qualification-skos-prefLabel ;
+    sh:targetClass rmo:Qualification .
 
-tech-shape:poc-Role a sh:NodeShape ;
+tech-shape:rmo-Role a sh:NodeShape ;
     rdfs:label "Role" ;
     rdfs:comment "Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Role-dct-title,
-        tech-shape:poc-Role-skos-altLabel,
-        tech-shape:poc-Role-skos-inScheme,
-        tech-shape:poc-Role-skos-prefLabel ;
-    sh:targetClass poc:Role .
+    sh:property tech-shape:rmo-Role-dct-title,
+        tech-shape:rmo-Role-skos-altLabel,
+        tech-shape:rmo-Role-skos-inScheme,
+        tech-shape:rmo-Role-skos-prefLabel ;
+    sh:targetClass rmo:Role .
 
-tech-shape:poc-Skill a sh:NodeShape ;
+tech-shape:rmo-Skill a sh:NodeShape ;
     rdfs:label "Skill" ;
     rdfs:comment "A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-Skill-dct-title,
-        tech-shape:poc-Skill-poc-essentialFor,
-        tech-shape:poc-Skill-poc-optionalFor,
-        tech-shape:poc-Skill-poc-yearsOfSkill,
-        tech-shape:poc-Skill-skos-altLabel,
-        tech-shape:poc-Skill-skos-inScheme,
-        tech-shape:poc-Skill-skos-prefLabel ;
-    sh:targetClass poc:Skill .
+    sh:property tech-shape:rmo-Skill-dct-title,
+        tech-shape:rmo-Skill-rmo-essentialFor,
+        tech-shape:rmo-Skill-rmo-optionalFor,
+        tech-shape:rmo-Skill-rmo-yearsOfSkill,
+        tech-shape:rmo-Skill-skos-altLabel,
+        tech-shape:rmo-Skill-skos-inScheme,
+        tech-shape:rmo-Skill-skos-prefLabel ;
+    sh:targetClass rmo:Skill .
 
-tech-shape:poc-TypeOfEngagement a sh:NodeShape ;
+tech-shape:rmo-TypeOfEngagement a sh:NodeShape ;
     rdfs:label "Type of engagement" ;
     rdfs:comment "Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
-    sh:property tech-shape:poc-TypeOfEngagement-poc-engagementType,
-        tech-shape:poc-TypeOfEngagement-poc-hasBenefits,
-        tech-shape:poc-TypeOfEngagement-skos-altLabel ;
-    sh:targetClass poc:TypeOfEngagement .
+    sh:property tech-shape:rmo-TypeOfEngagement-rmo-engagementType,
+        tech-shape:rmo-TypeOfEngagement-rmo-hasBenefits,
+        tech-shape:rmo-TypeOfEngagement-skos-altLabel ;
+    sh:targetClass rmo:TypeOfEngagement .
 
 tech-shape:dct-Location-locn-geographicName a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
@@ -180,16 +175,16 @@ tech-shape:dct-Location-locn-geographicName a sh:PropertyShape ;
     sh:name "Geographic name" ;
     sh:path locn:geographicName .
 
-tech-shape:dct-Location-poc-timeZone a sh:PropertyShape ;
+tech-shape:dct-Location-rmo-timeZone a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An area which observes a uniform standard time for legal, commercial and social purposes." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Time zone" ;
-    sh:path poc:timeZone .
+    sh:path rmo:timeZone .
 
-tech-shape:poc-Benefits-dct-description a sh:PropertyShape ;
+tech-shape:rmo-Benefits-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -198,15 +193,15 @@ tech-shape:poc-Benefits-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-Benefits-poc-BenefitName a sh:PropertyShape ;
+tech-shape:rmo-Benefits-rmo-BenefitName a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Benefit name" ;
-    sh:path poc:BenefitName .
+    sh:path rmo:BenefitName .
 
-tech-shape:poc-Candidate-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Candidate-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
@@ -215,7 +210,7 @@ tech-shape:poc-Candidate-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Candidate-foaf-homepage a sh:PropertyShape ;
+tech-shape:rmo-Candidate-foaf-homepage a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -223,7 +218,7 @@ tech-shape:poc-Candidate-foaf-homepage a sh:PropertyShape ;
     sh:name "Homepage" ;
     sh:path foaf:homepage .
 
-tech-shape:poc-Candidate-foaf-mbox a sh:PropertyShape ;
+tech-shape:rmo-Candidate-foaf-mbox a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
@@ -231,7 +226,7 @@ tech-shape:poc-Candidate-foaf-mbox a sh:PropertyShape ;
     sh:name "Mbox" ;
     sh:path foaf:mbox .
 
-tech-shape:poc-Candidate-foaf-name a sh:PropertyShape ;
+tech-shape:rmo-Candidate-foaf-name a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "The complete name of the Candidate as one string." ;
@@ -240,91 +235,92 @@ tech-shape:poc-Candidate-foaf-name a sh:PropertyShape ;
     sh:name "Name" ;
     sh:path foaf:name .
 
-tech-shape:poc-Candidate-poc-hasProfile a sh:PropertyShape ;
-    sh:class poc:CandidateProfile ;
-    sh:description "Indicates the CandidateProfile of a specific Candidate." ;
+tech-shape:rmo-Candidate-rmo-hasProfile a sh:PropertyShape ;
+    sh:class rmo:CandidateProfile ;
+    sh:description "Indicates the candidate profile of a specific Candidate." ;
     sh:name "Has profile" ;
-    sh:path poc:hasProfile ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasProfile> ?that . ?that <http://index.dev/ontology/poc#hasProfile> ?this .}" ] .
+    sh:path rmo:hasProfile ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasProfile> ?that . ?that <http://index.dev/ontology/rmo#hasProfile> ?this .}" ] .
 
-tech-shape:poc-Candidate-poc-phoneNumber a sh:PropertyShape ;
+tech-shape:rmo-Candidate-rmo-phoneNumber a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "A telephone number through which the Candidate can be contacted." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Phone number" ;
-    sh:path poc:phoneNumber .
+    sh:path rmo:phoneNumber .
 
-tech-shape:poc-CandidateProfile-poc-hasCredential a sh:PropertyShape ;
-    sh:class poc:Credential ;
+tech-shape:rmo-CandidateProfile-rmo-hasCredential a sh:PropertyShape ;
+    sh:class rmo:Credential ;
     sh:description "Academic qualifications and professional certifications obtained by a candidate." ;
     sh:name "Has credential" ;
-    sh:path poc:hasCredential ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasCredential> ?that . ?that <http://index.dev/ontology/poc#hasCredential> ?this .}" ] .
+    sh:path rmo:hasCredential ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasCredential> ?that . ?that <http://index.dev/ontology/rmo#hasCredential> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-hasExperience a sh:PropertyShape ;
-    sh:class poc:Experience ;
-    sh:description "Represents the work experience details of a CandidateProfile." ;
+tech-shape:rmo-CandidateProfile-rmo-hasExperience a sh:PropertyShape ;
+    sh:class rmo:Experience ;
+    sh:description "Represents the work experience details of a candidate profile." ;
     sh:name "Has experience" ;
-    sh:path poc:hasExperience ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasExperience> ?that . ?that <http://index.dev/ontology/poc#hasExperience> ?this .}" ] .
+    sh:path rmo:hasExperience ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasExperience> ?that . ?that <http://index.dev/ontology/rmo#hasExperience> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-hasLocation a sh:PropertyShape ;
+tech-shape:rmo-CandidateProfile-rmo-hasLocation a sh:PropertyShape ;
     sh:class dcterms:Location ;
     sh:description "Specifies the geographical location and timezone relevant to CandidateProfile." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has location" ;
-    sh:path poc:hasLocation ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasLocation> ?that . ?that <http://index.dev/ontology/poc#hasLocation> ?this .}" ] .
+    sh:path rmo:hasLocation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasLocation> ?that . ?that <http://index.dev/ontology/rmo#hasLocation> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-hasQualification a sh:PropertyShape ;
-    sh:class poc:Qualification ;
+tech-shape:rmo-CandidateProfile-rmo-hasQualification a sh:PropertyShape ;
+    sh:class rmo:Qualification ;
     sh:name "Has qualification" ;
-    sh:path poc:hasQualification ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasQualification> ?that . ?that <http://index.dev/ontology/poc#hasQualification> ?this .}" ] .
+    sh:path rmo:hasQualification ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasQualification> ?that . ?that <http://index.dev/ontology/rmo#hasQualification> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-hasSkills a sh:PropertyShape ;
-    sh:class poc:Skill ;
-    sh:description "Indicates that a CandidateProfile possesses a specific skill." ;
+tech-shape:rmo-CandidateProfile-rmo-hasSkills a sh:PropertyShape ;
+    sh:class rmo:Skill ;
+    sh:description "Indicates that a candidate profile possesses a specific skill." ;
     sh:minCount 1 ;
     sh:name "Has skills" ;
-    sh:path poc:hasSkills ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasSkills> ?that . ?that <http://index.dev/ontology/poc#hasSkills> ?this .}" ] .
+    sh:path rmo:hasSkills ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasSkills> ?that . ?that <http://index.dev/ontology/rmo#hasSkills> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-profileId a sh:PropertyShape ;
+tech-shape:rmo-CandidateProfile-rmo-profileId a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:integer ;
     sh:description "A unique identifier for the candidate profile." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Profile id" ;
-    sh:path poc:profileId .
+    sh:path rmo:profileId .
 
-tech-shape:poc-CandidateProfile-poc-receivesJobDesciption a sh:PropertyShape ;
-    sh:class poc:JobDescription ;
-    sh:description "Indicates that a CandidateProfile receives a JobDescription from the system." ;
+tech-shape:rmo-CandidateProfile-rmo-receivesJobDesciption a sh:PropertyShape ;
+    sh:class rmo:JobDescription ;
+    sh:description "Indicates that a candidate profile receives a job description from the system." ;
     sh:name "Receives job desciption" ;
-    sh:path poc:receivesJobDesciption ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#receivesJobDesciption> ?that . ?that <http://index.dev/ontology/poc#receivesJobDesciption> ?this .}" ] .
+    sh:path rmo:receivesJobDesciption ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#receivesJobDesciption> ?that . ?that <http://index.dev/ontology/rmo#receivesJobDesciption> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-targetOccupation a sh:PropertyShape ;
-    sh:class poc:Role ;
-    sh:description "Indicates the job roles or occupations that a CandidateProfile is interested in or qualified for." ;
+tech-shape:rmo-CandidateProfile-rmo-targetOccupation a sh:PropertyShape ;
+    sh:class rmo:Role ;
+    sh:description "Indicates the job roles or occupations that a candidate profile is interested in or qualified for." ;
     sh:name "Target occupation" ;
-    sh:path poc:targetOccupation ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#targetOccupation> ?that . ?that <http://index.dev/ontology/poc#targetOccupation> ?this .}" ] .
+    sh:path rmo:targetOccupation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#targetOccupation> ?that . ?that <http://index.dev/ontology/rmo#targetOccupation> ?this .}" ] .
 
-tech-shape:poc-CandidateProfile-poc-targetRate a sh:PropertyShape ;
+tech-shape:rmo-CandidateProfile-rmo-targetRate a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:double ;
+    sh:description "Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Target rate" ;
-    sh:path poc:targetRate .
+    sh:path rmo:targetRate .
 
-tech-shape:poc-Certification-dct-description a sh:PropertyShape ;
+tech-shape:rmo-Certification-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -333,7 +329,7 @@ tech-shape:poc-Certification-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-Company-dct-description a sh:PropertyShape ;
+tech-shape:rmo-Company-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -342,39 +338,40 @@ tech-shape:poc-Company-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-Company-poc-companyName a sh:PropertyShape ;
+tech-shape:rmo-Company-rmo-companyName a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
+    sh:description "The name of the organization or business entity that has posted a job description." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Company name" ;
-    sh:path poc:companyName .
+    sh:path rmo:companyName .
 
-tech-shape:poc-Company-poc-hasLocation a sh:PropertyShape ;
+tech-shape:rmo-Company-rmo-hasLocation a sh:PropertyShape ;
     sh:class dcterms:Location ;
-    sh:description "Specifies the geographical location and timezone relevant to CandidateProfile." ;
+    sh:description "Specifies the geographical location and time zone relevant to candidate profile." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has location" ;
-    sh:path poc:hasLocation ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasLocation> ?that . ?that <http://index.dev/ontology/poc#hasLocation> ?this .}" ] .
+    sh:path rmo:hasLocation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasLocation> ?that . ?that <http://index.dev/ontology/rmo#hasLocation> ?this .}" ] .
 
-tech-shape:poc-Company-poc-industry a sh:PropertyShape ;
+tech-shape:rmo-Company-rmo-industry a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Industry" ;
-    sh:path poc:industry .
+    sh:path rmo:industry .
 
-tech-shape:poc-Company-poc-posts a sh:PropertyShape ;
-    sh:class poc:JobDescription ;
-    sh:description "Indicates that a Company publishes a JobDescription." ;
+tech-shape:rmo-Company-rmo-posts a sh:PropertyShape ;
+    sh:class rmo:JobDescription ;
+    sh:description "Indicates that a Company publishes a job description." ;
     sh:name "Posts" ;
-    sh:path poc:posts ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#posts> ?that . ?that <http://index.dev/ontology/poc#posts> ?this .}" ] .
+    sh:path rmo:posts ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#posts> ?that . ?that <http://index.dev/ontology/rmo#posts> ?this .}" ] .
 
-tech-shape:poc-Credential-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Credential-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
@@ -383,23 +380,24 @@ tech-shape:poc-Credential-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Credential-poc-dateAwarded a sh:PropertyShape ;
+tech-shape:rmo-Credential-rmo-dateAwarded a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:date ;
+    sh:description "The date when a candidate was granted a particular credential, such as a degree or certification." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Date awarded" ;
-    sh:path poc:dateAwarded .
+    sh:path rmo:dateAwarded .
 
-tech-shape:poc-Education-poc-educationDegree a sh:PropertyShape ;
+tech-shape:rmo-Education-rmo-educationDegree a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Education degree" ;
-    sh:path poc:educationDegree .
+    sh:path rmo:educationDegree .
 
-tech-shape:poc-Experience-dct-description a sh:PropertyShape ;
+tech-shape:rmo-Experience-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -408,7 +406,7 @@ tech-shape:poc-Experience-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-Experience-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Experience-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "Represents the title or the name of a resource." ;
     sh:maxCount 1 ;
@@ -416,30 +414,31 @@ tech-shape:poc-Experience-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Experience-poc-hasSkillUsed a sh:PropertyShape ;
-    sh:class poc:Skill ;
+tech-shape:rmo-Experience-rmo-hasSkillUsed a sh:PropertyShape ;
+    sh:class rmo:Skill ;
     sh:description "Indicates that a specific skill was utilized in a particular experience." ;
     sh:name "Has skill used" ;
-    sh:path poc:hasSkillUsed ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasSkillUsed> ?that . ?that <http://index.dev/ontology/poc#hasSkillUsed> ?this .}" ] .
+    sh:path rmo:hasSkillUsed ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasSkillUsed> ?that . ?that <http://index.dev/ontology/rmo#hasSkillUsed> ?this .}" ] .
 
-tech-shape:poc-Experience-poc-isRelatedTo a sh:PropertyShape ;
-    sh:class poc:Qualification,
-        poc:Role ;
+tech-shape:rmo-Experience-rmo-isRelatedTo a sh:PropertyShape ;
+    sh:class rmo:Qualification,
+        rmo:Role ;
     sh:description "Indicates that a specific resource is associated with a particular other resource." ;
     sh:name "Is related to" ;
-    sh:path poc:isRelatedTo ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#isRelatedTo> ?that . ?that <http://index.dev/ontology/poc#isRelatedTo> ?this .}" ],
-        [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#isRelatedTo> ?that . ?that <http://index.dev/ontology/poc#isRelatedTo> ?this .}" ] .
+    sh:path rmo:isRelatedTo ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#isRelatedTo> ?that . ?that <http://index.dev/ontology/rmo#isRelatedTo> ?this .}" ],
+        [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#isRelatedTo> ?that . ?that <http://index.dev/ontology/rmo#isRelatedTo> ?this .}" ] .
 
-tech-shape:poc-Experience-poc-yearsOfExperience a sh:PropertyShape ;
+tech-shape:rmo-Experience-rmo-yearsOfExperience a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:description "Indicates the total number of years a candidate has worked in their field or occupation." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Years of experience" ;
-    sh:path poc:yearsOfExperience .
+    sh:path rmo:yearsOfExperience .
 
-tech-shape:poc-JobDescription-dct-description a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -448,7 +447,7 @@ tech-shape:poc-JobDescription-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-JobDescription-dct-title a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
@@ -457,100 +456,105 @@ tech-shape:poc-JobDescription-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-JobDescription-poc-availability a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-availability a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
+    sh:description "Indicates when the job position is open for applications, including specific dates or time frames such as \"immediate\" or \"within three months.\"" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Availability" ;
-    sh:path poc:availability .
+    sh:path rmo:availability .
 
-tech-shape:poc-JobDescription-poc-hasEngagement a sh:PropertyShape ;
-    sh:class poc:TypeOfEngagement ;
-    sh:description "Indicates what TypeOfEngagement a specific JobDescription entails." ;
+tech-shape:rmo-JobDescription-rmo-hasEngagement a sh:PropertyShape ;
+    sh:class rmo:TypeOfEngagement ;
+    sh:description "Indicates what type of engagement a specific job description entails." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has engagement" ;
-    sh:path poc:hasEngagement ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasEngagement> ?that . ?that <http://index.dev/ontology/poc#hasEngagement> ?this .}" ] .
+    sh:path rmo:hasEngagement ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasEngagement> ?that . ?that <http://index.dev/ontology/rmo#hasEngagement> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-jobId a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-jobId a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
+    sh:description "A unique identifier for a job description, used to distinguish it from other job description." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Job id" ;
-    sh:path poc:jobId .
+    sh:path rmo:jobId .
 
-tech-shape:poc-JobDescription-poc-offersPosition a sh:PropertyShape ;
-    sh:class poc:Role ;
-    sh:description "Indicates the job position offered by a JobDescription." ;
+tech-shape:rmo-JobDescription-rmo-offersPosition a sh:PropertyShape ;
+    sh:class rmo:Role ;
+    sh:description "Indicates the job position offered by a job description." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Offers position" ;
-    sh:path poc:offersPosition ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#offersPosition> ?that . ?that <http://index.dev/ontology/poc#offersPosition> ?this .}" ] .
+    sh:path rmo:offersPosition ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#offersPosition> ?that . ?that <http://index.dev/ontology/rmo#offersPosition> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-projectType a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-projectType a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
+    sh:description "Represents the nature or category of a project, such as software development, research, or marketing." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Project type" ;
-    sh:path poc:projectType .
+    sh:path rmo:projectType .
 
-tech-shape:poc-JobDescription-poc-rate a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-rate a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:decimal ;
+    sh:description "Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Rate" ;
-    sh:path poc:rate .
+    sh:path rmo:rate .
 
-tech-shape:poc-JobDescription-poc-requiresCredential a sh:PropertyShape ;
-    sh:class poc:Credential ;
-    sh:description "Indicates that a JobDescription may require one or more Academic qualifications and/or professional certifications." ;
+tech-shape:rmo-JobDescription-rmo-requiresCredential a sh:PropertyShape ;
+    sh:class rmo:Credential ;
+    sh:description "Indicates that a job description may require one or more Academic qualifications and/or professional certifications." ;
     sh:name "Requires credential" ;
-    sh:path poc:requiresCredential ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#requiresCredential> ?that . ?that <http://index.dev/ontology/poc#requiresCredential> ?this .}" ] .
+    sh:path rmo:requiresCredential ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#requiresCredential> ?that . ?that <http://index.dev/ontology/rmo#requiresCredential> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-requiresExperience a sh:PropertyShape ;
-    sh:class poc:Experience ;
-    sh:description "Specifies the type and level of experience required for a JobDescription." ;
+tech-shape:rmo-JobDescription-rmo-requiresExperience a sh:PropertyShape ;
+    sh:class rmo:Experience ;
+    sh:description "Specifies the type and level of experience required for a job description." ;
     sh:name "Requires experience" ;
-    sh:path poc:requiresExperience ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#requiresExperience> ?that . ?that <http://index.dev/ontology/poc#requiresExperience> ?this .}" ] .
+    sh:path rmo:requiresExperience ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#requiresExperience> ?that . ?that <http://index.dev/ontology/rmo#requiresExperience> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-requiresQualification a sh:PropertyShape ;
-    sh:class poc:Qualification ;
-    sh:description "Specifies the qualifications required for a JobDescription." ;
+tech-shape:rmo-JobDescription-rmo-requiresQualification a sh:PropertyShape ;
+    sh:class rmo:Qualification ;
+    sh:description "Specifies the qualifications required for a job description." ;
     sh:name "Requires qualification" ;
-    sh:path poc:requiresQualification ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#requiresQualification> ?that . ?that <http://index.dev/ontology/poc#requiresQualification> ?this .}" ] .
+    sh:path rmo:requiresQualification ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#requiresQualification> ?that . ?that <http://index.dev/ontology/rmo#requiresQualification> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-requiresSkill a sh:PropertyShape ;
-    sh:class poc:Skill ;
-    sh:description "Specifies the skills that are necessary for a JobDescription." ;
+tech-shape:rmo-JobDescription-rmo-requiresSkill a sh:PropertyShape ;
+    sh:class rmo:Skill ;
+    sh:description "Specifies the skills that are necessary for a job description." ;
     sh:minCount 1 ;
     sh:name "Requires skill" ;
-    sh:path poc:requiresSkill ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#requiresSkill> ?that . ?that <http://index.dev/ontology/poc#requiresSkill> ?this .}" ] .
+    sh:path rmo:requiresSkill ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#requiresSkill> ?that . ?that <http://index.dev/ontology/rmo#requiresSkill> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-specifiesLocation a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-specifiesLocation a sh:PropertyShape ;
     sh:class dcterms:Location ;
-    sh:description "Specifies the geographical location and timezone relevant to JobDescription." ;
+    sh:description "Specifies the geographical location and time zone relevant to job description." ;
     sh:name "Specifies location" ;
-    sh:path poc:specifiesLocation ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#specifiesLocation> ?that . ?that <http://index.dev/ontology/poc#specifiesLocation> ?this .}" ] .
+    sh:path rmo:specifiesLocation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#specifiesLocation> ?that . ?that <http://index.dev/ontology/rmo#specifiesLocation> ?this .}" ] .
 
-tech-shape:poc-JobDescription-poc-startDate a sh:PropertyShape ;
+tech-shape:rmo-JobDescription-rmo-startDate a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:description "Represents the date when a job description, project, or engagement is scheduled to begin." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Start date" ;
-    sh:path poc:startDate .
+    sh:path rmo:startDate .
 
-tech-shape:poc-Qualification-dct-description a sh:PropertyShape ;
+tech-shape:rmo-Qualification-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
@@ -559,7 +563,7 @@ tech-shape:poc-Qualification-dct-description a sh:PropertyShape ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-tech-shape:poc-Qualification-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Qualification-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
@@ -568,7 +572,7 @@ tech-shape:poc-Qualification-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Qualification-skos-altLabel a sh:PropertyShape ;
+tech-shape:rmo-Qualification-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
@@ -577,13 +581,13 @@ tech-shape:poc-Qualification-skos-altLabel a sh:PropertyShape ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
-tech-shape:poc-Qualification-skos-inScheme a sh:PropertyShape ;
+tech-shape:rmo-Qualification-skos-inScheme a sh:PropertyShape ;
     sh:class esco:Qualification ;
     sh:description "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme." ;
     sh:name "In scheme" ;
     sh:path skos:inScheme .
 
-tech-shape:poc-Qualification-skos-prefLabel a sh:PropertyShape ;
+tech-shape:rmo-Qualification-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "The preferred lexical label for a resource, in a given language." ;
     sh:maxCount 1 ;
@@ -591,7 +595,7 @@ tech-shape:poc-Qualification-skos-prefLabel a sh:PropertyShape ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
-tech-shape:poc-Role-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Role-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "Represents the title or the name of a resource." ;
     sh:maxCount 1 ;
@@ -599,7 +603,7 @@ tech-shape:poc-Role-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Role-skos-altLabel a sh:PropertyShape ;
+tech-shape:rmo-Role-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
@@ -607,13 +611,13 @@ tech-shape:poc-Role-skos-altLabel a sh:PropertyShape ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
-tech-shape:poc-Role-skos-inScheme a sh:PropertyShape ;
+tech-shape:rmo-Role-skos-inScheme a sh:PropertyShape ;
     sh:class esco:Occupation ;
     sh:description "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme." ;
     sh:name "In scheme" ;
     sh:path skos:inScheme .
 
-tech-shape:poc-Role-skos-prefLabel a sh:PropertyShape ;
+tech-shape:rmo-Role-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
@@ -621,7 +625,7 @@ tech-shape:poc-Role-skos-prefLabel a sh:PropertyShape ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
-tech-shape:poc-Skill-dct-title a sh:PropertyShape ;
+tech-shape:rmo-Skill-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
@@ -630,29 +634,30 @@ tech-shape:poc-Skill-dct-title a sh:PropertyShape ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
-tech-shape:poc-Skill-poc-essentialFor a sh:PropertyShape ;
-    sh:class poc:Role ;
+tech-shape:rmo-Skill-rmo-essentialFor a sh:PropertyShape ;
+    sh:class rmo:Role ;
     sh:description "Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose." ;
     sh:name "Essential for" ;
-    sh:path poc:essentialFor ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#essentialFor> ?that . ?that <http://index.dev/ontology/poc#essentialFor> ?this .}" ] .
+    sh:path rmo:essentialFor ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#essentialFor> ?that . ?that <http://index.dev/ontology/rmo#essentialFor> ?this .}" ] .
 
-tech-shape:poc-Skill-poc-optionalFor a sh:PropertyShape ;
-    sh:class poc:Role ;
+tech-shape:rmo-Skill-rmo-optionalFor a sh:PropertyShape ;
+    sh:class rmo:Role ;
     sh:description "Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology." ;
     sh:name "Optional for" ;
-    sh:path poc:optionalFor ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#optionalFor> ?that . ?that <http://index.dev/ontology/poc#optionalFor> ?this .}" ] .
+    sh:path rmo:optionalFor ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#optionalFor> ?that . ?that <http://index.dev/ontology/rmo#optionalFor> ?this .}" ] .
 
-tech-shape:poc-Skill-poc-yearsOfSkill a sh:PropertyShape ;
+tech-shape:rmo-Skill-rmo-yearsOfSkill a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:integer ;
+    sh:description "Indicates the number of years a candidate has utilized a specific skill." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Years of skill" ;
-    sh:path poc:yearsOfSkill .
+    sh:path rmo:yearsOfSkill .
 
-tech-shape:poc-Skill-skos-altLabel a sh:PropertyShape ;
+tech-shape:rmo-Skill-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
@@ -661,13 +666,13 @@ tech-shape:poc-Skill-skos-altLabel a sh:PropertyShape ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
-tech-shape:poc-Skill-skos-inScheme a sh:PropertyShape ;
+tech-shape:rmo-Skill-skos-inScheme a sh:PropertyShape ;
     sh:class esco:Skill ;
     sh:description "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme." ;
     sh:name "In scheme" ;
     sh:path skos:inScheme .
 
-tech-shape:poc-Skill-skos-prefLabel a sh:PropertyShape ;
+tech-shape:rmo-Skill-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "The preferred lexical label for a resource, in a given language." ;
@@ -676,23 +681,23 @@ tech-shape:poc-Skill-skos-prefLabel a sh:PropertyShape ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
-tech-shape:poc-TypeOfEngagement-poc-engagementType a sh:PropertyShape ;
+tech-shape:rmo-TypeOfEngagement-rmo-engagementType a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "It includes part-time, full-time, or contractual roles." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Engagement type" ;
-    sh:path poc:engagementType .
+    sh:path rmo:engagementType .
 
-tech-shape:poc-TypeOfEngagement-poc-hasBenefits a sh:PropertyShape ;
-    sh:class poc:Benefits ;
+tech-shape:rmo-TypeOfEngagement-rmo-hasBenefits a sh:PropertyShape ;
+    sh:class rmo:Benefits ;
     sh:description "Indicates the benefits associated with a specific type of job engagement." ;
     sh:name "Has benefits" ;
-    sh:path poc:hasBenefits ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/poc#hasBenefits> ?that . ?that <http://index.dev/ontology/poc#hasBenefits> ?this .}" ] .
+    sh:path rmo:hasBenefits ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://index.dev/ontology/rmo#hasBenefits> ?that . ?that <http://index.dev/ontology/rmo#hasBenefits> ?this .}" ] .
 
-tech-shape:poc-TypeOfEngagement-skos-altLabel a sh:PropertyShape ;
+tech-shape:rmo-TypeOfEngagement-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
@@ -705,13 +710,13 @@ tech-shape:tech-shape a owl:Ontology ;
     rdfs:label "Core Public Organisation Vocabulary - core shapes"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2024-07-19"^^xsd:date ;
+    dcterms:issued "2024-07-25"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "POC _AP Ontology - core shapes"@en ;
+    dcterms:title "RMO _AP Ontology - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-19" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-25" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

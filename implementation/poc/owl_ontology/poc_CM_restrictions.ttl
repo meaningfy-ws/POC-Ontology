@@ -7,9 +7,9 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix poc: <http://index.dev/ontology/poc#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rmo: <http://index.dev/ontology/rmo#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,14 +18,14 @@
     rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "he HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis.."@en ;
-    dcterms:issued "2024-07-19"^^xsd:date ;
+    dcterms:issued "2024-07-25"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "POC Ontology_AP Ontology - core restrictions"@en ;
+    dcterms:title "RMO Ontology_AP Ontology - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from poc_CM.xml on 
-                2024-07-19""" ;
+                2024-07-25""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -58,54 +58,54 @@
     owl:versionIRI :tech-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
 
-poc:essentialFor rdfs:domain poc:Skill ;
-    rdfs:range poc:Role .
+rmo:essentialFor rdfs:domain rmo:Skill ;
+    rdfs:range rmo:Role .
 
-poc:hasBenefits rdfs:domain poc:TypeOfEngagement ;
-    rdfs:range poc:Benefits .
+rmo:hasBenefits rdfs:domain rmo:TypeOfEngagement ;
+    rdfs:range rmo:Benefits .
 
-poc:hasCredential rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:Credential .
+rmo:hasCredential rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:Credential .
 
-poc:hasExperience rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:Experience .
+rmo:hasExperience rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:Experience .
 
-poc:hasProfile rdfs:domain poc:Candidate ;
-    rdfs:range poc:CandidateProfile .
+rmo:hasProfile rdfs:domain rmo:Candidate ;
+    rdfs:range rmo:CandidateProfile .
 
-poc:hasQualification rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:Qualification .
+rmo:hasQualification rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:Qualification .
 
-poc:hasSkillUsed rdfs:domain poc:Experience ;
-    rdfs:range poc:Skill .
+rmo:hasSkillUsed rdfs:domain rmo:Experience ;
+    rdfs:range rmo:Skill .
 
-poc:isRelatedTo rdf:domain poc:Experience ;
+rmo:isRelatedTo rdf:domain rmo:Experience ;
     rdfs:range [ a owl:Class ;
-            owl:unionOf ( poc:Role poc:Qualification ) ] .
+            owl:unionOf ( rmo:Role rmo:Qualification ) ] .
 
-poc:optionalFor rdfs:domain poc:Skill ;
-    rdfs:range poc:Role .
+rmo:optionalFor rdfs:domain rmo:Skill ;
+    rdfs:range rmo:Role .
 
-poc:posts rdfs:domain poc:Company ;
-    rdfs:range poc:JobDescription .
+rmo:posts rdfs:domain rmo:Company ;
+    rdfs:range rmo:JobDescription .
 
-poc:receivesJobDesciption rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:JobDescription .
+rmo:receivesJobDesciption rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:JobDescription .
 
-poc:requiresCredential rdfs:domain poc:JobDescription ;
-    rdfs:range poc:Credential .
+rmo:requiresCredential rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:Credential .
 
-poc:requiresExperience rdfs:domain poc:JobDescription ;
-    rdfs:range poc:Experience .
+rmo:requiresExperience rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:Experience .
 
-poc:requiresQualification rdfs:domain poc:JobDescription ;
-    rdfs:range poc:Qualification .
+rmo:requiresQualification rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:Qualification .
 
-poc:specifiesLocation rdfs:domain poc:JobDescription ;
+rmo:specifiesLocation rdfs:domain rmo:JobDescription ;
     rdfs:range dcterms:Location .
 
-poc:targetOccupation rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:Role .
+rmo:targetOccupation rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:Role .
 
 esco:Occupation a owl:Class ;
     rdfs:subClassOf skos:Concept ;
@@ -125,86 +125,86 @@ esco:Skill a owl:Class ;
             owl:hasValue esco:Skill ;
             owl:onProperty skos:inScheme ] .
 
-poc:BenefitName a owl:FunctionalProperty ;
-    rdfs:domain poc:Benefits ;
+rmo:BenefitName a owl:FunctionalProperty ;
+    rdfs:domain rmo:Benefits ;
     rdfs:range rdf:PlainLiteral .
 
-poc:availability a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
+rmo:availability a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
     rdfs:range rdf:PlainLiteral .
 
-poc:companyName a owl:FunctionalProperty ;
-    rdfs:domain poc:Company ;
+rmo:companyName a owl:FunctionalProperty ;
+    rdfs:domain rmo:Company ;
     rdfs:range rdf:PlainLiteral .
 
-poc:dateAwarded a owl:FunctionalProperty ;
-    rdfs:domain poc:Credential ;
+rmo:dateAwarded a owl:FunctionalProperty ;
+    rdfs:domain rmo:Credential ;
     rdfs:range xsd:date .
 
-poc:educationDegree a owl:FunctionalProperty ;
-    rdfs:domain poc:Education ;
+rmo:educationDegree a owl:FunctionalProperty ;
+    rdfs:domain rmo:Education ;
     rdfs:range rdf:PlainLiteral .
 
-poc:engagementType a owl:FunctionalProperty ;
-    rdfs:domain poc:TypeOfEngagement ;
+rmo:engagementType a owl:FunctionalProperty ;
+    rdfs:domain rmo:TypeOfEngagement ;
     rdfs:range rdf:PlainLiteral .
 
-poc:hasEngagement a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
-    rdfs:range poc:TypeOfEngagement .
+rmo:hasEngagement a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:TypeOfEngagement .
 
-poc:hasSkills rdfs:domain poc:CandidateProfile ;
-    rdfs:range poc:Skill .
+rmo:hasSkills rdfs:domain rmo:CandidateProfile ;
+    rdfs:range rmo:Skill .
 
-poc:industry a owl:FunctionalProperty ;
-    rdfs:domain poc:Company ;
+rmo:industry a owl:FunctionalProperty ;
+    rdfs:domain rmo:Company ;
     rdfs:range rdf:PlainLiteral .
 
-poc:jobId a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
+rmo:jobId a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
     rdfs:range rdf:PlainLiteral .
 
-poc:offersPosition a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
-    rdfs:range poc:Role .
+rmo:offersPosition a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:Role .
 
-poc:phoneNumber a owl:FunctionalProperty ;
-    rdfs:domain poc:Candidate ;
+rmo:phoneNumber a owl:FunctionalProperty ;
+    rdfs:domain rmo:Candidate ;
     rdfs:range rdf:PlainLiteral .
 
-poc:profileId a owl:FunctionalProperty ;
-    rdfs:domain poc:CandidateProfile ;
+rmo:profileId a owl:FunctionalProperty ;
+    rdfs:domain rmo:CandidateProfile ;
     rdfs:range xsd:integer .
 
-poc:projectType a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
+rmo:projectType a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
     rdfs:range rdf:PlainLiteral .
 
-poc:rate a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
+rmo:rate a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
     rdfs:range xsd:decimal .
 
-poc:requiresSkill rdfs:domain poc:JobDescription ;
-    rdfs:range poc:Skill .
+rmo:requiresSkill rdfs:domain rmo:JobDescription ;
+    rdfs:range rmo:Skill .
 
-poc:startDate a owl:FunctionalProperty ;
-    rdfs:domain poc:JobDescription ;
+rmo:startDate a owl:FunctionalProperty ;
+    rdfs:domain rmo:JobDescription ;
     rdfs:range xsd:Date .
 
-poc:targetRate a owl:FunctionalProperty ;
-    rdfs:domain poc:CandidateProfile ;
+rmo:targetRate a owl:FunctionalProperty ;
+    rdfs:domain rmo:CandidateProfile ;
     rdfs:range xsd:double .
 
-poc:timeZone a owl:FunctionalProperty ;
+rmo:timeZone a owl:FunctionalProperty ;
     rdfs:domain dcterms:Location ;
     rdfs:range rdf:PlainLiteral .
 
-poc:yearsOfExperience a owl:FunctionalProperty ;
-    rdfs:domain poc:Experience ;
+rmo:yearsOfExperience a owl:FunctionalProperty ;
+    rdfs:domain rmo:Experience ;
     rdfs:range xsd:Integer .
 
-poc:yearsOfSkill a owl:FunctionalProperty ;
-    rdfs:domain poc:Skill ;
+rmo:yearsOfSkill a owl:FunctionalProperty ;
+    rdfs:domain rmo:Skill ;
     rdfs:range xsd:integer .
 
 rdf:Plainliteral a owl:Class .
@@ -214,137 +214,134 @@ locn:geographicName a owl:FunctionalProperty ;
     rdfs:range rdf:PlainLiteral .
 
 foaf:homepage a owl:FunctionalProperty ;
-    rdfs:domain poc:Candidate ;
+    rdfs:domain rmo:Candidate ;
     rdfs:range xsd:anyURI .
 
 foaf:mbox a owl:FunctionalProperty ;
-    rdfs:domain poc:Candidate ;
+    rdfs:domain rmo:Candidate ;
     rdfs:range rdf:PlainLiteral .
 
 foaf:name a owl:FunctionalProperty ;
-    rdfs:domain poc:Candidate ;
+    rdfs:domain rmo:Candidate ;
     rdfs:range rdf:PlainLiteral .
 
-poc:Certification a owl:Class ;
+rmo:Certification a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ] .
 
-poc:Education rdfs:subClassOf [ a owl:Restriction ;
+rmo:Education rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:educationDegree ] .
+            owl:onProperty rmo:educationDegree ] .
 
-poc:hasLocation a owl:FunctionalProperty ;
+rmo:hasLocation a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Company poc:CandidateProfile ) ] ;
+            owl:unionOf ( rmo:Company rmo:CandidateProfile ) ] ;
     rdfs:range dcterms:Location .
 
 rdf:plainLiteral a owl:Class .
 
-poc:Benefits a owl:Class ;
+rmo:Benefits a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:BenefitName ],
+            owl:onProperty rmo:BenefitName ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ] .
 
 skos:inScheme rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Qualification poc:Role poc:Skill ) ] ;
+            owl:unionOf ( rmo:Qualification rmo:Role rmo:Skill ) ] ;
     rdfs:range skos:Concept .
 
 skos:prefLabel a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Qualification poc:Role poc:Skill ) ] ;
+            owl:unionOf ( rmo:Qualification rmo:Role rmo:Skill ) ] ;
     rdfs:range [ a owl:Class ;
             owl:unionOf ( rdf:plainLiteral rdf:PlainLiteral ) ] .
 
-poc:Credential a owl:Class ;
+rmo:Credential a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:dateAwarded ],
+            owl:onProperty rmo:dateAwarded ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ] .
 
-poc:TypeOfEngagement a owl:Class ;
+rmo:TypeOfEngagement a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty skos:altLabel ],
+            owl:onProperty rmo:engagementType ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:engagementType ] .
+            owl:onProperty skos:altLabel ] .
 
 dcterms:Location rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty locn:geographicName ],
+            owl:onProperty rmo:timeZone ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:timeZone ] .
+            owl:onProperty locn:geographicName ] .
 
 skos:altLabel a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Qualification poc:Role poc:Skill poc:TypeOfEngagement ) ] ;
+            owl:unionOf ( rmo:Qualification rmo:Role rmo:Skill rmo:TypeOfEngagement ) ] ;
     rdfs:range rdf:PlainLiteral .
 
-poc:Company a owl:Class ;
+rmo:Company a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:hasLocation ],
+            owl:onProperty rmo:companyName ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:industry ],
+            owl:onProperty rmo:hasLocation ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:companyName ] .
+            owl:onProperty rmo:industry ] .
 
-poc:Candidate a owl:Class ;
+rmo:Candidate a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
+            owl:onProperty foaf:homepage ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:phoneNumber ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty foaf:mbox ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:phoneNumber ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty foaf:name ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty foaf:homepage ] .
+            owl:onProperty foaf:name ] .
 
 dcterms:description a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Benefits poc:Certification poc:Company poc:Experience poc:JobDescription poc:Qualification ) ] ;
+            owl:unionOf ( rmo:Benefits rmo:Certification rmo:Company rmo:Experience rmo:JobDescription rmo:Qualification ) ] ;
     rdfs:range rdf:PlainLiteral .
 
-poc:Experience a owl:Class ;
+rmo:Experience a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:title ],
+            owl:onProperty rmo:yearsOfExperience ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:yearsOfExperience ],
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ] .
 
 dcterms:title a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( poc:Candidate poc:Credential poc:Experience poc:JobDescription poc:Qualification poc:Role poc:Skill ) ] ;
+            owl:unionOf ( rmo:Candidate rmo:Credential rmo:Experience rmo:JobDescription rmo:Qualification rmo:Role rmo:Skill ) ] ;
     rdfs:range [ a owl:Class ;
             owl:unionOf ( rdf:PlainLiteral rdf:Plainliteral rdf:plainLiteral ) ] .
 
-poc:Qualification a owl:Class ;
+rmo:Qualification a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty dcterms:title ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty skos:prefLabel ],
         [ a owl:Restriction ;
@@ -352,37 +349,26 @@ poc:Qualification a owl:Class ;
             owl:onProperty skos:altLabel ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:description ] .
+            owl:onProperty dcterms:description ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:title ] .
 
-poc:CandidateProfile rdfs:subClassOf [ a owl:Restriction ;
+rmo:CandidateProfile rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:profileId ],
+            owl:onProperty rmo:profileId ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:targetRate ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:hasLocation ],
+            owl:onProperty rmo:hasLocation ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty poc:hasSkills ] .
+            owl:onProperty rmo:hasSkills ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:targetRate ] .
 
-poc:Role a owl:Class ;
+rmo:Role a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty skos:altLabel ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty dcterms:title ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty skos:prefLabel ] .
-
-poc:Skill a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:yearsOfSkill ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
@@ -392,43 +378,57 @@ poc:Skill a owl:Class ;
             owl:cardinality 1 ;
             owl:onProperty skos:altLabel ] .
 
-poc:JobDescription a owl:Class ;
+rmo:Skill a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:jobId ],
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:availability ],
+            owl:onProperty skos:prefLabel ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:yearsOfSkill ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty skos:altLabel ] .
+
+rmo:JobDescription a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:jobId ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:projectType ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
+            owl:onProperty rmo:offersPosition ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:startDate ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:availability ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rmo:rate ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty rmo:requiresSkill ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
             owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty poc:hasEngagement ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:startDate ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:projectType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty poc:requiresSkill ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:rate ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty poc:offersPosition ] .
+            owl:onProperty rmo:hasEngagement ] .
 
 rdf:PlainLiteral a owl:Class .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( poc:Certification poc:Education ) .
+    owl:members ( rmo:Certification rmo:Education ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( poc:Qualification poc:Role poc:Skill ) .
+    owl:members ( rmo:Qualification rmo:Role rmo:Skill ) .
 
