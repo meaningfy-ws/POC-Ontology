@@ -111,22 +111,22 @@
     <xsl:variable name="ontologyDescriptionShapes"
         select="'The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core.'"/>
     <!--    rdfs:seeAlso -->
-    <xsl:variable name="seeAlsoResources"
-        select="
-            ('https://github.com/OP-TED/ePO/releases',
-            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about',
-            'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
-            'https://docs.ted.europa.eu/home/index.html')"/>
+<!--    <xsl:variable name="seeAlsoResources"-->
+<!--        select="-->
+<!--            ('https://github.com/OP-TED/ePO/releases',-->
+<!--            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about',-->
+<!--            'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',-->
+<!--            'https://docs.ted.europa.eu/home/index.html')"/>-->
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
-    <xsl:variable name="incompatibleWith" select="'3.1.0'"/>
+<!--    <xsl:variable name="incompatibleWith" select="'3.1.0'"/>-->
     <!--    owl:versionInfo -->
-    <xsl:variable name="versionInfo" select="'4.0.0'"/>
+    <xsl:variable name="versionInfo" select="'1.0.0'"/>
     <!--    bibo:status-->
     <xsl:variable name="ontologyStatus" select="'Semantic Specification Release'"/>
     <!--    owl:priorVersion -->
-    <xsl:variable name="priorVersion" select="'3.1.0'"/>
+<!--    <xsl:variable name="priorVersion" select="'3.1.0'"/>-->
     <!--    vann:preferredNamespaceUri -->
     <xsl:variable name="preferredNamespaceUri" select="'http://index.dev/ontology/rmo#'"/>
     <!--    vann:preferredNamespacePrefix -->
