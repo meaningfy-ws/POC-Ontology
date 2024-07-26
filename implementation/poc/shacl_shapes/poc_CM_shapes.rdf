@@ -33,14 +33,14 @@
          xmlns:sh="http://www.w3.org/ns/shacl#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
-         xmlns:tech-res="http://data.europa.eu/a4g/ontology#"
-         xmlns:tech-shape="http://data.europa.eu/a4g/data-shape#"
+         xmlns:tech-res="http://index.dev/ontology/rmo#"
+         xmlns:tech-shape="http://index.dev/ontology/rmo/data-shape#"
          xmlns:time="http://www.w3.org/2006/time#"
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
          xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#tech-shape">
+   <owl:Ontology rdf:about="http://index.dev/ontology/rmo/data-shape#tech-shape">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -68,1583 +68,1583 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech-restriction"/>
+      <owl:imports rdf:resource="http://index.dev/ontology/rmo#tech"/>
+      <owl:imports rdf:resource="http://index.dev/ontology/rmo#tech-restriction"/>
       <dct:title xml:lang="en">RMO _AP Ontology - core shapes</dct:title>
-      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
-      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-25</rdfs:comment>
+      <rdfs:label xml:lang="en">Core Recruitment Match Vocabulary - core shapes</rdfs:label>
+      <dct:publisher>https://meaningfy.ws/</dct:publisher>
+      <dct:description xml:lang="en">The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core.</dct:description>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-26</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-25</dct:issued>
-      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-26</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#tech-shape-3.1.0</owl:priorVersion>
-      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
-      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
-      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
+      <owl:versionIRI rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape-4.0.0"/>
+      <owl:priorVersion>http://index.dev/ontology/rmo/data-shape#tech-shape-3.1.0</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://index.dev/ontology/rmo#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>rmo</vann:preferredNamespacePrefix>
+      <dct:license>© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0.</dct:license>
    </owl:Ontology>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
       <sh:targetClass rdf:resource="http://purl.org/dc/terms/Location"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
       <rdfs:label>Location</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
       <rdfs:comment>A geographic area or place characterized by its physical coordinates and corresponding time zone.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Benefits"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
       <rdfs:label>Benefits</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
       <rdfs:comment>Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Candidate"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
       <rdfs:label>Candidate</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
       <rdfs:comment>An individual who uses the system to find job opportunities.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#CandidateProfile"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
       <rdfs:label>Candidate profile</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
       <rdfs:comment>Represents the detailed profile of a Candidate, including credentials, skills experience, and location.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Certification"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
       <rdfs:label>Certification</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
       <rdfs:comment>The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Company"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
       <rdfs:label>Company</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
       <rdfs:comment>An organization or business entity that employs individuals.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Credential"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
       <rdfs:label>Credential</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
       <rdfs:comment>An academic or professional qualification obtained by a candidate, such as degrees or certifications.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Education"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education">
       <rdfs:label>Education</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education">
       <rdfs:comment>The academic qualifications of a Candidate.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Experience"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <rdfs:label>Experience</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <rdfs:comment>Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
       <rdfs:label>Job description</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
       <rdfs:comment>A job opening posted by a company, including job details and requirements.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Qualification"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <rdfs:label>Qualification</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <rdfs:comment>Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <rdfs:label>Role</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <rdfs:comment>Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#Skill"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <rdfs:label>Skill</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <rdfs:comment>A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
+   <sh:NodeShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
       <sh:targetClass rdf:resource="http://index.dev/ontology/rmo#TypeOfEngagement"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
       <rdfs:label>Type of engagement</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
       <rdfs:comment>Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
       <sh:path rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
       <sh:name>Geographic name</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
       <sh:description>A textual description for a Location.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-locn-geographicName">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#timeZone"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
       <sh:name>Time zone</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
       <sh:description>An area which observes a uniform standard time for legal, commercial and social purposes.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rmo-timeZone">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#dct-Location-rmo-timeZone">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#BenefitName"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
       <sh:name>Benefit name</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Benefits-rmo-BenefitName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage">
       <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage">
       <sh:name>Homepage</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-homepage">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
       <sh:path rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
       <sh:name>Mbox</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-mbox">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
       <sh:path rdf:resource="http://xmlns.com/foaf/0.1/name"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
       <sh:name>Name</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
       <sh:description>The complete name of the Candidate as one string.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-foaf-name">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#phoneNumber"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:name>Phone number</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:description>A telephone number through which the Candidate can be contacted.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-phoneNumber">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#profileId"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
       <sh:name>Profile id</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
       <sh:description>A unique identifier for the candidate profile.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-profileId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#targetRate"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
       <sh:name>Target rate</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
       <sh:description>Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetRate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Certification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#companyName"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
       <sh:name>Company name</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
       <sh:description>The name of the organization or business entity that has posted a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-companyName">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#industry"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
       <sh:name>Industry</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-industry">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#dateAwarded"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
       <sh:name>Date awarded</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
       <sh:description>The date when a candidate was granted a particular credential, such as a degree or certification.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Credential-rmo-dateAwarded">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#educationDegree"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
       <sh:name>Education degree</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Education-rmo-educationDegree">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#yearsOfExperience"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience">
       <sh:name>Years of experience</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience">
       <sh:description>Indicates the total number of years a candidate has worked in their field or occupation.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-yearsOfExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#availability"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
       <sh:name>Availability</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
       <sh:description>Indicates when the job position is open for applications, including specific dates or time frames such as "immediate" or "within three months."</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-availability">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#jobId"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
       <sh:name>Job id</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
       <sh:description>A unique identifier for a job description, used to distinguish it from other job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-jobId">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-jobId">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#projectType"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
       <sh:name>Project type</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
       <sh:description>Represents the nature or category of a project, such as software development, research, or marketing.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-projectType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#rate"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
       <sh:name>Rate</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
       <sh:description>Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-rate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#startDate"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
       <sh:name>Start date</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
       <sh:description>Represents the date when a job description, project, or engagement is scheduled to begin.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-startDate">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:description>An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-description">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:name>Alt label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
       <sh:name>Pref label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
       <sh:description>The preferred lexical label for a resource, in a given language.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
       <sh:name>Alt label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
       <sh:name>Pref label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:name>Title</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:description>Represents the title or the name of a resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-dct-title">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#yearsOfSkill"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
       <sh:name>Years of skill</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
       <sh:description>Indicates the number of years a candidate has utilized a specific skill.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-yearsOfSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:name>Alt label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:name>Pref label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:description>The preferred lexical label for a resource, in a given language.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-prefLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#engagementType"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:name>Engagement type</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:description>It includes part-time, full-time, or contractual roles.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:name>Alt label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+      <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-skos-altLabel">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#specifiesLocation&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#specifiesLocation&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#specifiesLocation"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:name>Specifies location</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-specifiesLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:description>Specifies the geographical location and time zone relevant to job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasLocation&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasLocation&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasLocation"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:name>Has location</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-hasLocation">
       <sh:description>Specifies the geographical location and time zone relevant to candidate profile.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasLocation&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasLocation&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasLocation"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:name>Has location</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasLocation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasLocation">
       <sh:description>Specifies the geographical location and timezone relevant to CandidateProfile.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Benefits"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasBenefits&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasBenefits&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasBenefits"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
       <sh:name>Has benefits</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-hasBenefits">
       <sh:description>Indicates the benefits associated with a specific type of job engagement.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#CandidateProfile"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasProfile&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasProfile&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasProfile"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile">
       <sh:name>Has profile</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Candidate-rmo-hasProfile">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-hasProfile">
       <sh:description>Indicates the candidate profile of a specific Candidate.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Experience"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasExperience&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasExperience&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasExperience"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience">
       <sh:name>Has experience</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasExperience">
       <sh:description>Represents the work experience details of a candidate profile.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#receivesJobDesciption&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#receivesJobDesciption&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#receivesJobDesciption"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
       <sh:name>Receives job desciption</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-receivesJobDesciption">
       <sh:description>Indicates that a candidate profile receives a job description from the system.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#targetOccupation&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#targetOccupation&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#targetOccupation"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
       <sh:name>Target occupation</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetOccupation">
       <sh:description>Indicates the job roles or occupations that a candidate profile is interested in or qualified for.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasQualification">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Qualification"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasQualification">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasQualification&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasQualification&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasQualification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasQualification"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasQualification">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasQualification">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasQualification"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasQualification">
       <sh:name>Has qualification</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Credential"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasCredential&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasCredential&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasCredential"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential">
       <sh:name>Has credential</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasCredential">
       <sh:description>Academic qualifications and professional certifications obtained by a candidate.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Skill"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasSkills&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasSkills&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasSkills"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:name>Has skills</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-CandidateProfile-rmo-hasSkills">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-hasSkills">
       <sh:description>Indicates that a candidate profile possesses a specific skill.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#posts&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#posts&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#posts"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts">
       <sh:name>Posts</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Company-rmo-posts">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-posts">
       <sh:description>Indicates that a Company publishes a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Credential"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#requiresCredential&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#requiresCredential&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#requiresCredential"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential">
       <sh:name>Requires credential</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresCredential">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresCredential">
       <sh:description>Indicates that a job description may require one or more Academic qualifications and/or professional certifications.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#isRelatedTo&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#isRelatedTo&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#isRelatedTo"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:name>Is related to</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:description>Indicates that a specific resource is associated with a particular other resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Qualification"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#isRelatedTo&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#isRelatedTo&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#isRelatedTo"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:name>Is related to</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-isRelatedTo">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-isRelatedTo">
       <sh:description>Indicates that a specific resource is associated with a particular other resource.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Skill"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasSkillUsed&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasSkillUsed&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasSkillUsed"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed">
       <sh:name>Has skill used</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Experience-rmo-hasSkillUsed">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-hasSkillUsed">
       <sh:description>Indicates that a specific skill was utilized in a particular experience.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Experience"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#requiresExperience&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#requiresExperience&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#requiresExperience"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience">
       <sh:name>Requires experience</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresExperience">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresExperience">
       <sh:description>Specifies the type and level of experience required for a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#TypeOfEngagement"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#hasEngagement&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#hasEngagement&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#hasEngagement"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:name>Has engagement</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-hasEngagement">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-hasEngagement">
       <sh:description>Indicates what type of engagement a specific job description entails.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Qualification"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#requiresQualification&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#requiresQualification&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#requiresQualification"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification">
       <sh:name>Requires qualification</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresQualification">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresQualification">
       <sh:description>Specifies the qualifications required for a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#offersPosition&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#offersPosition&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#offersPosition"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:name>Offers position</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-offersPosition">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-offersPosition">
       <sh:description>Indicates the job position offered by a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Skill"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#requiresSkill&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#requiresSkill&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#requiresSkill"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:name>Requires skill</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-JobDescription-rmo-requiresSkill">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-requiresSkill">
       <sh:description>Specifies the skills that are necessary for a job description.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#optionalFor&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#optionalFor&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#optionalFor"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor">
       <sh:name>Optional for</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-optionalFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-optionalFor">
       <sh:description>Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor">
       <sh:class rdf:resource="http://index.dev/ontology/rmo#Role"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://index.dev/ontology/rmo#essentialFor&gt; ?that . ?that &lt;http://index.dev/ontology/rmo#essentialFor&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor">
       <sh:path rdf:resource="http://index.dev/ontology/rmo#essentialFor"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor">
       <sh:name>Essential for</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-rmo-essentialFor">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-essentialFor">
       <sh:description>Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-inScheme">
       <sh:class rdf:resource="http://data.europa.eu/esco/model#Qualification"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-inScheme"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-inScheme"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-inScheme">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-inScheme">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-inScheme">
       <sh:name>In scheme</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Qualification-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-inScheme">
       <sh:description>A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-inScheme">
       <sh:class rdf:resource="http://data.europa.eu/esco/model#Occupation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-inScheme"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-inScheme"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-inScheme">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-inScheme">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-inScheme">
       <sh:name>In scheme</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Role-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-inScheme">
       <sh:description>A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-inScheme">
       <sh:class rdf:resource="http://data.europa.eu/esco/model#Skill"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-inScheme"/>
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
+      <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-inScheme"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-inScheme">
+   <sh:PropertyShape rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-inScheme">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-inScheme">
       <sh:name>In scheme</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rmo-Skill-skos-inScheme">
+   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-inScheme">
       <sh:description>A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
 </rdf:RDF>

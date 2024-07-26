@@ -1,4 +1,3 @@
-@prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -14,48 +13,6 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:tech a owl:Ontology ;
-    rdfs:label "Core Public Organisation Vocabulary - core"@en ;
-    dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2024-07-25"^^xsd:date ;
-    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
-    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "RMO Ontology  - core"@en ;
-    vann:preferredNamespacePrefix "epo" ;
-    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-25" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
-        <https://github.com/OP-TED/ePO/releases>,
-        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
-        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports <http://data.europa.eu/esco/model>,
-        cccev:,
-        <http://data.europa.eu/nuts>,
-        <http://lexvo.org/ontology>,
-        <http://publications.europa.eu/ontology/euvoc>,
-        at-voc:,
-        dcterms:,
-        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
-        <http://www.opengis.net/ont/geosparql>,
-        <http://www.opengis.net/ont/sf>,
-        <http://www.w3.org/2003/01/geo/wgs84_pos>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
-        <http://www.w3.org/2006/vcard/ns>,
-        <http://www.w3.org/2008/05/skos-xl>,
-        <http://www.w3.org/ns/adms>,
-        <http://www.w3.org/ns/locn>,
-        org:,
-        <http://www.w3.org/ns/person>,
-        foaf:,
-        <https://data.europa.eu/m8g/>,
-        <ttp://publications.europa.eu/ontology/authority/> ;
-    owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#tech-3.1.0" ;
-    owl:versionIRI :tech-4.0.0 ;
-    owl:versionInfo "4.0.0" .
-
 esco:Occupation a owl:NamedIndividual,
         skos:ConceptScheme ;
     skos:prefLabel "Occupation"@en .
@@ -69,203 +26,253 @@ esco:Skill a owl:NamedIndividual,
     skos:prefLabel "Skill"@en .
 
 rmo:BenefitName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:prefLabel "Benefit name"@en .
 
 rmo:Benefits a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Additional advantages provided to employees beyond their salary, such as health insurance or retirement plans."@en ;
     skos:prefLabel "Benefits"@en .
 
 rmo:Candidate a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "An individual who uses the system to find job opportunities."@en ;
     skos:prefLabel "Candidate"@en .
 
 rmo:CandidateProfile a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents the detailed profile of a Candidate, including credentials, skills experience, and location."@en ;
     skos:prefLabel "Candidate profile"@en .
 
 rmo:Certification a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     rdfs:subClassOf rmo:Credential ;
     skos:definition "The official recognition of a candidate's expertise or proficiency in a specific domain, typically obtained through examination or evaluation by a professional body."@en ;
     skos:prefLabel "Certification"@en .
 
 rmo:Company a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "An organization or business entity that employs individuals."@en ;
     skos:prefLabel "Company"@en .
 
 rmo:Education a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     rdfs:subClassOf rmo:Credential ;
     skos:definition "The academic qualifications of a Candidate."@en ;
     skos:prefLabel "Education"@en .
 
 rmo:Experience a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents the practical knowledge and proficiency gained by a candidate through previous work engagements, projects, or hands-on activities."@en ;
     skos:prefLabel "Experience"@en .
 
 rmo:JobDescription a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "A job opening posted by a company, including job details and requirements."@en ;
     skos:prefLabel "Job description"@en .
 
 rmo:Qualification a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "Qualifications are the formal outcome of an assessment and validation process by a competent body determining that an individual has achieved learning outcomes to given standards."@en ;
     skos:prefLabel "Qualification"@en .
 
 rmo:Role a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "Represents the specific job occupations, positions, or professions for which candidates may be qualified or seeking employment opportunities."@en ;
     skos:prefLabel "Role"@en .
 
 rmo:Skill a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "A specific capability or proficiency possessed by a candidate, often acquired through training, practice, or experience."@en ;
     skos:prefLabel "Skill"@en .
 
 rmo:TypeOfEngagement a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents various arrangements under which individuals are employed, such as part-time, full-time, or contractual roles."@en ;
     skos:prefLabel "Type of engagement"@en .
 
 rmo:availability a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates when the job position is open for applications, including specific dates or time frames such as \"immediate\" or \"within three months.\" (rmo:JobDescription)"@en ;
     skos:prefLabel "Availability"@en .
 
 rmo:companyName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "The name of the organization or business entity that has posted a job description. (rmo:Company)"@en ;
     skos:prefLabel "Company name"@en .
 
 rmo:dateAwarded a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "The date when a candidate was granted a particular credential, such as a degree or certification. (rmo:Credential)"@en ;
     skos:prefLabel "Date awarded"@en .
 
 rmo:educationDegree a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:prefLabel "Education degree"@en .
 
 rmo:engagementType a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "It includes part-time, full-time, or contractual roles. (rmo:TypeOfEngagement)"@en ;
     skos:prefLabel "Engagement type"@en .
 
 rmo:essentialFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a particular resource or characteristic is necessary or crucial for a specific entity or concept within the ontology in order to fulfill its intended purpose. (rmo:Skill -> rmo:Role (+rmo:essentialFor))"@en ;
     skos:prefLabel "Essential for"@en .
 
 rmo:hasBenefits a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the benefits associated with a specific type of job engagement. (rmo:TypeOfEngagement -> rmo:Benefits (+rmo:hasBenefits))"@en ;
     skos:prefLabel "Has benefits"@en .
 
 rmo:hasCredential a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Academic qualifications and professional certifications obtained by a candidate. (rmo:CandidateProfile -> rmo:Credential (+rmo:hasCredential))"@en ;
     skos:prefLabel "Has credential"@en .
 
 rmo:hasEngagement a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates what type of engagement a specific job description entails. (rmo:JobDescription -> rmo:TypeOfEngagement (+rmo:hasEngagement))"@en ;
     skos:prefLabel "Has engagement"@en .
 
 rmo:hasExperience a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents the work experience details of a candidate profile. (rmo:CandidateProfile -> rmo:Experience (+rmo:hasExperience))"@en ;
     skos:prefLabel "Has experience"@en .
 
 rmo:hasLocation a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the geographical location and time zone relevant to candidate profile. (rmo:Company -> dct:Location (+rmo:hasLocation)) Specifies the geographical location and timezone relevant to CandidateProfile. (rmo:CandidateProfile -> dct:Location (+rmo:hasLocation))"@en ;
     skos:prefLabel "Has location"@en .
 
 rmo:hasProfile a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the candidate profile of a specific Candidate. (rmo:Candidate -> rmo:CandidateProfile (+rmo:hasProfile))"@en ;
     skos:prefLabel "Has profile"@en .
 
 rmo:hasQualification a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:prefLabel "Has qualification"@en .
 
 rmo:hasSkillUsed a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a specific skill was utilized in a particular experience. (rmo:Experience -> rmo:Skill (+rmo:hasSkillUsed))"@en ;
     skos:prefLabel "Has skill used"@en .
 
 rmo:hasSkills a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a candidate profile possesses a specific skill. (rmo:CandidateProfile -> rmo:Skill (+rmo:hasSkills))"@en ;
     skos:prefLabel "Has skills"@en .
 
 rmo:industry a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:prefLabel "Industry"@en .
 
 rmo:isRelatedTo a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -> rmo:Role (+rmo:isRelatedTo)) Indicates that a specific resource is associated with a particular other resource. (rmo:Experience -> rmo:Qualification (+rmo:isRelatedTo))"@en ;
     skos:prefLabel "Is related to"@en .
 
 rmo:jobId a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "A unique identifier for a job description, used to distinguish it from other job description. (rmo:JobDescription)"@en ;
     skos:prefLabel "Job id"@en .
 
 rmo:offersPosition a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the job position offered by a job description. (rmo:JobDescription -> rmo:Role (+rmo:offersPosition))"@en ;
     skos:prefLabel "Offers position"@en .
 
 rmo:optionalFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a particular resource or characteristic is optional or non-compulsory for a specific entity or concept within the ontology. (rmo:Skill -> rmo:Role (+rmo:optionalFor))"@en ;
     skos:prefLabel "Optional for"@en .
 
 rmo:phoneNumber a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "A telephone number through which the Candidate can be contacted. (rmo:Candidate)"@en ;
     skos:prefLabel "Phone number"@en .
 
 rmo:posts a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a Company publishes a job description. (rmo:Company -> rmo:JobDescription (+rmo:posts))"@en ;
     skos:prefLabel "Posts"@en .
 
 rmo:profileId a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "A unique identifier for the candidate profile. (rmo:CandidateProfile)"@en ;
     skos:prefLabel "Profile id"@en .
 
 rmo:projectType a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents the nature or category of a project, such as software development, research, or marketing. (rmo:JobDescription)"@en ;
     skos:prefLabel "Project type"@en .
 
 rmo:rate a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount. (rmo:JobDescription)"@en ;
     skos:prefLabel "Rate"@en .
 
 rmo:receivesJobDesciption a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a candidate profile receives a job description from the system. (rmo:CandidateProfile -> rmo:JobDescription (+rmo:receivesJobDesciption))"@en ;
     skos:prefLabel "Receives job desciption"@en .
 
 rmo:requiresCredential a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates that a job description may require one or more Academic qualifications and/or professional certifications. (rmo:JobDescription -> rmo:Credential (+rmo:requiresCredential))"@en ;
     skos:prefLabel "Requires credential"@en .
 
 rmo:requiresExperience a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the type and level of experience required for a job description. (rmo:JobDescription -> rmo:Experience (+rmo:requiresExperience))"@en ;
     skos:prefLabel "Requires experience"@en .
 
 rmo:requiresQualification a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the qualifications required for a job description. (rmo:JobDescription -> rmo:Qualification (+rmo:requiresQualification))"@en ;
     skos:prefLabel "Requires qualification"@en .
 
 rmo:requiresSkill a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the skills that are necessary for a job description. (rmo:JobDescription -> rmo:Skill (+rmo:requiresSkill))"@en ;
     skos:prefLabel "Requires skill"@en .
 
 rmo:specifiesLocation a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the geographical location and time zone relevant to job description. (rmo:JobDescription -> dct:Location (+rmo:specifiesLocation))"@en ;
     skos:prefLabel "Specifies location"@en .
 
 rmo:startDate a rdf:Property ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Represents the date when a job description, project, or engagement is scheduled to begin. (rmo:JobDescription)"@en ;
     skos:prefLabel "Start date"@en .
 
 rmo:targetOccupation a owl:ObjectProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the job roles or occupations that a candidate profile is interested in or qualified for. (rmo:CandidateProfile -> rmo:Role (+rmo:targetOccupation))"@en ;
     skos:prefLabel "Target occupation"@en .
 
 rmo:targetRate a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job. (rmo:CandidateProfile)"@en ;
     skos:prefLabel "Target rate"@en .
 
 rmo:timeZone a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "An area which observes a uniform standard time for legal, commercial and social purposes. (dct:Location)"@en ;
     skos:prefLabel "Time zone"@en .
 
 rmo:yearsOfExperience a rdf:Property ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the total number of years a candidate has worked in their field or occupation. (rmo:Experience)"@en ;
     skos:prefLabel "Years of experience"@en .
 
 rmo:yearsOfSkill a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "Indicates the number of years a candidate has utilized a specific skill. (rmo:Skill)"@en ;
     skos:prefLabel "Years of skill"@en .
 
@@ -308,6 +315,49 @@ foaf:name a owl:DatatypeProperty ;
     skos:prefLabel "Name"@en .
 
 rmo:Credential a owl:Class ;
+    rdfs:isDefinedBy rmo:tech ;
     skos:definition "An academic or professional qualification obtained by a candidate, such as degrees or certifications."@en ;
     skos:prefLabel "Credential"@en .
+
+rmo:tech a owl:Ontology ;
+    rdfs:label "Core Recruitment Match Vocabulary - core"@en ;
+    dcterms:created "2024-07-01"^^xsd:date ;
+    dcterms:description "The Recruitment Match Ontology core describes the concepts and properties representing the Recruitment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
+    dcterms:issued "2024-07-26"^^xsd:date ;
+    dcterms:license "© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0." ;
+    dcterms:publisher "https://meaningfy.ws/" ;
+    dcterms:title "RMO Ontology  - core"@en ;
+    vann:preferredNamespacePrefix "rmo" ;
+    vann:preferredNamespaceUri "http://index.dev/ontology/rmo#" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-26" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports <http://data.europa.eu/esco/model>,
+        cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://index.dev/ontology/rmo#tech-3.1.0" ;
+    owl:versionIRI rmo:tech-4.0.0 ;
+    owl:versionInfo "4.0.0" .
 
