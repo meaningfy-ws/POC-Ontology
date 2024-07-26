@@ -32,8 +32,8 @@
     <!-- Ontology base URI, configure as necessary. Do not use a trailing local delimiter
         like in the namespace definition-->
     <!--<xsl:variable name="base-uri" select="'http://publications.europa.eu/ontology/ePO'"/>-->
-    <xsl:variable name="base-ontology-uri" select="'http://data.europa.eu/a4g/ontology'"/>
-    <xsl:variable name="base-shape-uri" select="'http://data.europa.eu/a4g/data-shape'"/>
+    <xsl:variable name="base-ontology-uri" select="'http://index.dev/ontology/rmo'"/>
+    <xsl:variable name="base-shape-uri" select="'http://index.dev/ontology/rmo/data-shape'"/>
     <xsl:variable name="base-restriction-uri" select="$base-ontology-uri"/>
     <!--    Shapes Module URI-->
     <xsl:variable name="shapeArtefactURI"
@@ -84,11 +84,11 @@
 
     <xsl:variable name="generateObjectsAndRealisations" select="fn:true()"/>
 
-    <xsl:variable name="conventionReportCopyrightText" select="'Publications Office of the European Union, 2023'"/>
-    <xsl:variable name="conventionReportAuthor" select="'Publications Office of the European Union'"/>
+    <xsl:variable name="conventionReportCopyrightText" select="'Meaningfy, 2024'"/>
+    <xsl:variable name="conventionReportAuthor" select="'Meaningfy'"/>
     <xsl:variable name="conventionReportAuthorLocation" select="'Luxembourg'"/>
-    <xsl:variable name="conventionReportAuthorWebsite" select="'https://op.europa.eu'"/>
-    <xsl:variable name="conventionReportUMLModelName" select="'eProcurement'"/>
+    <xsl:variable name="conventionReportAuthorWebsite" select="'https://meaningfy.ws/'"/>
+    <xsl:variable name="conventionReportUMLModelName" select="'Recruitment '"/>
 
     <!-- _______________________________________________________________________   -->
     <!--                            METADATA SECTION                               -->
@@ -96,20 +96,20 @@
     <!--    This section contains the variables used to build the ontology metadata-->
     <xsl:variable name="moduleReference" select="'tech'"/>
     <!--    rdfs:label -->
-<xsl:variable name="ontologyLabelCore" select="'Core Public Organisation Vocabulary - core'"/>
-<xsl:variable name="ontologyLabelRestrictions" select="'Core Public Organisation Vocabulary - core restrictions'"/>
-<xsl:variable name="ontologyLabelShapes" select="'Core Public Organisation Vocabulary - core shapes'"/>
+<xsl:variable name="ontologyLabelCore" select="'Core Recruitment Match Vocabulary - core'"/>
+<xsl:variable name="ontologyLabelRestrictions" select="'Core Recruitment Match Vocabulary - core restrictions'"/>
+<xsl:variable name="ontologyLabelShapes" select="'Core Recruitment Match Vocabulary - core shapes'"/>
     <!--    dct:title -->
     <xsl:variable name="ontologyTitleCore" select="'RMO Ontology  - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'RMO Ontology_AP Ontology - core restrictions'"/>
     <xsl:variable name="ontologyTitleShapes" select="'RMO _AP Ontology - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="'The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+        select="'The Recruitment Match Ontology core describes the concepts and properties representing the Recruitment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
-        select="'he HR ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis..'"/>
+        select="'The RMO ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis..'"/>
     <xsl:variable name="ontologyDescriptionShapes"
-        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
+        select="'The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
@@ -128,23 +128,23 @@
     <!--    owl:priorVersion -->
     <xsl:variable name="priorVersion" select="'3.1.0'"/>
     <!--    vann:preferredNamespaceUri -->
-    <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/a4g/ontology#'"/>
+    <xsl:variable name="preferredNamespaceUri" select="'http://index.dev/ontology/rmo#'"/>
     <!--    vann:preferredNamespacePrefix -->
-    <xsl:variable name="preferredNamespacePrefix" select="'epo'"/>
+    <xsl:variable name="preferredNamespacePrefix" select="'rmo'"/>
     <!--    dct:license-->
-    <xsl:variable name="licenseLiteral" select="'© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).'"/>
+    <xsl:variable name="licenseLiteral" select="'© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0.'"/>
     <!--    dct:created-->
-    <xsl:variable name="createdDate" select="'2021-06-01'"/>
+    <xsl:variable name="createdDate" select="'2024-07-01'"/>
     <!--    dct:publisher-->
-    <xsl:variable name="publisher" select="'http://publications.europa.eu/resource/authority/corporate-body/PUBL'"/>
+    <xsl:variable name="publisher" select="'https://meaningfy.ws/'"/>
 
             <!-- _______________________________________________________________________   -->
     <!--                            RESPEC SECTION                               -->
     <!-- _______________________________________________________________________   -->
 
-    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/POC-Ontology'"/>
+    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/rmo-ontology'"/>
     <xsl:variable name="respecDescription" select="'The RMO ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis. '"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
-    <xsl:variable name="authors" select="('Jana Ahmad', 'Achilles Dougali')"/>
-    <xsl:variable name="editors" select="('Eugen Costezki', 'Andi Stan','Eugene Garla','Mihai Golovatenco')"/>
+    <xsl:variable name="authors" select="('Andi Stan','Eugene Garla','Mihai Golovatenco', 'Eugen Costezki', 'Achilles Dougalis', 'Jana Ahmad')"/>
+    <xsl:variable name="editors" select="('Jana Ahmad','Achilles Dougalis')"/>
 </xsl:stylesheet>
