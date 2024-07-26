@@ -117,13 +117,13 @@
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
-    <xsl:variable name="incompatibleWith" select="'noe'"/>
+    <xsl:variable name="incompatibleWith" select="'none'"/>
     <!--    owl:versionInfo -->
     <xsl:variable name="versionInfo" select="'1.0.0'"/>
     <!--    bibo:status-->
     <xsl:variable name="ontologyStatus" select="'Semantic Specification Release'"/>
     <!--    owl:priorVersion -->
-    <xsl:variable name="priorVersion" select="'none"/>
+    <xsl:variable name="priorVersion" select="'none'"/>
     <!--    vann:preferredNamespaceUri -->
     <xsl:variable name="preferredNamespaceUri" select="'http://index.dev/ontology/rmo#'"/>
     <!--    vann:preferredNamespacePrefix -->
