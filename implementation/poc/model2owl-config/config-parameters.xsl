@@ -113,7 +113,7 @@
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
-            ('https://github.com/meaningfy-ws/rmo-ontology'')"/>
+            'https://github.com/meaningfy-ws/rmo-ontology'"/>
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
