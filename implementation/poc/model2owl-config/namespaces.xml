@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<prefixes xmlns="http://publications.europa.eu/ns/">
+<prefixes xmlns="http://index.dev/ontology/rmo/">
     <prefix name="" value="http://index.dev/ontology/rmo#"/>
 
     <prefix name="owl" value="http://www.w3.org/2002/07/owl#"/>

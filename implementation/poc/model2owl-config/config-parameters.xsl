@@ -100,7 +100,7 @@
 <xsl:variable name="ontologyLabelRestrictions" select="'Core Recruitment Match Vocabulary - core restrictions'"/>
 <xsl:variable name="ontologyLabelShapes" select="'Core Recruitment Match Vocabulary - core shapes'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'RMO Ontology  - core'"/>
+    <xsl:variable name="ontologyTitleCore" select="'Recruitment Match Ontology (RMO) - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'RMO Ontology_AP Ontology - core restrictions'"/>
     <xsl:variable name="ontologyTitleShapes" select="'RMO _AP Ontology - core shapes'"/>
     <!--    dct:description-->
