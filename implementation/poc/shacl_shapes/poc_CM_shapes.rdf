@@ -62,9 +62,9 @@
       <rdfs:label xml:lang="en">Core Recruitment Match Vocabulary - core shapes</rdfs:label>
       <dct:publisher>https://meaningfy.ws/</dct:publisher>
       <dct:description xml:lang="en">The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core.</dct:description>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-26</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-27</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/meaningfy-ws/rmo-ontology"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-26</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-27</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</dct:created>
       <owl:versionInfo>1.0.0</owl:versionInfo>
       <owl:incompatibleWith>none</owl:incompatibleWith>

@@ -708,13 +708,13 @@ tech-shape:tech-shape a owl:Ontology ;
     rdfs:label "Core Recruitment Match Vocabulary - core shapes"@en ;
     dcterms:created "2024-07-01"^^xsd:date ;
     dcterms:description "The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core."@en ;
-    dcterms:issued "2024-07-26"^^xsd:date ;
+    dcterms:issued "2024-07-27"^^xsd:date ;
     dcterms:license "© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0." ;
     dcterms:publisher "https://meaningfy.ws/" ;
     dcterms:title "RMO _AP Ontology - core shapes"@en ;
     vann:preferredNamespacePrefix "rmo" ;
     vann:preferredNamespaceUri "http://index.dev/ontology/rmo#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-26" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-27" ;
     rdfs:seeAlso <https://github.com/meaningfy-ws/rmo-ontology> ;
     owl:imports <http://data.europa.eu/esco/model>,
         cccev:,

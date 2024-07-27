@@ -53,13 +53,13 @@
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/esco/model"/>
-      <dct:title xml:lang="en">RMO Ontology  - core</dct:title>
+      <dct:title xml:lang="en">Recruitment Match Ontology (RMO) - core</dct:title>
       <rdfs:label xml:lang="en">Core Recruitment Match Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The Recruitment Match Ontology core describes the concepts and properties representing the Recruitment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>https://meaningfy.ws/</dct:publisher>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-26</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-27</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/meaningfy-ws/rmo-ontology"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-26</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-27</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</dct:created>
       <owl:versionInfo>1.0.0</owl:versionInfo>
       <owl:incompatibleWith>none</owl:incompatibleWith>
