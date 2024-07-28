@@ -62,9 +62,9 @@
       <rdfs:label xml:lang="en">Core Recruitment Match Vocabulary - core shapes</rdfs:label>
       <dct:publisher>https://meaningfy.ws/</dct:publisher>
       <dct:description xml:lang="en">The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core.</dct:description>
-      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-27</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from poc_CM.xml on 2024-07-28</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/meaningfy-ws/rmo-ontology"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-27</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-28</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</dct:created>
       <owl:versionInfo>1.0.0</owl:versionInfo>
       <owl:incompatibleWith>none</owl:incompatibleWith>
@@ -304,10 +304,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName"/>
    </rdf:Description>
@@ -324,7 +320,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Benefits-rmo-BenefitName">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
@@ -344,10 +339,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-homepage"/>
@@ -382,10 +373,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-mbox">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-foaf-name"/>
@@ -429,7 +416,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Candidate-rmo-phoneNumber">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-profileId"/>
@@ -472,7 +458,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-CandidateProfile-rmo-targetRate">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification">
@@ -493,10 +478,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Certification-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description"/>
    </rdf:Description>
@@ -514,10 +495,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName"/>
@@ -538,7 +515,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-companyName">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company">
@@ -555,10 +531,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Company-rmo-industry">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title"/>
@@ -577,10 +549,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Credential">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Credential-rmo-dateAwarded"/>
@@ -619,10 +587,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Education-rmo-educationDegree">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description"/>
    </rdf:Description>
@@ -641,10 +605,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title"/>
    </rdf:Description>
@@ -659,10 +619,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Experience">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Experience-rmo-yearsOfExperience"/>
@@ -701,10 +657,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title"/>
    </rdf:Description>
@@ -722,10 +674,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability"/>
@@ -746,7 +694,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-availability">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
@@ -790,7 +737,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-projectType">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
@@ -812,7 +758,6 @@
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-rate">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription">
@@ -831,7 +776,6 @@
       <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-startDate">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
@@ -852,10 +796,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-description">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title"/>
    </rdf:Description>
@@ -873,10 +813,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel"/>
@@ -896,10 +832,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-altLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel"/>
    </rdf:Description>
@@ -914,10 +846,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
       <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Qualification-skos-prefLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title"/>
@@ -934,10 +862,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
       <rdfs:isDefinedBy rdf:resource="http://index.dev/ontology/rmo/data-shape#tech-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel"/>
    </rdf:Description>
@@ -953,10 +877,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-altLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel"/>
    </rdf:Description>
@@ -971,10 +891,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Role-skos-prefLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title"/>
@@ -993,10 +909,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-dct-title">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-rmo-yearsOfSkill"/>
@@ -1038,10 +950,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-altLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel"/>
    </rdf:Description>
@@ -1059,10 +967,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-Skill-skos-prefLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType"/>
@@ -1082,10 +986,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-rmo-engagementType">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement">
       <sh:property rdf:resource="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel"/>
    </rdf:Description>
@@ -1103,10 +1003,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-TypeOfEngagement-skos-altLabel">
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo/data-shape#rmo-JobDescription-rmo-specifiesLocation">
       <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>

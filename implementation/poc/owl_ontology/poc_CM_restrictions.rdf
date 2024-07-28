@@ -60,9 +60,9 @@
       <dct:publisher>https://meaningfy.ws/</dct:publisher>
       <dct:description xml:lang="en">The RMO ontology is designed to facilitate the automatic matching of candidate profiles with job descriptions, enhancing the recruitment process for both recruiters and candidates. This ontology integrates key concepts such as skills, qualifications, experiences, job roles, and technologies, structured to improve job matching, career management, and labor market analysis..</dct:description>
       <rdfs:comment>This version is automatically generated from poc_CM.xml on 
-                2024-07-27</rdfs:comment>
+                2024-07-28</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/meaningfy-ws/rmo-ontology"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-27</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-28</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</dct:created>
       <owl:versionInfo>1.0.0</owl:versionInfo>
       <owl:incompatibleWith>none</owl:incompatibleWith>
@@ -118,24 +118,8 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#Benefits">
       <rdfs:subClassOf>
          <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Benefits">
-      <rdfs:subClassOf>
-         <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#BenefitName"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Candidate">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -143,14 +127,6 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Candidate">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
             <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
@@ -167,7 +143,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#phoneNumber"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -183,23 +159,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#targetRate"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Certification">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Company">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -207,23 +167,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#companyName"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Company">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#industry"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Credential">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -231,30 +175,6 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#dateAwarded"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Education">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#educationDegree"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Experience">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Experience">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
             <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
@@ -270,24 +190,8 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#JobDescription">
       <rdfs:subClassOf>
          <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#JobDescription">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#JobDescription">
-      <rdfs:subClassOf>
-         <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#availability"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -303,7 +207,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#projectType"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -311,7 +215,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#rate"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -319,71 +223,7 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#startDate"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Qualification">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Role">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Role">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Role">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Skill">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
@@ -391,38 +231,6 @@
       <rdfs:subClassOf>
          <owl:Restriction>
             <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#yearsOfSkill"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Skill">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#Skill">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#TypeOfEngagement">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://index.dev/ontology/rmo#engagementType"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-         </owl:Restriction>
-      </rdfs:subClassOf>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#TypeOfEngagement">
-      <rdfs:subClassOf>
-         <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
             <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
          </owl:Restriction>
       </rdfs:subClassOf>
@@ -546,17 +354,11 @@
    <rdf:Description rdf:about="http://purl.org/dc/terms/description">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#BenefitName">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Benefits"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#BenefitName">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#BenefitName">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
       <rdfs:domain>
@@ -584,9 +386,6 @@
          </owl:Class>
       </rdfs:range>
    </rdf:Description>
-   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Candidate"/>
    </rdf:Description>
@@ -602,9 +401,6 @@
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Candidate"/>
    </rdf:Description>
@@ -619,9 +415,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#phoneNumber">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#phoneNumber">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#profileId">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#CandidateProfile"/>
@@ -638,26 +431,17 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetRate">
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#targetRate">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#companyName">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Company"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#companyName">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#companyName">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#industry">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Company"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#industry">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#industry">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#dateAwarded">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Credential"/>
@@ -674,9 +458,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#educationDegree">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#educationDegree">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfExperience">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Experience"/>
    </rdf:Description>
@@ -692,9 +473,6 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#availability">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#availability">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#jobId">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
    </rdf:Description>
@@ -709,9 +487,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#projectType">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#projectType">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#rate">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
@@ -719,17 +494,11 @@
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#rate">
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#rate">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#startDate">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#startDate">
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Date"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#startDate">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
       <rdfs:domain>
@@ -745,9 +514,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
       <rdfs:domain>
@@ -770,9 +536,6 @@
          </owl:Class>
       </rdfs:range>
    </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-   </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#yearsOfSkill">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#Skill"/>
    </rdf:Description>
@@ -787,9 +550,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#engagementType">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://index.dev/ontology/rmo#engagementType">
-      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://index.dev/ontology/rmo#specifiesLocation">
       <rdfs:domain rdf:resource="http://index.dev/ontology/rmo#JobDescription"/>

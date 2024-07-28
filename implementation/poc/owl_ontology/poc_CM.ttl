@@ -322,13 +322,13 @@ foaf:name a owl:DatatypeProperty ;
     rdfs:label "Core Recruitment Match Vocabulary - core"@en ;
     dcterms:created "2024-07-01"^^xsd:date ;
     dcterms:description "The Recruitment Match Ontology core describes the concepts and properties representing the Recruitment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2024-07-27"^^xsd:date ;
+    dcterms:issued "2024-07-28"^^xsd:date ;
     dcterms:license "© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0." ;
     dcterms:publisher "https://meaningfy.ws/" ;
     dcterms:title "Recruitment Match Ontology (RMO) - core"@en ;
     vann:preferredNamespacePrefix "rmo" ;
     vann:preferredNamespaceUri "http://index.dev/ontology/rmo#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-27" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-28" ;
     rdfs:seeAlso <https://github.com/meaningfy-ws/rmo-ontology> ;
     owl:imports <http://data.europa.eu/esco/model>,
         cccev:,

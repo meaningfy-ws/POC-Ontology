@@ -186,8 +186,6 @@ tech-shape:rmo-Benefits-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
@@ -195,7 +193,6 @@ tech-shape:rmo-Benefits-rmo-BenefitName a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Benefit name" ;
     sh:path :BenefitName .
 
@@ -203,8 +200,6 @@ tech-shape:rmo-Candidate-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -219,8 +214,6 @@ tech-shape:rmo-Candidate-foaf-homepage a sh:PropertyShape ;
 tech-shape:rmo-Candidate-foaf-mbox a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Mbox" ;
     sh:path foaf:mbox .
 
@@ -244,7 +237,6 @@ tech-shape:rmo-Candidate-rmo-phoneNumber a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "A telephone number through which the Candidate can be contacted." ;
-    sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Phone number" ;
     sh:path :phoneNumber .
@@ -314,7 +306,6 @@ tech-shape:rmo-CandidateProfile-rmo-targetRate a sh:PropertyShape ;
     sh:datatype xsd:double ;
     sh:description "Specifies the desired hourly or annual rate of pay for the candidate, indicating their expected compensation for a job." ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Target rate" ;
     sh:path :targetRate .
 
@@ -322,8 +313,6 @@ tech-shape:rmo-Certification-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
@@ -331,8 +320,6 @@ tech-shape:rmo-Company-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
@@ -341,7 +328,6 @@ tech-shape:rmo-Company-rmo-companyName a sh:PropertyShape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "The name of the organization or business entity that has posted a job description." ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Company name" ;
     sh:path :companyName .
 
@@ -357,8 +343,6 @@ tech-shape:rmo-Company-rmo-hasLocation a sh:PropertyShape ;
 tech-shape:rmo-Company-rmo-industry a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Industry" ;
     sh:path :industry .
 
@@ -373,8 +357,6 @@ tech-shape:rmo-Credential-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -390,8 +372,6 @@ tech-shape:rmo-Credential-rmo-dateAwarded a sh:PropertyShape ;
 tech-shape:rmo-Education-rmo-educationDegree a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Education degree" ;
     sh:path :educationDegree .
 
@@ -399,16 +379,12 @@ tech-shape:rmo-Experience-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 tech-shape:rmo-Experience-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -440,8 +416,6 @@ tech-shape:rmo-JobDescription-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
@@ -449,8 +423,6 @@ tech-shape:rmo-JobDescription-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -459,7 +431,6 @@ tech-shape:rmo-JobDescription-rmo-availability a sh:PropertyShape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Indicates when the job position is open for applications, including specific dates or time frames such as \"immediate\" or \"within three months.\"" ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Availability" ;
     sh:path :availability .
 
@@ -495,7 +466,6 @@ tech-shape:rmo-JobDescription-rmo-projectType a sh:PropertyShape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the nature or category of a project, such as software development, research, or marketing." ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Project type" ;
     sh:path :projectType .
 
@@ -504,7 +474,6 @@ tech-shape:rmo-JobDescription-rmo-rate a sh:PropertyShape ;
     sh:datatype xsd:decimal ;
     sh:description "Specifies the compensation for the job, typically expressed as an hourly rate, salary, or contract amount." ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Rate" ;
     sh:path :rate .
 
@@ -548,7 +517,6 @@ tech-shape:rmo-JobDescription-rmo-startDate a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "Represents the date when a job description, project, or engagement is scheduled to begin." ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Start date" ;
     sh:path :startDate .
 
@@ -556,8 +524,6 @@ tech-shape:rmo-Qualification-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
@@ -565,8 +531,6 @@ tech-shape:rmo-Qualification-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -574,8 +538,6 @@ tech-shape:rmo-Qualification-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
@@ -588,24 +550,18 @@ tech-shape:rmo-Qualification-skos-inScheme a sh:PropertyShape ;
 tech-shape:rmo-Qualification-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "The preferred lexical label for a resource, in a given language." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
 tech-shape:rmo-Role-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
 tech-shape:rmo-Role-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
@@ -618,8 +574,6 @@ tech-shape:rmo-Role-skos-inScheme a sh:PropertyShape ;
 tech-shape:rmo-Role-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
@@ -627,8 +581,6 @@ tech-shape:rmo-Skill-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "Represents the title or the name of a resource." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
@@ -659,8 +611,6 @@ tech-shape:rmo-Skill-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
@@ -674,8 +624,6 @@ tech-shape:rmo-Skill-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "The preferred lexical label for a resource, in a given language." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
@@ -683,8 +631,6 @@ tech-shape:rmo-TypeOfEngagement-rmo-engagementType a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "It includes part-time, full-time, or contractual roles." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Engagement type" ;
     sh:path :engagementType .
 
@@ -699,8 +645,6 @@ tech-shape:rmo-TypeOfEngagement-skos-altLabel a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
@@ -708,13 +652,13 @@ tech-shape:tech-shape a owl:Ontology ;
     rdfs:label "Core Recruitment Match Vocabulary - core shapes"@en ;
     dcterms:created "2024-07-01"^^xsd:date ;
     dcterms:description "The Recruitment Match Ontology core shapes provides the generic datashape specifications for the Recruitment Match Ontology core."@en ;
-    dcterms:issued "2024-07-27"^^xsd:date ;
+    dcterms:issued "2024-07-28"^^xsd:date ;
     dcterms:license "© Meaningfy, 2024. Unless otherwise noted, the reuse of the Ontology is authorised under the Meaningfy  CC-BY 4.0." ;
     dcterms:publisher "https://meaningfy.ws/" ;
     dcterms:title "RMO _AP Ontology - core shapes"@en ;
     vann:preferredNamespacePrefix "rmo" ;
     vann:preferredNamespaceUri "http://index.dev/ontology/rmo#" ;
-    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-27" ;
+    rdfs:comment "This version is automatically generated from poc_CM.xml on 2024-07-28" ;
     rdfs:seeAlso <https://github.com/meaningfy-ws/rmo-ontology> ;
     owl:imports <http://data.europa.eu/esco/model>,
         cccev:,
