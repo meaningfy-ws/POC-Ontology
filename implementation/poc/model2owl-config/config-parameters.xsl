@@ -9,7 +9,7 @@
 
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Mar 22, 2020</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> JUL 20, 2024</xd:p>
             <xd:p><xd:b>Author:</xd:b> lps</xd:p>
             <xd:p>This module defines project level variables and parameters</xd:p>
         </xd:desc>

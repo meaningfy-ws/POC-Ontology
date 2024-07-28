@@ -6,7 +6,7 @@
 
 
     <meta charset="utf-8" />
-    <title>RMO Ontology  - core</title>
+    <title>Recruitment Match Ontology (RMO) - core</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -21,13 +21,28 @@
 
 
 		   {
-		    name: "Eugen Costezki",
+		    name: "Jana Ahmad",
 		    companyURL: "",
 		    company: "",
 		    mailto: ""
 
 		    }
 		,
+
+		   {
+		    name: "Achilles Dougalis",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+
+
+
+		]
+
+        	var authors = [
+
 
 		   {
 		    name: "Andi Stan",
@@ -54,16 +69,10 @@
 		    mailto: ""
 
 		    }
-
-
-
-		]
-
-        	var authors = [
-
+		,
 
 		   {
-		    name: "Jana Ahmad",
+		    name: "Eugen Costezki",
 		    companyURL: "",
 		    company: "",
 		    mailto: ""
@@ -78,6 +87,15 @@
 		    mailto: ""
 
 		    }
+		,
+
+		   {
+		    name: "Jana Ahmad",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
 
 
 
@@ -86,11 +104,11 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      publishDate: "2024-07-25",
-      shortName: "RMO Ontology  - core",
+      publishDate: "2024-07-27",
+      shortName: "Recruitment Match Ontology (RMO) - core",
         editors: editors,
       authors: authors,
-        github: "https://github.com/meaningfy-ws/POC-Ontology",
+        github: "https://github.com/meaningfy-ws/rmo-ontology",
       xref: "web-platform",
       generatedSubtitle: "",
       additionalCopyrightHolders: ""
@@ -158,7 +176,7 @@
     </style>
 
     <p class="copyright">
-        Copyright © 2023
+        Copyright © 2024
     </p>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -183,11 +201,41 @@
     <h2>Terminology</h2>
 <p>
 An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
-</p><p>
-A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
-A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.
+</p>
+    <p>
+A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.</p>
 
-<h3>Used Prefixes</h3>
+   <p> A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.</p>
+
+     <p>A <strong>Controlled Lists</strong> Controlled lists, also known as controlled vocabularies, are predefined sets of terms used to ensure consistency and accuracy in data representation and retrieval. In the context of an ontology, controlled lists play a crucial role in standardizing the terminology used across different entities and relationships. This standardization is essential for maintaining the integrity of the data model, facilitating interoperability between systems, and improving the precision and recall in information retrieval.</p>
+
+    <h3>Graphical representation</h3>
+
+    <p>The graphical representation of the Application Profile is provided in the form of an UML class diagram
+        <sup>1</sup> and is depicted in the figure below. The boxes represent classes while the arrow connections represent properties establishing relations to other classes. The attributes inside boxes represent properties providing either literal data values or relation to other classes that omitted from the diagram. Both, arrows and attributes, are labelled with the property names prefixed with the namespace where they are defined.
+    </p>
+
+    <p>The cardinality specifications on the connector (_ .. _) arrows and next to the attributes, marked in square brackets ( [ ] ) represent constraints on how the property may be employed on the class instances and has a normative meaning. The first number means minimum cardinality constraint and the second means maximum cardinality constraint. The minimum cardinality constraint is zero (0 .. _ ) for optional properties and one (1 .. _) for mandatory properties. The maximum cardinality constraint is usually unspecified ( _ .. *) or limited to one (_ .. 1) and has no normative value in this application profile. If the cardinality is not specified then the implied meaning is exactly one (1..1).
+    </p>
+
+    <p>The stereotypes, marked in the double angle brackets (&lt;&lt; &gt;&gt;), used in the diagram are based on RDFS model. They have an indicative and not a semantic value.
+    </p>
+
+    <p>In curly brackets ({ }) are provided the value constraints on the property values. These constraints refer to controlled list of values that should meet.
+    </p>
+
+    <figure id="graphical-representation">
+        <figcaption>UML class diagram for the current application profile</figcaption>
+        <img src="Images/EAID_F409FC12_A009_48ad_92B5_A889DB11BCB8.jpg" alt="Conceptual Model Image">
+    </figure>
+
+<!--    <ol>-->
+<!--        <li>Class diagram, <a href="https://en.wikipedia.org/wiki/Class_diagram" target="_blank">https://en.wikipedia.org/wiki/Class_diagram</a></li>-->
+<!--    </ol>-->
+
+<!--    <h3>Conceptual Model</h3>-->
+<!--        <img src="Images/EAID_F409FC12_A009_48ad_92B5_A889DB11BCB8.jpg" alt="Conceptual Model Image">-->
+<!--<h3>Used Prefixes</h3>-->
 
 
         <table id="table-namespaces" class="simple">
@@ -209,13 +257,12 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
             </tbody>
         </table>
 
-        <h3>Conceptual Model</h3>
-        <img src="Images/EAID_F409FC12_A009_48ad_92B5_A889DB11BCB8.jpg" alt="Conceptual Model Image">
-
 </section>
 
-
 <section>
+
+<h2> The Domain Model </h2>
+The domain model diagram presents a structured representation of the Recruitment Match Ontology (RMO), detailing the key concepts and relationships that facilitate the matching of candidate profiles with job description in a recommender system. This ontology captures essential aspects of candidate information, job requirements, and their interactions.
 
 <h2>
    Main Entities
@@ -293,7 +340,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Geographic name%20in%20Location" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Geographic name%20in%20Location" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -331,7 +378,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Time zone%20in%20Location" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Time zone%20in%20Location" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -443,7 +490,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -481,7 +528,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Benefit name%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Benefit name%20in%20Benefits" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -597,7 +644,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -635,7 +682,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Homepage%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Homepage%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -673,7 +720,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Mbox%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Mbox%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -711,7 +758,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Name%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Name%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -749,7 +796,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Phone number%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Phone number%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -787,7 +834,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has profile%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has profile%20in%20Candidate" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -906,7 +953,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Profile id%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Profile id%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -944,7 +991,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Target rate%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Target rate%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -982,7 +1029,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has location%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has location%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1020,7 +1067,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has experience%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has experience%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1058,7 +1105,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Receives job desciption%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Receives job desciption%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1096,7 +1143,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Target occupation%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Target occupation%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1134,7 +1181,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has qualification%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has qualification%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1172,7 +1219,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has credential%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has credential%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1210,7 +1257,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has skills%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has skills%20in%20Candidate profile" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1328,7 +1375,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Certification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Certification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1443,7 +1490,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Company" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Company" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1481,7 +1528,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Company name%20in%20Company" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Company name%20in%20Company" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1519,7 +1566,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Industry%20in%20Company" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Industry%20in%20Company" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1557,7 +1604,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has location%20in%20Company" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has location%20in%20Company" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1595,7 +1642,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Posts%20in%20Company" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Posts%20in%20Company" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1707,7 +1754,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Credential" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Credential" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1745,7 +1792,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Date awarded%20in%20Credential" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Date awarded%20in%20Credential" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1863,7 +1910,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Education degree%20in%20Education" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Education degree%20in%20Education" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -1979,7 +2026,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2017,7 +2064,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2055,7 +2102,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Years of experience%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Years of experience%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2093,7 +2140,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2131,7 +2178,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Is related to%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2169,7 +2216,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has skill used%20in%20Experience" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has skill used%20in%20Experience" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2293,7 +2340,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2331,7 +2378,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2369,7 +2416,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Availability%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Availability%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2407,7 +2454,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Job id%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Job id%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2445,7 +2492,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Project type%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Project type%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2483,7 +2530,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Rate%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Rate%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2521,7 +2568,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Start date%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Start date%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2559,7 +2606,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Specifies location%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Specifies location%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2597,7 +2644,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires credential%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Requires credential%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2635,7 +2682,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires experience%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Requires experience%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2673,7 +2720,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has engagement%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has engagement%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2711,7 +2758,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires qualification%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Requires qualification%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2749,7 +2796,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Offers position%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Offers position%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2787,7 +2834,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Requires skill%20in%20Job description" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Requires skill%20in%20Job description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2909,7 +2956,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Description%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Description%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2947,7 +2994,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -2985,7 +3032,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Alt label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3023,7 +3070,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Pref label%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3061,7 +3108,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20In scheme%20in%20Qualification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3182,7 +3229,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Role" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Role" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3220,7 +3267,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Role" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Alt label%20in%20Role" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3258,7 +3305,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Role" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Pref label%20in%20Role" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3296,7 +3343,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Role" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20In scheme%20in%20Role" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3420,7 +3467,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Title%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Title%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3458,7 +3505,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Years of skill%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Years of skill%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3496,7 +3543,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Alt label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3534,7 +3581,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Pref label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Pref label%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3572,7 +3619,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Optional for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Optional for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3610,7 +3657,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Essential for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Essential for%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3648,7 +3695,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20In scheme%20in%20Skill" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20In scheme%20in%20Skill" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3761,7 +3808,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Engagement type%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Engagement type%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3799,7 +3846,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Alt label%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Alt label%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3837,7 +3884,7 @@ The main entities are those that form the core of the Application Profile.
                                 class="class mandatory">
                                 <td>
 
-                                    <a href="https://github.com/meaningfy-ws/POC-Ontology/issues/new?title=Issue%20for%20Has benefits%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
+                                    <a href="https://github.com/meaningfy-ws/rmo-ontology/issues/new?title=Issue%20for%20Has benefits%20in%20Type of engagement" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
 
                                     <i class="fa-regular fa-message"></i>
@@ -3877,8 +3924,11 @@ The main entities are those that form the core of the Application Profile.
 </section>
 
 
-
-
+<h3>Controlled Lists in RMO Ontology</h3>
+    <h4> Integration of ESCO</h4>
+    The ESCO (European Skills, Competences, Qualifications, and Occupations) controlled lists play a pivotal role in RMO ontology. These standardized lists provide a comprehensive and consistent vocabulary for key concepts such as skills, occupations, and qualifications.
+    <h4> SKOS (Simple Knowledge Organization System)</h4>
+SKOS is commonly used to structure and manage controlled lists in an ontology. It provides a framework for defining concepts, concept schemes, and their relationships.
 </section>
 
 </body>
