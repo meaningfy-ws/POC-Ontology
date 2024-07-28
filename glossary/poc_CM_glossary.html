@@ -143,7 +143,7 @@
                         not limited to: an abstract, a table of contents, a graphical representation, or a
                         free-text account of the resource.
                         </td>
-                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>rmo:Candidate<br>rmo:Credential<br>rmo:Experience<br>rmo:JobDescription<br>rmo:Qualification<br>rmo:Role<br>rmo:Skill<br></td>
@@ -155,7 +155,7 @@
                          Represents the title or the name of a resource.
                          Represents the title or the name of a resource.
                         </td>
-                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:Plainliteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:Plainliteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:plainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>rmo:Candidate</td>
@@ -167,7 +167,7 @@
                      <td>rmo:Candidate</td>
                      <td>foaf:mbox</td>
                      <td></td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>rmo:Candidate</td>
@@ -186,19 +186,19 @@
                      <td>rmo:availability</td>
                      <td>Indicates when the job position is open for applications, including specific dates
                         or time frames such as "immediate" or "within three months."</td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:Benefits</td>
                      <td>rmo:BenefitName</td>
                      <td></td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:Company</td>
                      <td>rmo:companyName</td>
                      <td>The name of the organization or business entity that has posted a job description.</td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:Credential</td>
@@ -211,20 +211,20 @@
                      <td>rmo:Education</td>
                      <td>rmo:educationDegree</td>
                      <td></td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>rmo:TypeOfEngagement</td>
                      <td>rmo:engagementType</td>
                      <td>It includes part-time, full-time, or contractual roles.
                         </td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>rmo:Company</td>
                      <td>rmo:industry</td>
                      <td></td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>rmo:JobDescription</td>
@@ -236,7 +236,7 @@
                      <td>rmo:Candidate</td>
                      <td>rmo:phoneNumber</td>
                      <td>A telephone number through which the Candidate can be contacted.</td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [1..*]</td>
                   </tr>
                   <tr>
                      <td>rmo:CandidateProfile</td>
@@ -256,28 +256,28 @@
                         
                         
                         </td>
-                     <td>rdf:PlainLiteral [1..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:JobDescription</td>
                      <td>rmo:rate</td>
                      <td>Specifies the compensation for the job, typically expressed as an hourly rate, salary,
                         or contract amount.</td>
-                     <td>xsd:decimal [1..1]</td>
+                     <td>xsd:decimal [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:JobDescription</td>
                      <td>rmo:startDate</td>
                      <td>Represents the date when a job description, project, or engagement is scheduled to
                         begin.</td>
-                     <td>xsd:Date [1..1]</td>
+                     <td>xsd:Date [0..1]</td>
                   </tr>
                   <tr>
                      <td>rmo:CandidateProfile</td>
                      <td>rmo:targetRate</td>
                      <td>Specifies the desired hourly or annual rate of pay for the candidate, indicating their
                         expected compensation for a job.</td>
-                     <td>xsd:double [1..1]</td>
+                     <td>xsd:double [0..1]</td>
                   </tr>
                   <tr>
                      <td>dct:Location</td>
@@ -310,14 +310,14 @@
                          An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants,
                         and irregular plural/singular forms may be included among the alternative labels for
                         a concept. </td>
-                     <td>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>rmo:Qualification<br>rmo:Role<br>rmo:Skill<br></td>
                      <td>skos:prefLabel</td>
                      <td>The preferred lexical label for a resource, in a given language.   The preferred lexical label for a resource, in a given language. 
                         </td>
-                     <td>rdf:plainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [1..1]<br></td>
+                     <td>rdf:plainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                </tbody>
             </table>
