@@ -10,6 +10,7 @@
          xmlns:dct="http://purl.org/dc/terms/"
          xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
          xmlns:esco="http://data.europa.eu/esco/model#"
+         xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
          xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
